@@ -39,7 +39,7 @@ packages:
       url: https://github.com/bitwarden/f-droid/raw/refs/heads/main/fdroid/metadata/com.x8bit.bitwarden.yml
     info_url: https://github.com/bitwarden/f-droid/raw/refs/heads/main/fdroid/repo/index-v2.json
     version_jq: .packages."$PKG_NAME".versions | to_entries | sort_by(.value.manifest.versionCode) | reverse | .[0].value.manifest.versionName
-    download_jq: .repo.mirrors[1].url as $baseUrl | .packages."$PKG_NAME".versions | to_entries | sort_by(.value.manifest.versionCode) | reverse | .[0].value.file.name as $filename | $baseUrl + $filename
+    download_jq: .packages."$PKG_NAME".versions | to_entries | sort_by(.value.manifest.versionCode) | reverse | .[0].value.file.name as $filename | https://github.com/bitwarden/f-droid/raw/refs/heads/main/fdroid/repo + $filename
 
   - pkg_name: org.localsend.localsend_app
     metadata:
@@ -47,4 +47,4 @@ packages:
       url: https://gitlab.com/fdroid/fdroiddata/-/raw/master/metadata/org.localsend.localsend_app.yml
     info_url: https://mirrors.tuna.tsinghua.edu.cn/fdroid/repo/index-v2.json
     version_jq: .packages."$PKG_NAME".versions | to_entries | sort_by(.value.manifest.versionCode) | reverse | .[0].value.manifest.versionName
-    download_jq: .repo.mirrors[0].url as $baseUrl | .packages."$PKG_NAME".versions | to_entries | sort_by(.value.manifest.versionCode) | reverse | .[0].value.file.name as $filename | $baseUrl + $filename
+    download_jq: .packages."$PKG_NAME".versions | to_entries | sort_by(.value.manifest.versionCode) | reverse | .[0].value.file.name as $filename | https://mirrors.tuna.tsinghua.edu.cn/fdroid/repo + $filename
