@@ -93,7 +93,3 @@ packages:
   - pkg_name: com.tailscale.ipn
     icon_url: https://github.com/tailscale/tailscale-android/raw/main/metadata/en-US/images/icon.png
     <<: *fdroid
-
-  - pkg_name: com.termux
-    icon_url: https://github.com/termux/termux-app/raw/master/fastlane/metadata/android/en-US/images/icon.png
-    <<: *fdroid
