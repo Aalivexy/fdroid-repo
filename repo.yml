@@ -1,6 +1,6 @@
 config:
   repo_name: Aalivexy
-  repo_url: http://192.168.31.110/fdroid/repo
+  repo_url: https://cnb.cool/aalivexy/fdroid-repo/-/blob/fdroid/repo
   repo_description: >-
     Aalivexy's F-Droid Repo
 
