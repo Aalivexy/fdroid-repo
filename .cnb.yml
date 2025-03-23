@@ -18,8 +18,8 @@ main:
           if: '[ -d "fdroid" ]'
           script: |
             cd fdroid
-            git config user.name "Cloud Native Build"
-            git config user.email "cnb@cnb.cool"
+            git config --global user.name "Cloud Native Build"
+            git config --global user.email "cnb@cnb.cool"
             git init --initial-branch=fdroid
             git remote add origin https://${CNB_TOKEN_USER_NAME}:${CNB_TOKEN}@cnb.cool/aalivexy/fdroid-repo.git
             git add .
