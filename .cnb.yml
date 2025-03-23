@@ -1,5 +1,5 @@
 main:
-  web_trigger_udpate: &web_trigger_update
+  web_trigger_update: &web_trigger_update
     - name: Update fdroid branch
       runner:
         cpus: 2
