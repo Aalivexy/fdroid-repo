@@ -16,6 +16,7 @@ main:
         - name: Update fdroid branch
           if: '[ ! -d "fdroid" ]'
           script: |
+            cd fdroid
             git init --initial-branch=main
             REMOTE_URL="$(git -C ../ config --get remote.origin.url)"
             if [ -n "$REMOTE_URL" ]; then
