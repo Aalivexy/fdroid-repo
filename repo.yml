@@ -1,11 +1,8 @@
 config:
   repo_name: Aalivexy
-  repo_url: https://cnb.cool/aalivexy/fdroid-repo/-/git/raw/fdroid/repo
+  repo_url: https://aalivexy.cc/fdroid/repo
   repo_description: >-
     Aalivexy's F-Droid Repo
-  mirrors:
-    - url: https://aalivexy.cc/fdroid
-    - url: https://cnb.cool/aalivexy/fdroid-repo/-/git/raw/fdroid
 
   repo_keyalias: $repo_keyalias
   keystore: $keystore
@@ -13,41 +10,90 @@ config:
   keypass: $keypass
   keydname: $keydname
 
-packages:
-  - pkg_name: com.follow.clash
-    metadata:
-      icon_url: https://github.com/chen08209/FlClash-fdroid-repo/raw/main/fdroid/metadata/com.follow.clash/en-US/images/icon.png
-      url: https://github.com/chen08209/FlClash-fdroid-repo/raw/main/fdroid/metadata/com.follow.clash.yml
-    info_url: https://api.github.com/repos/chen08209/FlClash/releases
-    version_jq: .[0].tag_name
-    download_jq: .[0].assets[] | select(.name | contains("arm64-v8a.apk")) | .browser_download_url
+.fdroid: &fdroid
+  metadata_url: https://gitlab.com/fdroid/fdroiddata/-/raw/master/metadata/$PKG_NAME.yml
+  info_url: https://mirrors.tuna.tsinghua.edu.cn/fdroid/repo/index-v2.json
+  version_jq: .packages."$PKG_NAME".versions | to_entries | sort_by(.value.manifest.versionCode) | reverse | .[0].value.manifest.versionName
+  download_jq: .packages."$PKG_NAME".versions | to_entries | sort_by(.value.manifest.versionCode) | reverse | .[0].value.file.name as $filename | "https://mirrors.tuna.tsinghua.edu.cn/fdroid/repo" + $filename
 
+packages:
   - pkg_name: com.limelight.noir
+    icon_url: https://github.com/ClassicOldSong/moonlight-android/raw/moonlight-noir/fastlane/metadata/android/en-US/images/icon.png
     metadata:
-      icon_url: https://github.com/ClassicOldSong/moonlight-android/raw/moonlight-noir/fastlane/metadata/android/en-US/images/icon.png
-      override:
-        Name: Artemis
-        AuthorName: ClassicOldSong
-        License: GPL-3.0-or-later
-        SourceCode: https://github.com/ClassicOldSong/moonlight-android
-        Categories:
-          - Games
+      Categories:
+        - Games
+      AuthorName: ClassicOldSong
+      License: GPL-3.0-or-later
+      Name: Artemis
+      SourceCode: https://github.com/ClassicOldSong/moonlight-android
+      IssueTracker: https://github.com/ClassicOldSong/moonlight-android/issues
+      Changelog: https://github.com/ClassicOldSong/moonlight-android/releases
+      Summary: An open source client for Apollo/Sunshine.
     info_url: https://api.github.com/repos/ClassicOldSong/moonlight-android/releases
     version_jq: .[0].tag_name
     download_jq: .[0].assets[] | select(.name | contains("release.apk")) | .browser_download_url
 
   - pkg_name: com.x8bit.bitwarden
-    metadata:
-      icon_url: https://github.com/bitwarden/f-droid/raw/main/fdroid/metadata/com.x8bit.bitwarden/icon.png
-      url: https://github.com/bitwarden/f-droid/raw/main/fdroid/metadata/com.x8bit.bitwarden.yml
+    icon_url: https://github.com/bitwarden/f-droid/raw/main/fdroid/metadata/com.x8bit.bitwarden/icon.png
+    metadata_url: https://github.com/bitwarden/f-droid/raw/main/fdroid/metadata/com.x8bit.bitwarden.yml
     info_url: https://github.com/bitwarden/f-droid/raw/main/fdroid/repo/index-v2.json
     version_jq: .packages."$PKG_NAME".versions | to_entries | sort_by(.value.manifest.versionCode) | reverse | .[0].value.manifest.versionName
     download_jq: .packages."$PKG_NAME".versions | to_entries | sort_by(.value.manifest.versionCode) | reverse | .[0].value.file.name as $filename | "https://github.com/bitwarden/f-droid/raw/main/fdroid/repo" + $filename
 
+  - pkg_name: com.looker.droidify
+    icon_url: https://github.com/Droid-ify/client/raw/main/metadata/en-US/images/icon.png
+    <<: *fdroid
+
+  - pkg_name: com.follow.clash
+    icon_url: https://github.com/chen08209/FlClash-fdroid-repo/raw/main/fdroid/metadata/com.follow.clash/en-US/images/icon.png
+    metadata_url: https://github.com/chen08209/FlClash-fdroid-repo/raw/main/fdroid/metadata/com.follow.clash.yml
+    info_url: https://api.github.com/repos/chen08209/FlClash/releases
+    version_jq: .[0].tag_name
+    download_jq: .[0].assets[] | select(.name | contains("arm64-v8a.apk")) | .browser_download_url
+
+  - pkg_name: com.absinthe.libchecker
+    icon_url: https://github.com/LibChecker/LibChecker/raw/master/fastlane/metadata/android/en-US/images/icon.png
+    <<: *fdroid
+
   - pkg_name: org.localsend.localsend_app
+    icon_url: https://github.com/localsend/localsend/raw/main/fastlane/metadata/android/en-US/images/icon.png
+    <<: *fdroid
+
+  - pkg_name: de.syss.MifareClassicTool
+    icon_url: https://github.com/ikarus23/MifareClassicTool/raw/master/metadata/en-US/images/icon.png
+    <<: *fdroid
+
+  - pkg_name: me.ash.reader
+    icon_url: https://github.com/Ashinch/ReadYou/raw/main/fastlane/metadata/android/en-US/images/icon.png
+    <<: *fdroid
+
+  - pkg_name: com.seafile.seadroid2
+    icon_url: https://github.com/haiwen/seadroid/raw/master/app/src/main/res/drawable-xxxhdpi/ic_launcher.png
+    <<: *fdroid
+
+  - pkg_name: moe.shizuku.privileged.api
+    icon_url: https://github.com/RikkaApps/Shizuku/raw/master/manager/src/main/res/mipmap-xxxhdpi/ic_launcher.png
     metadata:
-      icon_url: https://github.com/localsend/localsend/raw/main/fastlane/metadata/android/en-US/images/icon.png
-      url: https://gitlab.com/fdroid/fdroiddata/-/raw/master/metadata/org.localsend.localsend_app.yml
-    info_url: https://mirrors.tuna.tsinghua.edu.cn/fdroid/repo/index-v2.json
-    version_jq: .packages."$PKG_NAME".versions | to_entries | sort_by(.value.manifest.versionCode) | reverse | .[0].value.manifest.versionName
-    download_jq: .packages."$PKG_NAME".versions | to_entries | sort_by(.value.manifest.versionCode) | reverse | .[0].value.file.name as $filename | "https://mirrors.tuna.tsinghua.edu.cn/fdroid/repo" + $filename
+      Categories:
+        - System
+      AuthorName: RikkaApps
+      License: Apache-2.0
+      Name: Shizuku
+      WebSite: https://shizuku.rikka.app
+      SourceCode: https://github.com/RikkaApps/Shizuku
+      IssueTracker: https://github.com/RikkaApps/Shizuku/issues
+      Changelog: https://github.com/RikkaApps/Shizuku/releases
+      Summary: using system APIs directly with adb/root privileges from normal apps
+      AntiFeatures:
+        - UpstreamNonFree
+    info_url: https://api.github.com/repos/RikkaApps/Shizuku/releases
+    version_jq: .[0].tag_name
+    download_jq: .[0].assets[] | select(.name | contains("release.apk")) | .browser_download_url
+
+  - pkg_name: com.tailscale.ipn
+    icon_url: https://github.com/tailscale/tailscale-android/raw/main/metadata/en-US/images/icon.png
+    <<: *fdroid
+
+  - pkg_name: com.termux
+    icon_url: https://github.com/termux/termux-app/raw/master/fastlane/metadata/android/en-US/images/icon.png
+    <<: *fdroid

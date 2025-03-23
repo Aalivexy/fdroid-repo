@@ -185,7 +185,7 @@ def apply_env(config: RepoConfig) -> RepoConfig:
 
 def download_packages():
     try:
-        if fdroid_dir.exists():
+        if os.environ.get("DEL_EXISTING") and fdroid_dir.exists():
             shutil.rmtree(fdroid_dir)
             logging.info("Removed existing fdroid directory")
     except Exception as e:
@@ -214,23 +214,29 @@ def download_packages():
     for pkg in repo.packages:
         new_icon_file = metadata_dir / f"{pkg.pkg_name}/en-US/images/icon.png"
         new_icon_file.parent.mkdir(parents=True, exist_ok=True)
-        new_icon_file.write_bytes(get_data_from_url(pkg.metadata.icon_url).content)
+        new_icon_file.write_bytes(get_data_from_url(pkg.icon_url).content)
 
         metadata_file = metadata_dir / f"{pkg.pkg_name}.yml"
         metadata = dict()
-        if pkg.metadata.url:
+        if pkg.metadata_url:
             metadata = {
                 **metadata,
-                **yaml.safe_load(get_data_from_url(pkg.metadata.url).content),
+                **yaml.safe_load(
+                    get_data_from_url(
+                        pkg.metadata_url.replace("$PKG_NAME", pkg.pkg_name)
+                    ).content
+                ),
             }
-        if pkg.metadata.override:
-            metadata = {**metadata, **pkg.metadata.override.__dict__}
+        if pkg.metadata:
+            metadata = {**metadata, **pkg.metadata}
         metadata = {
             k: v
             for k, v in metadata.items()
             if k not in banned_keys and v is not None and v != ""
         }
         metadata["Categories"].append(repo.config.repo_name)
+        if metadata.get("Name") is None and metadata.get("AutoName") is not None:
+            metadata["Name"] = metadata["AutoName"]
 
         metadata_file.write_text(yaml.safe_dump(metadata, sort_keys=False))
         logging.info(f"Processed metadata for {pkg.pkg_name}")

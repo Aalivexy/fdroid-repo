@@ -6,7 +6,6 @@ class RepoConfig:
     repo_name: str
     repo_url: str
     repo_description: str
-    mirrors: list
 
     repo_keyalias: str
     keystore: str
@@ -34,7 +33,9 @@ class PackageMetadata:
 @dataclass
 class Package:
     pkg_name: str
-    metadata: PackageMetadata
+    icon_url: str
+    metadata_url: str | None
+    metadata: dict | None
     info_url: str
     version_jq: str
     download_jq: str
