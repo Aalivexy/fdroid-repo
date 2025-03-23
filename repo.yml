@@ -1,0 +1,42 @@
+config:
+  repo_name: Aalivexy
+  repo_url: http://192.168.31.110/fdroid/repo
+  repo_description: >-
+    Aalivexy's F-Droid Repo
+
+  repo_keyalias: $repo_keyalias
+  keystore: $keystore
+  keystorepass: $keystorepass
+  keypass: $keypass
+  keydname: $keydname
+
+packages:
+  - pkg_name: com.follow.clash
+    metadata:
+      icon_url: https://github.com/chen08209/FlClash-fdroid-repo/raw/refs/heads/main/fdroid/metadata/com.follow.clash/en-US/images/icon.png
+      url: https://github.com/chen08209/FlClash-fdroid-repo/raw/refs/heads/main/fdroid/metadata/com.follow.clash.yml
+    info_url: https://api.github.com/repos/chen08209/FlClash/releases
+    version_jq: .[0].tag_name
+    download_jq: .[0].assets[] | select(.name | contains("arm64-v8a.apk")) | .browser_download_url
+
+  - pkg_name: com.limelight.noir
+    metadata:
+      icon_url: https://github.com/ClassicOldSong/moonlight-android/raw/refs/heads/moonlight-noir/fastlane/metadata/android/en-US/images/icon.png
+      override:
+        Name: Artemis
+        AuthorName: ClassicOldSong
+        License: GPL-3.0-or-later
+        SourceCode: https://github.com/ClassicOldSong/moonlight-android
+        Categories:
+          - Games
+    info_url: https://api.github.com/repos/ClassicOldSong/moonlight-android/releases
+    version_jq: .[0].tag_name
+    download_jq: .[0].assets[] | select(.name | contains("release.apk")) | .browser_download_url
+
+  - pkg_name: com.x8bit.bitwarden
+    metadata:
+      icon_url: https://github.com/bitwarden/f-droid/raw/refs/heads/main/fdroid/metadata/com.x8bit.bitwarden/icon.png
+      url: https://github.com/bitwarden/f-droid/raw/refs/heads/main/fdroid/metadata/com.x8bit.bitwarden.yml
+    info_url: https://mobileapp.bitwarden.com/fdroid/repo/index-v2.json
+    version_jq: .packages."$PKG_NAME".versions | to_entries | sort_by(.value.manifest.versionCode) | reverse | .[0].value.manifest.versionName
+    download_jq: .repo.mirrors[0].url as $baseUrl | .packages."$PKG_NAME".versions | to_entries | sort_by(.value.manifest.versionCode) | reverse | .[0].value.file.name as $filename | $baseUrl + $filename

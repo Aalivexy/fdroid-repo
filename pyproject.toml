@@ -1,0 +1,11 @@
+[project]
+name = "fdroid-repo"
+version = "0.1.0"
+description = "Aalivexy's F-Droid repository"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "dacite>=1.9.2",
+    "fdroidserver>=2.3.5",
+    "jq>=1.8.0",
+]
