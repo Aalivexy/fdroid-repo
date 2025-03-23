@@ -6,6 +6,7 @@ class RepoConfig:
     repo_name: str
     repo_url: str
     repo_description: str
+    mirrors: list
 
     repo_keyalias: str
     keystore: str
