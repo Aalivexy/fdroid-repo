@@ -10,11 +10,10 @@ main:
         - name: Install astral-sh/uv
           script: |
             curl -LsSf https://astral.sh/uv/install.sh | sh
-            source $HOME/.local/bin/env
         - name: Install dependencies
-          script: uv sync
+          script: /home/mobiledevops/.local/bin/uv sync
         - name: Check for updates
-          script: uv run main.py
+          script: /home/mobiledevops/.local/bin/uv run main.py
         - name: Update fdroid branch
           if: '[ ! -d "fdroid" ]'
           script: |
