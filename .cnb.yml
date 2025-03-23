@@ -22,7 +22,7 @@ main:
             git config --global user.email "cnb@cnb.cool"
             git init --initial-branch=fdroid
             git remote add origin https://${CNB_TOKEN_USER_NAME}:${CNB_TOKEN}@cnb.cool/aalivexy/fdroid-repo.git
-            git add .
+            git add repo/
             git commit -m "Update fdroid branch"
             git push --force origin fdroid
 
