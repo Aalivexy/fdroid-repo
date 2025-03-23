@@ -8,7 +8,9 @@ main:
       imports: "https://cnb.cool/aalivexy/fdroid-env/-/blob/main/env.yml"
       stages:
         - name: Install astral-sh/uv
-          script: curl -LsSf https://astral.sh/uv/install.sh | sh
+          script: |
+            curl -LsSf https://astral.sh/uv/install.sh | sh
+            source $HOME/.local/bin/env
         - name: Install dependencies
           script: uv sync
         - name: Check for updates
