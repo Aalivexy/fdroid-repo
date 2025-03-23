@@ -15,7 +15,7 @@ main:
         - name: Check for updates
           script: /home/mobiledevops/.local/bin/uv run main.py
         - name: Update fdroid branch
-          if: '[ ! -d "fdroid" ]'
+          if: '[ -d "fdroid" ]'
           script: |
             cd fdroid
             git init --initial-branch=main
