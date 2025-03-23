@@ -13,15 +13,15 @@ config:
 packages:
   - pkg_name: com.follow.clash
     metadata:
-      icon_url: https://github.com/chen08209/FlClash-fdroid-repo/raw/refs/heads/main/fdroid/metadata/com.follow.clash/en-US/images/icon.png
-      url: https://github.com/chen08209/FlClash-fdroid-repo/raw/refs/heads/main/fdroid/metadata/com.follow.clash.yml
+      icon_url: https://github.com/chen08209/FlClash-fdroid-repo/raw/main/fdroid/metadata/com.follow.clash/en-US/images/icon.png
+      url: https://github.com/chen08209/FlClash-fdroid-repo/raw/main/fdroid/metadata/com.follow.clash.yml
     info_url: https://api.github.com/repos/chen08209/FlClash/releases
     version_jq: .[0].tag_name
     download_jq: .[0].assets[] | select(.name | contains("arm64-v8a.apk")) | .browser_download_url
 
   - pkg_name: com.limelight.noir
     metadata:
-      icon_url: https://github.com/ClassicOldSong/moonlight-android/raw/refs/heads/moonlight-noir/fastlane/metadata/android/en-US/images/icon.png
+      icon_url: https://github.com/ClassicOldSong/moonlight-android/raw/moonlight-noir/fastlane/metadata/android/en-US/images/icon.png
       override:
         Name: Artemis
         AuthorName: ClassicOldSong
@@ -35,11 +35,11 @@ packages:
 
   - pkg_name: com.x8bit.bitwarden
     metadata:
-      icon_url: https://github.com/bitwarden/f-droid/raw/refs/heads/main/fdroid/metadata/com.x8bit.bitwarden/icon.png
-      url: https://github.com/bitwarden/f-droid/raw/refs/heads/main/fdroid/metadata/com.x8bit.bitwarden.yml
-    info_url: https://github.com/bitwarden/f-droid/raw/refs/heads/main/fdroid/repo/index-v2.json
+      icon_url: https://github.com/bitwarden/f-droid/raw/main/fdroid/metadata/com.x8bit.bitwarden/icon.png
+      url: https://github.com/bitwarden/f-droid/raw/main/fdroid/metadata/com.x8bit.bitwarden.yml
+    info_url: https://github.com/bitwarden/f-droid/raw/main/fdroid/repo/index-v2.json
     version_jq: .packages."$PKG_NAME".versions | to_entries | sort_by(.value.manifest.versionCode) | reverse | .[0].value.manifest.versionName
-    download_jq: .packages."$PKG_NAME".versions | to_entries | sort_by(.value.manifest.versionCode) | reverse | .[0].value.file.name as $filename | "https://github.com/bitwarden/f-droid/raw/refs/heads/main/fdroid/repo" + $filename
+    download_jq: .packages."$PKG_NAME".versions | to_entries | sort_by(.value.manifest.versionCode) | reverse | .[0].value.file.name as $filename | "https://github.com/bitwarden/f-droid/raw/main/fdroid/repo" + $filename
 
   - pkg_name: org.localsend.localsend_app
     metadata:

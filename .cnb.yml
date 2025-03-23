@@ -18,15 +18,11 @@ main:
           if: '[ -d "fdroid" ]'
           script: |
             cd fdroid
-            git init --initial-branch=main
-            REMOTE_URL="$(git -C ../ config --get remote.origin.url)"
-            if [ -n "$REMOTE_URL" ]; then
-                git remote remove origin 2>/dev/null || true
-                git remote add origin "$REMOTE_URL"
-            fi
+            git init --initial-branch=fdroid
+            git remote add origin https://${CNB_TOKEN_USER_NAME}:${CNB_TOKEN}@cnb.cool/aalivexy/fdroid-repo.git
             git add .
             git commit -m "Update fdroid branch"
-            git push --force origin main:fdroid
+            git push --force origin fdroid
 
   "crontab: 0 4,16 * * *":
     - <<: *web_trigger_update
