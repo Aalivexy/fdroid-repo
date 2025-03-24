@@ -162,7 +162,7 @@ def check_for_updates() -> bool:
             .manifest.versionName
         )
 
-        if version == current_version:
+        if current_version.startswith(version):
             logging.info(f"{pkg.pkg_name} is up to date")
         else:
             logging.info(f"{pkg.pkg_name} has a new version: {version}")
