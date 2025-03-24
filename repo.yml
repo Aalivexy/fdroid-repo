@@ -86,7 +86,7 @@ packages:
       Summary: using system APIs directly with adb/root privileges from normal apps
       AntiFeatures:
         - UpstreamNonFree
-    info_url: https://api.github.com/repos/RikkaApps/Shizuku/releases
+    info_url: https://api.github.com/repos/RikkaApps/Shizuku/releases/latest
     version_jq: .tag_name
     download_jq: .assets[] | select(.name | contains("release.apk")) | .browser_download_url
 
