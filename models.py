@@ -50,6 +50,7 @@ class RepoData:
 @dataclass
 class FdroidPackageManifest:
     versionName: str
+    versionCode: int
 
 
 @dataclass

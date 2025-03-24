@@ -156,13 +156,24 @@ def check_for_updates() -> bool:
             logging.info(f"{pkg.pkg_name} not found in current repo")
             return True
 
-        current_version = normalize_version(
-            current_repo.packages[pkg.pkg_name]
-            .versions.popitem()[1]
-            .manifest.versionName
-        )
+        is_up_to_date = False
 
-        if current_version.startswith(version):
+        if version.isdigit():
+            if int(version) == (
+                current_repo.packages[pkg.pkg_name]
+                .versions.popitem()[1]
+                .manifest.versionCode
+            ):
+                is_up_to_date = True
+        else:
+            if normalize_version(
+                current_repo.packages[pkg.pkg_name]
+                .versions.popitem()[1]
+                .manifest.versionName
+            ).startswith(version):
+                is_up_to_date = True
+
+        if is_up_to_date:
             logging.info(f"{pkg.pkg_name} is up to date")
         else:
             logging.info(f"{pkg.pkg_name} has a new version: {version}")
