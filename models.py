@@ -57,9 +57,14 @@ class FdroidPackageManifest:
 class FdroidPackageVersion:
     manifest: FdroidPackageManifest
 
+@dataclass
+class FdroidPackageMetadata:
+    summary: dict[str, str] | None
+    description: dict[str, str] | None
 
 @dataclass
 class FdroidPackage:
+    metadata: FdroidPackageMetadata
     versions: dict[str, FdroidPackageVersion]
 
 
