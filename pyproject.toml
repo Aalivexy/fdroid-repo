@@ -9,3 +9,7 @@ dependencies = [
     "fdroidserver>=2.3.5",
     "jq>=1.8.0",
 ]
+
+[[tool.uv.index]]
+default = true
+url = "https://mirrors.cloud.tencent.com/pypi/simple"

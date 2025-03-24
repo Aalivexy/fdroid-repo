@@ -5,15 +5,20 @@ main:
         cpus: 2
       docker:
         image: mobiledevops/android-sdk-image:34.0.1
+        volumes:
+          - /cache:cow
       imports: "https://cnb.cool/aalivexy/fdroid-env/-/blob/main/env.yml"
+      env:
+        UV_LINK_MODE: copy
+        UV_UNMANAGED_INSTALL: /usr/bin
+        UV_CACHE_DIR: /cache
       stages:
         - name: Install astral-sh/uv
-          script: |
-            curl -LsSf https://astral.sh/uv/install.sh | sh
+          script: curl -LsSf https://astral.sh/uv/install.sh | sh
         - name: Install dependencies
-          script: /home/mobiledevops/.local/bin/uv sync
+          script: uv sync
         - name: Check for updates
-          script: /home/mobiledevops/.local/bin/uv run main.py
+          script: uv run main.py
         - name: Update fdroid branch
           if: '[ -d "fdroid" ]'
           script: |
