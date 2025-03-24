@@ -176,7 +176,7 @@ packages:
         - NonFreeNet
     info_url: https://api.github.com/repos/Notsfsssf/pixez-flutter/releases/latest
     version_jq: .tag_name
-    download_jq: .assets[] | select(.name | contains("arm64-v8a-release.apk") | .browser_download_url
+    download_jq: .assets[] | select(.name | contains("arm64-v8a-release.apk")) | .browser_download_url
 
   - pkg_name: app.mihon
     icon_url: https://github.com/mihonapp/mihon/raw/main/.github/assets/logo.png
