@@ -216,3 +216,7 @@ packages:
     info_url: https://api.github.com/repos/mihonapp/mihon/releases/latest
     version_jq: .tag_name
     download_jq: .assets[] | select(.name | contains("arm64-v8a") and contains(".apk")) | .browser_download_url
+
+  - pkg_name: org.tasks
+    icon_url: https://github.com/tasks/tasks/raw/main/fastlane/metadata/android/en-US/images/icon.png
+    <<: *fdroid
