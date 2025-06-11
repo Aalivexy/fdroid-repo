@@ -220,3 +220,22 @@ packages:
   - pkg_name: org.tasks
     icon_url: https://github.com/tasks/tasks/raw/main/fastlane/metadata/android/en-US/images/icon.png
     <<: *fdroid
+
+  - pkg_name: com.rosan.installer.x.revived
+    icon_url: https://github.com/wxxsfxyzm/InstallerX-Revived/raw/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+    metadata:
+      Categories:
+        - System
+        - Utilities
+      AuthorName: wxxsfxyzm
+      License: GPL-3.0-or-later
+      Name: InstallerX Revived
+      SourceCode: https://github.com/wxxsfxyzm/InstallerX-Revived
+      IssueTracker: https://github.com/wxxsfxyzm/InstallerX-Revived/issues
+      Changelog: https://github.com/wxxsfxyzm/InstallerX-Revived/releases
+      Summary: Powerful and flexible Android app installer
+      Description: |
+        InstallerX Revived is an open-source, powerful and flexible Android application installer designed for advanced users and enthusiasts. It provides features such as batch installation, APK management, and a user-friendly interface to streamline the process of installing apps on Android devices. The project is a community-driven revival of the original InstallerX, aiming to deliver compatibility with modern Android versions and add new features based on user feedback.
+    info_url: https://api.github.com/repos/wxxsfxyzm/InstallerX-Revived/releases/latest
+    version_jq: .tag_name
+    download_jq: .assets[] | select(.name | contains("app-Stable-release.apk")) | .browser_download_url
