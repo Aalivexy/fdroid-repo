@@ -99,8 +99,6 @@ def get_package_info(pkg: Package) -> tuple[str, str]:
 def get_data_from_url(
     url: str, max_retries: int = 3, retry_delay: float = 2.0
 ) -> requests.Response:
-    if not url:
-        return b""
     headers = {}
     if (
         url.startswith("https://api.github.com/")
@@ -242,9 +240,9 @@ def download_packages():
             fdroid = from_dict(FdroidIndexV2, get_data_from_url(pkg.info_url).json())
             if fdroid.packages.get(pkg.pkg_name):
                 data = fdroid.packages[pkg.pkg_name].metadata
-                if not metadata.get("Summary"):
+                if not metadata.get("Summary") and data.summary:
                     metadata["Summary"] = data.summary.get("en-US", data.summary)
-                if not metadata.get("Description"):
+                if not metadata.get("Description") and data.description:
                     metadata["Description"] = data.description.get(
                         "en-US", data.description
                     )
