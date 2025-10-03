@@ -262,7 +262,7 @@ packages:
       AuthorName: RE
       License: AGPL-3.0-only
       AntiFeatures:
-        - NonFree
+        - UpstreamNonFree
       Name: RikkaHub
       WebSite: https://rikka-ai.com
       SourceCode: https://github.com/rikkahub/rikkahub
