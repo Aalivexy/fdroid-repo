@@ -252,3 +252,40 @@ packages:
     info_url: https://api.github.com/repos/vvb2060/PackageInstaller/releases/latest
     version_jq: .tag_name
     download_jq: .assets[] | select(.name | contains(".apk")) | .browser_download_url
+
+  - pkg_name: me.rerere.rikkahub
+    icon_url: https://github.com/rikkahub/rikkahub/raw/master/docs/icon.png
+    metadata:
+      Categories:
+        - Internet
+        - Utilities
+      AuthorName: RE
+      License: AGPL-3.0-only
+      AntiFeatures:
+        - NonFree
+      Name: RikkaHub
+      WebSite: https://rikka-ai.com
+      SourceCode: https://github.com/rikkahub/rikkahub
+      IssueTracker: https://github.com/rikkahub/rikkahub/issues
+      Changelog: https://github.com/rikkahub/rikkahub/releases
+      Summary: 一个原生Android LLM 聊天客户端，支持切换不同的供应商进行聊天。
+      Description: |
+        一个原生Android LLM 聊天客户端，支持切换不同的供应商进行聊天 🤖💬
+
+        功能特色:
+        * 🎨 现代化安卓APP设计（Material You / 预测性返回）
+        * 🌙 暗色模式
+        * 🛠️ MCP 支持
+        * 🔄 多种类型的供应商支持，自定义 API / URL / 模型（目前支持 OpenAI、Google、Anthropic）
+        * 🖼️ 多模态输入支持
+        * 📝 Markdown 渲染（支持代码高亮、数学公式、表格、Mermaid）
+        * 🔍 搜索功能（Exa、Tavily、Zhipu、LinkUp、Brave、Perplexity...）
+        * 🧩 Prompt 变量（模型名称、时间等）
+        * 🤳 二维码导出和导入提供商
+        * 🤖 智能体自定义
+        * 🧠 类ChatGPT记忆功能
+        * 📝 AI翻译
+        * 🌐 自定义HTTP请求头和请求体
+    info_url: https://api.github.com/repos/rikkahub/rikkahub/releases/latest
+    version_jq: .tag_name
+    download_jq: .assets[] | select(.name | contains("arm64-v8a-release.apk")) | .browser_download_url
