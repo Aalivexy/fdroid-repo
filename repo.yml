@@ -13,8 +13,8 @@ config:
 .fdroid: &fdroid
   metadata_url: https://gitlab.com/fdroid/fdroiddata/-/raw/master/metadata/$PKG_NAME.yml
   info_url: https://mirrors.tuna.tsinghua.edu.cn/fdroid/repo/index-v2.json
-  version_jq: .packages."$PKG_NAME".versions | to_entries | sort_by(.value.manifest.versionCode) | reverse | .[0].value.manifest.versionName
-  download_jq: .packages."$PKG_NAME".versions | to_entries | sort_by(.value.manifest.versionCode) | reverse | .[0].value.file.name as $filename | "https://mirrors.tuna.tsinghua.edu.cn/fdroid/repo" + $filename
+  version_jq: .packages."$PKG_NAME".versions | to_entries | map(select((.value.releaseChannels // [] | any(. == "Beta")) | not)) | sort_by(.value.manifest.versionCode) | reverse | .[0].value.manifest.versionName
+  download_jq: .packages."$PKG_NAME".versions | to_entries | map(select((.value.releaseChannels // [] | any(. == "Beta")) | not)) | sort_by(.value.manifest.versionCode) | reverse | .[0].value.file.name as $filename | "https://mirrors.tuna.tsinghua.edu.cn/fdroid/repo" + $filename
 
 packages:
   - pkg_name: com.limelight.noir
