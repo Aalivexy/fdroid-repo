@@ -290,4 +290,7 @@ packages:
 
   - pkg_name: com.termux
     icon_url: https://github.com/termux/termux-app/raw/master/fastlane/metadata/android/en-US/images/icon.png
-    <<: *fdroid
+    metadata_url: https://gitlab.com/fdroid/fdroiddata/-/raw/master/metadata/$PKG_NAME.yml
+    info_url: https://api.github.com/repos/termux/termux-app/releases/latest
+    version_jq: .tag_name
+    download_jq: .assets[] | select(.name | contains("arm64-v8a.apk")) | .browser_download_url
