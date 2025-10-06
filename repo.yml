@@ -17,28 +17,6 @@ config:
   download_jq: .packages."$PKG_NAME".versions | to_entries | map(select((.value.releaseChannels // [] | any(. == "Beta")) | not)) | sort_by(.value.manifest.versionCode) | reverse | .[0].value.file.name as $filename | "https://mirrors.tuna.tsinghua.edu.cn/fdroid/repo" + $filename
 
 packages:
-  - pkg_name: com.limelight.noir
-    icon_url: https://github.com/ClassicOldSong/moonlight-android/raw/moonlight-noir/fastlane/metadata/android/en-US/images/icon.png
-    metadata:
-      Categories:
-        - Games
-      AuthorName: ClassicOldSong
-      License: GPL-3.0
-      Name: Artemis
-      SourceCode: https://github.com/ClassicOldSong/moonlight-android
-      IssueTracker: https://github.com/ClassicOldSong/moonlight-android/issues
-      Changelog: https://github.com/ClassicOldSong/moonlight-android/releases
-      Summary: An open source client for Apollo/Sunshine.
-      Description: |
-        Artemis Android will allow you to stream your collection of games from your Windows PC to your Android device, whether in your own home or over the internet.
-
-        Artemis is currently the best fork of Moonlight with loads of optimizations for office usage.
-
-        A more seamless experience with virtual display will be Artemis paired with <a href="https://github.com/ClassicOldSong/Apollo">Apollo</a>.
-    info_url: https://api.github.com/repos/ClassicOldSong/moonlight-android/releases/latest
-    version_jq: .tag_name
-    download_jq: .assets[] | select(.name | contains("release.apk")) | .browser_download_url
-
   - pkg_name: com.x8bit.bitwarden
     icon_url: https://github.com/bitwarden/f-droid/raw/main/fdroid/metadata/com.x8bit.bitwarden/icon.png
     metadata_url: https://github.com/bitwarden/f-droid/raw/main/fdroid/metadata/com.x8bit.bitwarden.yml
@@ -120,28 +98,6 @@ packages:
     icon_url: https://github.com/tailscale/tailscale-android/raw/main/metadata/en-US/images/icon.png
     <<: *fdroid
 
-  - pkg_name: com.tommasoberlose.anotherwidget.azuo
-    icon_url: https://github.com/azuo/another-widget/raw/patch-develop/app/src/main/ic_launcher-playstore.png
-    metadata:
-      Categories:
-        - Theming
-      AuthorName: Azuo Lee
-      License: MIT
-      Name: Another Widget
-      SourceCode: https://github.com/azuo/another-widget
-      IssueTracker: https://github.com/azuo/another-widget/issues
-      Changelog: https://github.com/azuo/another-widget/releases
-      Summary: Watch events, weather and much more at a glance.
-      Description: |
-        Another Widget intelligently summarizes the information you need most. Watch the next events, the weather, and the information you want in an intuitive and elegant way. (Nope, reminders cannot be displayed because it's not allowed.)
-
-        While respecting the design of the application, there is a great opportunity to customize the information displayed and widget components. Also, as much as possible, there are always updates and new features in the short run.
-
-        Help me developing with feedback and support me on how you can.
-    info_url: https://api.github.com/repos/azuo/another-widget/releases/latest
-    version_jq: .name | sub("Patched "; "")
-    download_jq: .assets[] | select(.name | contains(".apk")) | .browser_download_url
-
   - pkg_name: li.songe.gkd
     icon_url: https://avatars.githubusercontent.com/u/138121201
     metadata:
@@ -186,36 +142,6 @@ packages:
     info_url: https://api.github.com/repos/Notsfsssf/pixez-flutter/releases/latest
     version_jq: .tag_name
     download_jq: .assets[] | select(.name | contains("arm64-v8a-release.apk")) | .browser_download_url
-
-  - pkg_name: app.mihon
-    icon_url: https://github.com/mihonapp/mihon/raw/main/.github/assets/logo.png
-    metadata:
-      Categories:
-        - Graphics
-        - Multimedia
-      AuthorName: Mihon Open Source Project
-      License: Apache-2.0
-      Name: Mihon
-      SourceCode: https://github.com/mihonapp/mihon
-      IssueTracker: https://github.com/mihonapp/mihon/issues
-      Changelog: https://github.com/mihonapp/mihon/releases
-      Summary: Free and open source manga reader for Android
-      Description: |
-        Full-featured reader
-        Discover and read manga, webtoons, comics, and more - easier than ever on your Android device.
-
-        Features:
-        * Local reading of content.
-        * A configurable reader with multiple viewers, reading directions and other settings.
-        * Tracker support: MyAnimeList, AniList, Kitsu, MangaUpdates, Shikimori, and Bangumi support.
-        * Categories to organize your library.
-        * Light and dark themes.
-        * Schedule updating your library for new chapters.
-        * Create backups locally to read offline or to your desired cloud service.
-        * Plus much more...
-    info_url: https://api.github.com/repos/mihonapp/mihon/releases/latest
-    version_jq: .tag_name
-    download_jq: .assets[] | select(.name | contains("arm64-v8a") and contains(".apk")) | .browser_download_url
 
   - pkg_name: io.github.vvb2060.packageinstaller
     icon_url: https://i1.hdslb.com/bfs/new_dyn/c5bedcfa36e69ac7675f6195cf2c0b03173024496.png
