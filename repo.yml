@@ -294,3 +294,7 @@ packages:
     info_url: https://api.github.com/repos/termux/termux-app/releases/latest
     version_jq: .tag_name
     download_jq: .assets[] | select(.name | contains("arm64-v8a.apk")) | .browser_download_url
+
+  - pkg_name: me.zhanghai.android.files
+    icon_url: https://github.com/zhanghai/MaterialFiles/raw/master/fastlane/metadata/android/en-US/images/icon.png
+    <<: *fdroid
