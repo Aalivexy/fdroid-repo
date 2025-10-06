@@ -32,14 +32,13 @@ packages:
     icon_url: https://github.com/chen08209/FlClash-fdroid-repo/raw/main/fdroid/metadata/com.follow.clash/en-US/images/icon.png
     metadata_url: https://github.com/chen08209/FlClash-fdroid-repo/raw/main/fdroid/metadata/com.follow.clash.yml
     metadata:
-      Summary: A multi-platform proxy client based on ClashMeta,simple and easy to use, open-source and ad-free.
+      Summary: 基于ClashMeta的多平台代理客户端，简单易用，开源无广告。
       Description: |
-        Features:
-        ✈️ Multi-platform: Android, Windows, macOS and Linux
-        💻 Adaptive multiple screen sizes, Multiple color themes available
-        💡 Based on Material You Design, Surfboard-like UI
-        ☁️ Supports data sync via WebDAV
-        ✨ Support subscription link, Dark mode
+        ✈️ 多平台: Android, Windows, macOS and Linux
+        💻 自适应多个屏幕尺寸,多种颜色主题可供选择
+        💡 基本 Material You 设计, 类Surfboard用户界面
+        ☁️ 支持通过WebDAV同步数据
+        ✨ 支持一键导入订阅, 深色模式
     info_url: https://api.github.com/repos/chen08209/FlClash/releases/latest
     version_jq: .tag_name
     download_jq: .assets[] | select(.name | contains("arm64-v8a.apk")) | .browser_download_url
