@@ -143,7 +143,7 @@ packages:
     download_jq: .assets[] | select(.name | contains("arm64-v8a-release.apk")) | .browser_download_url
 
   - pkg_name: io.github.vvb2060.packageinstaller
-    icon_url: https://i1.hdslb.com/bfs/new_dyn/c5bedcfa36e69ac7675f6195cf2c0b03173024496.png
+    icon_url: https://cnb.cool/aalivexy/fdroid-repo/-/imgs/HnAcIFfRzyilTBJTlXqCuB/2fba6d2a-6c21-4a87-958f-bf51853f5191.png
     metadata:
       Categories:
         - System
