@@ -62,6 +62,7 @@ def get_current_repo() -> FdroidIndexV2 | None:
 
 
 def get_package_info(pkg: Package) -> tuple[str, str]:
+    data = None
     try:
         response = get_data_from_url(pkg.info_url)
         if not response:
