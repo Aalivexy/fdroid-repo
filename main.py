@@ -92,6 +92,7 @@ def get_package_info(pkg: Package) -> tuple[str, str]:
 
     except Exception as e:
         logging.error(f"Failed to fetch package info from {pkg.info_url}: {e}")
+        logging.log(f"{pkg.info_url} data: {data}")
         sys.exit(1)
 
 
