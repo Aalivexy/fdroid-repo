@@ -244,7 +244,7 @@ def download_packages():
                     metadata["Description"] = data.description.get(
                         "en-US", data.description
                     )
-                if not pkg.icon_url or data.icon:
+                if not pkg.icon_url and data.icon:
                     icon_info = data.icon.get("en-US") or list(pkg.icon.values())[0]
                     if icon_info:
                         base_url = pkg.info_url[:-len("/index-v2.json")]
