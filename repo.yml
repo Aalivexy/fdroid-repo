@@ -58,6 +58,7 @@ packages:
     <<: *fdroid
 
   - pkg_name: moe.shizuku.privileged.api
+    icon_url: https://github.com/RikkaApps/Shizuku/raw/master/manager/src/main/res/mipmap-xxxhdpi/ic_launcher.png
     metadata:
       Categories:
         - System
