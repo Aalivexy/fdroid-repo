@@ -245,7 +245,7 @@ def download_packages():
                         "en-US", data.description
                     )
                 if not pkg.icon_url and data.icon:
-                    icon_info = data.icon.get("en-US") or list(pkg.icon.values())[0]
+                    icon_info = data.icon.get("en-US") or list(data.icon.values())[0]
                     if icon_info:
                         base_url = pkg.info_url[:-len("/index-v2.json")]
                         pkg.icon_url = base_url + icon_info.name
@@ -259,6 +259,10 @@ def download_packages():
         metadata["Categories"].append(repo.config.repo_name)
         if metadata.get("Name") is None and metadata.get("AutoName") is not None:
             metadata["Name"] = metadata["AutoName"]
+
+        if not pkg.icon_url:
+            logging.error(f"icon_url is missing for package {pkg.pkg_name}")
+            sys.exit(1)
 
         new_icon_file = metadata_dir / f"{pkg.pkg_name}/en-US/images/icon.png"
         new_icon_file.parent.mkdir(parents=True, exist_ok=True)
