@@ -25,7 +25,6 @@ packages:
     download_jq: .packages."$PKG_NAME".versions | to_entries | sort_by(.value.manifest.versionCode) | reverse | .[0].value.file.name as $filename | "https://github.com/bitwarden/f-droid/raw/main/fdroid/repo" + $filename
 
   - pkg_name: com.looker.droidify
-    icon_url: https://github.com/Droid-ify/client/raw/main/metadata/en-US/images/icon.png
     <<: *fdroid
 
   - pkg_name: com.follow.clash
@@ -44,27 +43,21 @@ packages:
     download_jq: .assets[] | select(.name | contains("arm64-v8a.apk")) | .browser_download_url
 
   - pkg_name: com.absinthe.libchecker
-    icon_url: https://github.com/LibChecker/LibChecker/raw/master/fastlane/metadata/android/en-US/images/icon.png
     <<: *fdroid
 
   - pkg_name: org.localsend.localsend_app
-    icon_url: https://github.com/localsend/localsend/raw/main/fastlane/metadata/android/en-US/images/icon.png
     <<: *fdroid
 
   - pkg_name: de.syss.MifareClassicTool
-    icon_url: https://github.com/ikarus23/MifareClassicTool/raw/master/metadata/en-US/images/icon.png
     <<: *fdroid
 
   - pkg_name: me.ash.reader
-    icon_url: https://github.com/Ashinch/ReadYou/raw/main/fastlane/metadata/android/en-US/images/icon.png
     <<: *fdroid
 
   - pkg_name: com.seafile.seadroid2
-    icon_url: https://github.com/haiwen/seadroid/raw/master/app/src/debug/res/mipmap-xxxhdpi/ic_launcher.png
     <<: *fdroid
 
   - pkg_name: moe.shizuku.privileged.api
-    icon_url: https://github.com/RikkaApps/Shizuku/raw/master/manager/src/main/res/mipmap-xxxhdpi/ic_launcher.png
     metadata:
       Categories:
         - System
@@ -94,11 +87,9 @@ packages:
     download_jq: .assets[] | select(.name | contains("release.apk")) | .browser_download_url
 
   - pkg_name: com.tailscale.ipn
-    icon_url: https://github.com/tailscale/tailscale-android/raw/main/metadata/en-US/images/icon.png
     <<: *fdroid
 
   - pkg_name: dev.bg.jetbird
-    icon_url: https://codeberg.org/bg443/JetBird/raw/branch/master/fastlane/metadata/android/en-US/images/icon.png
     <<: *fdroid
 
   - pkg_name: li.songe.gkd
@@ -225,5 +216,4 @@ packages:
     download_jq: .assets[] | select(.name | contains("arm64-v8a.apk")) | .browser_download_url
 
   - pkg_name: me.zhanghai.android.files
-    icon_url: https://github.com/zhanghai/MaterialFiles/raw/master/fastlane/metadata/android/en-US/images/icon.png
     <<: *fdroid
