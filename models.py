@@ -58,9 +58,16 @@ class FdroidPackageVersion:
     manifest: FdroidPackageManifest
 
 @dataclass
+class IconInfo:
+    name: str
+    sha256: str
+    size: int
+
+@dataclass
 class FdroidPackageMetadata:
     summary: dict[str, str] | None
     description: dict[str, str] | None
+    icon: dict[str, IconInfo] | None
 
 @dataclass
 class FdroidPackage:

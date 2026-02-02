@@ -223,10 +223,6 @@ def download_packages():
 
     metadata_dir.mkdir(parents=True, exist_ok=True)
     for pkg in repo.packages:
-        new_icon_file = metadata_dir / f"{pkg.pkg_name}/en-US/images/icon.png"
-        new_icon_file.parent.mkdir(parents=True, exist_ok=True)
-        new_icon_file.write_bytes(get_data_from_url(pkg.icon_url).content)
-
         metadata_file = metadata_dir / f"{pkg.pkg_name}.yml"
         metadata = dict()
         if pkg.metadata_url:
@@ -248,6 +244,11 @@ def download_packages():
                     metadata["Description"] = data.description.get(
                         "en-US", data.description
                     )
+                if not pkg.icon_url or data.icon:
+                    icon_info = data.icon.get("en-US") or list(pkg.icon.values())[0]
+                    if icon_info:
+                        base_url = pkg.info_url[:-len("/index-v2.json")]
+                        pkg.icon_url = base_url + icon_info.name
         if pkg.metadata:
             metadata = {**metadata, **pkg.metadata}
         metadata = {
@@ -258,6 +259,10 @@ def download_packages():
         metadata["Categories"].append(repo.config.repo_name)
         if metadata.get("Name") is None and metadata.get("AutoName") is not None:
             metadata["Name"] = metadata["AutoName"]
+
+        new_icon_file = metadata_dir / f"{pkg.pkg_name}/en-US/images/icon.png"
+        new_icon_file.parent.mkdir(parents=True, exist_ok=True)
+        new_icon_file.write_bytes(get_data_from_url(pkg.icon_url).content)
 
         metadata_file.write_text(yaml.safe_dump(metadata, sort_keys=False))
         logging.info(f"Processed metadata for {pkg.pkg_name}")
