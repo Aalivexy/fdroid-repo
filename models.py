@@ -33,7 +33,7 @@ class PackageMetadata:
 @dataclass
 class Package:
     pkg_name: str
-    icon_url: str
+    icon_url: str | None
     metadata_url: str | None
     metadata: dict | None
     info_url: str
