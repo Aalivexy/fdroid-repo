@@ -13,8 +13,8 @@ config:
 .fdroid: &fdroid
   metadata_url: https://gitlab.com/fdroid/fdroiddata/-/raw/master/metadata/$PKG_NAME.yml
   info_url: https://mirrors.tuna.tsinghua.edu.cn/fdroid/repo/index-v2.json
-  version_jq: .packages."$PKG_NAME".versions | to_entries | map(select((.value.releaseChannels // [] | any(. == "Beta")) | not)) | sort_by(.value.manifest.versionCode) | reverse | .[0].value.manifest.versionName
-  download_jq: .packages."$PKG_NAME".versions | to_entries | map(select((.value.releaseChannels // [] | any(. == "Beta")) | not)) | sort_by(.value.manifest.versionCode) | reverse | .[0].value.file.name as $filename | "https://mirrors.tuna.tsinghua.edu.cn/fdroid/repo" + $filename
+  version_jq: .packages."$PKG_NAME".versions | to_entries | map(select((.value.releaseChannels // [] | any(. == "Beta")) | not)) | map(select(.value.manifest.nativecode == null or (.value.manifest.nativecode | any(. == "arm64-v8a")))) | sort_by(.value.manifest.versionCode) | reverse | .[0].value.manifest.versionName
+  download_jq: .packages."$PKG_NAME".versions | to_entries | map(select((.value.releaseChannels // [] | any(. == "Beta")) | not)) | map(select(.value.manifest.nativecode == null or (.value.manifest.nativecode | any(. == "arm64-v8a")))) | sort_by(.value.manifest.versionCode) | reverse | .[0].value.file.name as $filename | "https://mirrors.tuna.tsinghua.edu.cn/fdroid/repo" + $filename
 
 packages:
   - pkg_name: com.x8bit.bitwarden
@@ -95,6 +95,10 @@ packages:
 
   - pkg_name: com.tailscale.ipn
     icon_url: https://github.com/tailscale/tailscale-android/raw/main/metadata/en-US/images/icon.png
+    <<: *fdroid
+
+  - pkg_name: dev.bg.jetbird
+    icon_url: https://codeberg.org/bg443/JetBird/raw/branch/master/fastlane/metadata/android/en-US/images/icon.png
     <<: *fdroid
 
   - pkg_name: li.songe.gkd
