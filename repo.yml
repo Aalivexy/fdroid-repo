@@ -55,6 +55,8 @@ packages:
     <<: *fdroid
 
   - pkg_name: com.seafile.seadroid2
+    # seafile 的 fdroid 缺少 icon
+    icon_url: https://github.com/haiwen/seadroid/raw/master/app/src/debug/res/mipmap-xxxhdpi/ic_launcher.png
     <<: *fdroid
 
   - pkg_name: moe.shizuku.privileged.api
