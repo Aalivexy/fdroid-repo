@@ -209,7 +209,7 @@ packages:
         * 🌐 自定义HTTP请求头和请求体
     info_url: https://api.github.com/repos/rikkahub/rikkahub/releases/latest
     version_jq: .tag_name
-    download_jq: .assets[] | select(.name | contains("arm64-v8a.apk")) | .browser_download_url
+    download_jq: .assets[] | select(.name | contains(".apk")) | .browser_download_url
 
   - pkg_name: com.termux
     icon_url: https://github.com/termux/termux-app/raw/master/fastlane/metadata/android/en-US/images/icon.png
