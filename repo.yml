@@ -16,6 +16,12 @@ config:
   version_jq: .packages."$PKG_NAME".versions | to_entries | map(select((.value.releaseChannels // [] | any(. == "Beta")) | not)) | map(select(.value.manifest.nativecode == null or (.value.manifest.nativecode | any(. == "arm64-v8a")))) | sort_by(.value.manifest.versionCode) | reverse | .[0].value.manifest.versionName
   download_jq: .packages."$PKG_NAME".versions | to_entries | map(select((.value.releaseChannels // [] | any(. == "Beta")) | not)) | map(select(.value.manifest.nativecode == null or (.value.manifest.nativecode | any(. == "arm64-v8a")))) | sort_by(.value.manifest.versionCode) | reverse | .[0].value.file.name as $filename | "https://mirrors.tuna.tsinghua.edu.cn/fdroid/repo" + $filename
 
+.IzzyOnDroid: &IzzyOnDroid
+  metadata_url: https://codeberg.org/IzzyOnDroid/repodata/raw/branch/main/metadata/$PKG_NAME.yml
+  info_url: https://apt.izzysoft.de/fdroid/repo/index-v2.json
+  version_jq: .packages."$PKG_NAME".versions | to_entries | map(select((.value.releaseChannels // [] | any(. == "Beta")) | not)) | map(select(.value.manifest.nativecode == null or (.value.manifest.nativecode | any(. == "arm64-v8a")))) | sort_by(.value.manifest.versionCode) | reverse | .[0].value.manifest.versionName
+  download_jq: .packages."$PKG_NAME".versions | to_entries | map(select((.value.releaseChannels // [] | any(. == "Beta")) | not)) | map(select(.value.manifest.nativecode == null or (.value.manifest.nativecode | any(. == "arm64-v8a")))) | sort_by(.value.manifest.versionCode) | reverse | .[0].value.file.name as $filename | "https://apt.izzysoft.de/fdroid/repo" + $filename
+
 packages:
   - pkg_name: com.x8bit.bitwarden
     icon_url: https://github.com/bitwarden/f-droid/raw/main/fdroid/metadata/com.x8bit.bitwarden/icon.png
@@ -88,9 +94,6 @@ packages:
     info_url: https://api.github.com/repos/RikkaApps/Shizuku/releases/latest
     version_jq: .tag_name
     download_jq: .assets[] | select(.name | contains("release.apk")) | .browser_download_url
-
-  - pkg_name: com.tailscale.ipn
-    <<: *fdroid
 
   - pkg_name: dev.bg.jetbird
     <<: *fdroid
@@ -220,3 +223,6 @@ packages:
 
   - pkg_name: me.zhanghai.android.files
     <<: *fdroid
+
+  - pkg_name: me.weishu.kernelsu
+    <<: *IzzyOnDroid
