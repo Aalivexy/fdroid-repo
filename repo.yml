@@ -66,34 +66,7 @@ packages:
     <<: *fdroid
 
   - pkg_name: moe.shizuku.privileged.api
-    icon_url: https://github.com/RikkaApps/Shizuku/raw/master/manager/src/main/res/mipmap-xxxhdpi/ic_launcher.png
-    metadata:
-      Categories:
-        - System
-      AuthorName: RikkaApps
-      License: Apache-2.0
-      Name: Shizuku
-      WebSite: https://shizuku.rikka.app
-      SourceCode: https://github.com/RikkaApps/Shizuku
-      IssueTracker: https://github.com/RikkaApps/Shizuku/issues
-      Changelog: https://github.com/RikkaApps/Shizuku/releases
-      Summary: Using system APIs directly with adb/root privileges from normal apps through a Java process started with app_process.
-      Description: |
-        When developing apps that requires root, the most common method is to run some commands in the su shell. For example, there is app uses pm enable/disable command to enable/disable components. This method has very big disadvantages:
-
-        * Extremely slow (Multiple process creation)
-        * Needs to process texts (Super unreliable)
-        * The possibility is limited to available commands
-        * Even if adb has sufficient permissions, the app requires root privileges to run
-
-        Shizuku uses a completely different way. The most important feature Shizuku provides is something like be a middle man to receive requests from the app, sent to the system server, and send back the results. To the app, it is almost identical to the use system APIs directly. But it's much faster as it hooks into the system directly.
-
-        Several apps already use Shizuku. If you want to integrate it with yours, take a look at the Developer guide. For users, there's also a User guide.
-      AntiFeatures:
-        - UpstreamNonFree
-    info_url: https://api.github.com/repos/RikkaApps/Shizuku/releases/latest
-    version_jq: .tag_name
-    download_jq: .assets[] | select(.name | contains("release.apk")) | .browser_download_url
+    <<: *IzzyOnDroid
 
   - pkg_name: dev.bg.jetbird
     <<: *fdroid
@@ -122,26 +95,7 @@ packages:
     download_jq: .assets[] | select(.name | contains(".apk")) | .browser_download_url
   
   - pkg_name: com.perol.pixez
-    icon_url: https://github.com/Notsfsssf/pixez-flutter/raw/master/assets/images/icon.png
-    metadata:
-      Categories:
-        - Graphics
-        - Internet
-        - Multimedia
-      AuthorName: Perol_Notsfsssf
-      License: GPL-3.0
-      Name: PixEz Flutter
-      SourceCode: https://github.com/Notsfsssf/pixez-flutter
-      IssueTracker: https://github.com/Notsfsssf/pixez-flutter/issues
-      Changelog: https://github.com/Notsfsssf/pixez-flutter/releases
-      Summary: 一个支持免代理直连及查看动图的第三方Pixiv flutter客户端
-      Description: |
-        🎵 Mili - In Hell We Live, Lament 🎵
-      AntiFeatures:
-        - NonFreeNet
-    info_url: https://api.github.com/repos/Notsfsssf/pixez-flutter/releases/latest
-    version_jq: .tag_name
-    download_jq: .assets[] | select(.name | contains("arm64-v8a-release.apk")) | .browser_download_url
+    <<: *IzzyOnDroid
 
   - pkg_name: io.github.vvb2060.packageinstaller
     icon_url: https://cnb.cool/aalivexy/fdroid-repo/-/imgs/HnAcIFfRzyilTBJTlXqCuB/2fba6d2a-6c21-4a87-958f-bf51853f5191.png
