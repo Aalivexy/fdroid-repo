@@ -32,4 +32,4 @@ main:
             git commit -m "Update fdroid branch"
             git push --force origin fdroid
 
-  "crontab: 0 4,16 * * *": *web_trigger_update
+  # "crontab: 0 4,16 * * *": *web_trigger_update
