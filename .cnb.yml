@@ -27,7 +27,7 @@ main:
             cd "$workdir"
 
             git remote add github https://github.com/Aalivexy/fdroid-repo.git
-            git fetch --depth=1 github fdroid
+            git fetch github fdroid
             git checkout -B fdroid FETCH_HEAD
 
             git config user.name "Cloud Native Build"
