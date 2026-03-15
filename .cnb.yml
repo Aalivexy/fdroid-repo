@@ -6,8 +6,22 @@ main:
       stages:
         - name: Sync fdroid branch
           script: |
+            github_index_url="https://github.com/Aalivexy/fdroid-repo/raw/refs/heads/fdroid/repo/index-v2.json"
+            cnb_index_url="https://cnb.cool/aalivexy/fdroid-repo/-/git/raw/fdroid/repo/index-v2.json"
+            github_index_file="$(mktemp)"
+            cnb_index_file="$(mktemp)"
             workdir="$(mktemp -d)"
-            trap 'rm -rf "$workdir"' EXIT
+            trap 'rm -f "$github_index_file" "$cnb_index_file"; rm -rf "$workdir"' EXIT
+
+            curl -fsSL "$github_index_url" -o "$github_index_file"
+            if curl -fsSL "$cnb_index_url" -o "$cnb_index_file"; then
+              if cmp -s "$github_index_file" "$cnb_index_file"; then
+                echo "GitHub and CNB fdroid indexes are identical, skipping sync"
+                exit 0
+              fi
+            else
+              echo "CNB fdroid index not found or unreadable, continuing with sync"
+            fi
 
             git init --initial-branch=fdroid "$workdir"
             cd "$workdir"
