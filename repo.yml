@@ -11,24 +11,14 @@ config:
   keydname: $keydname
 
 .fdroid: &fdroid
-  metadata_url: https://gitlab.com/fdroid/fdroiddata/-/raw/master/metadata/$PKG_NAME.yml
   info_url: https://mirrors.tuna.tsinghua.edu.cn/fdroid/repo/index-v2.json
-  version_jq: .packages."$PKG_NAME".versions | to_entries | map(select((.value.releaseChannels // [] | any(. == "Beta")) | not)) | map(select(.value.manifest.nativecode == null or (.value.manifest.nativecode | any(. == "arm64-v8a")))) | sort_by(.value.manifest.versionCode) | reverse | .[0].value.manifest.versionName
-  download_jq: .packages."$PKG_NAME".versions | to_entries | map(select((.value.releaseChannels // [] | any(. == "Beta")) | not)) | map(select(.value.manifest.nativecode == null or (.value.manifest.nativecode | any(. == "arm64-v8a")))) | sort_by(.value.manifest.versionCode) | reverse | .[0].value.file.name as $filename | "https://mirrors.tuna.tsinghua.edu.cn/fdroid/repo" + $filename
 
 .IzzyOnDroid: &IzzyOnDroid
-  metadata_url: https://codeberg.org/IzzyOnDroid/repodata/raw/branch/main/metadata/$PKG_NAME.yml
   info_url: https://apt.izzysoft.de/fdroid/repo/index-v2.json
-  version_jq: .packages."$PKG_NAME".versions | to_entries | map(select((.value.releaseChannels // [] | any(. == "Beta")) | not)) | map(select(.value.manifest.nativecode == null or (.value.manifest.nativecode | any(. == "arm64-v8a")))) | sort_by(.value.manifest.versionCode) | reverse | .[0].value.manifest.versionName
-  download_jq: .packages."$PKG_NAME".versions | to_entries | map(select((.value.releaseChannels // [] | any(. == "Beta")) | not)) | map(select(.value.manifest.nativecode == null or (.value.manifest.nativecode | any(. == "arm64-v8a")))) | sort_by(.value.manifest.versionCode) | reverse | .[0].value.file.name as $filename | "https://apt.izzysoft.de/fdroid/repo" + $filename
 
 packages:
   - pkg_name: com.x8bit.bitwarden
-    icon_url: https://github.com/bitwarden/f-droid/raw/main/fdroid/metadata/com.x8bit.bitwarden/icon.png
-    metadata_url: https://github.com/bitwarden/f-droid/raw/main/fdroid/metadata/com.x8bit.bitwarden.yml
     info_url: https://github.com/bitwarden/f-droid/raw/main/fdroid/repo/index-v2.json
-    version_jq: .packages."$PKG_NAME".versions | to_entries | sort_by(.value.manifest.versionCode) | reverse | .[0].value.manifest.versionName
-    download_jq: .packages."$PKG_NAME".versions | to_entries | sort_by(.value.manifest.versionCode) | reverse | .[0].value.file.name as $filename | "https://github.com/bitwarden/f-droid/raw/main/fdroid/repo" + $filename
 
   - pkg_name: com.looker.droidify
     <<: *fdroid
@@ -61,7 +51,6 @@ packages:
     <<: *fdroid
 
   - pkg_name: com.seafile.seadroid2
-    # seafile 的 fdroid 缺少 icon
     icon_url: https://github.com/haiwen/seadroid/raw/master/app/src/debug/res/mipmap-xxxhdpi/ic_launcher.png
     <<: *fdroid
 
@@ -93,7 +82,7 @@ packages:
     info_url: https://api.github.com/repos/gkd-kit/gkd/releases/latest
     version_jq: .tag_name
     download_jq: .assets[] | select(.name | contains(".apk")) | .browser_download_url
-  
+
   - pkg_name: com.perol.pixez
     <<: *IzzyOnDroid
 

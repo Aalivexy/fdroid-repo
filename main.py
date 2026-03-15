@@ -9,7 +9,7 @@ import base64
 import logging
 from pathlib import Path
 from dacite import from_dict
-from models import Package, RepoConfig, RepoData, FdroidIndexV2
+from models import Package, RepoConfig, RepoData, FdroidIndexV2, FdroidPackageVersion
 
 logging.basicConfig(
     level=logging.INFO,
@@ -50,6 +50,18 @@ def normalize_version(version: str | int | float) -> str:
     return version_str[1:] if version_str.startswith("v") else version_str
 
 
+def get_source_type(info_url: str) -> str:
+    if info_url.endswith("index-v2.json"):
+        return "fdroid"
+    return "custom"
+
+
+def get_localized_text(text_dict: dict | None, default: str = "") -> str:
+    if not text_dict:
+        return default
+    return text_dict.get("en-US") or list(text_dict.values())[0] or default
+
+
 def get_current_repo() -> FdroidIndexV2 | None:
     url = f"{repo.config.repo_url}/index-v2.json"
     try:
@@ -61,39 +73,81 @@ def get_current_repo() -> FdroidIndexV2 | None:
         return None
 
 
+def filter_fdroid_versions(versions: dict[str, FdroidPackageVersion]) -> list[FdroidPackageVersion]:
+    filtered = []
+    for version in versions.values():
+        release_channels = version.releaseChannels or []
+        if "Beta" in release_channels:
+            continue
+
+        nativecode = version.manifest.nativecode
+        if nativecode is None or "arm64-v8a" in nativecode:
+            filtered.append(version)
+
+    filtered.sort(key=lambda v: v.manifest.versionCode, reverse=True)
+    return filtered
+
+
+def get_package_info_from_fdroid(data: dict, pkg: Package) -> tuple[str, str]:
+    fdroid = from_dict(FdroidIndexV2, data)
+
+    if pkg.pkg_name not in fdroid.packages:
+        logging.error(f"Package {pkg.pkg_name} not found in index-v2.json")
+        sys.exit(1)
+
+    package = fdroid.packages[pkg.pkg_name]
+    versions = filter_fdroid_versions(package.versions)
+
+    if not versions:
+        logging.error(f"No suitable versions found for {pkg.pkg_name}")
+        sys.exit(1)
+
+    latest = versions[0]
+    version = normalize_version(latest.manifest.versionName)
+
+    # 拼接下载链接
+    base_url = pkg.info_url[:-len("/index-v2.json")]
+    download = base_url + latest.file.name
+
+    return version, download
+
+
 def get_package_info(pkg: Package) -> tuple[str, str]:
-    data = None
+    source_type = get_source_type(pkg.info_url)
+
     try:
         response = get_data_from_url(pkg.info_url)
-        if not response:
-            logging.error(f"Failed to fetch data from {pkg.info_url}")
-            sys.exit(1)
-
         data = response.json()
 
-        version = (
-            jq.compile(pkg.version_jq.replace("$PKG_NAME", pkg.pkg_name))
-            .input_value(data)
-            .first()
-        )
-        if not version:
-            logging.error(f"Failed to extract version from {pkg.info_url}")
-            sys.exit(1)
+        if source_type == "fdroid":
+            return get_package_info_from_fdroid(data, pkg)
+        else:
+            if not pkg.version_jq or not pkg.download_jq:
+                logging.error(f"version_jq and download_jq are required for custom source: {pkg.info_url}")
+                sys.exit(1)
 
-        download = (
-            jq.compile(pkg.download_jq.replace("$PKG_NAME", pkg.pkg_name))
-            .input_value(data)
-            .first()
-        )
-        if not download:
-            logging.error(f"Failed to extract download URL from {pkg.info_url}")
-            sys.exit(1)
+            version = (
+                jq.compile(pkg.version_jq.replace("$PKG_NAME", pkg.pkg_name))
+                .input_value(data)
+                .first()
+            )
+            if not version:
+                logging.error(f"Failed to extract version from {pkg.info_url}")
+                sys.exit(1)
 
-        return normalize_version(version), download
+            download = (
+                jq.compile(pkg.download_jq.replace("$PKG_NAME", pkg.pkg_name))
+                .input_value(data)
+                .first()
+            )
+            if not download:
+                logging.error(f"Failed to extract download URL from {pkg.info_url}")
+                sys.exit(1)
+
+            return normalize_version(version), download
 
     except Exception as e:
         logging.error(f"Failed to fetch package info from {pkg.info_url}: {e}")
-        logging.info(f"{pkg.info_url} data: {data}")
         sys.exit(1)
 
 
@@ -224,39 +278,63 @@ def download_packages():
     metadata_dir.mkdir(parents=True, exist_ok=True)
     for pkg in repo.packages:
         metadata_file = metadata_dir / f"{pkg.pkg_name}.yml"
-        metadata = dict()
-        if pkg.metadata_url:
-            metadata = {
-                **metadata,
-                **yaml.safe_load(
-                    get_data_from_url(
-                        pkg.metadata_url.replace("$PKG_NAME", pkg.pkg_name)
-                    ).content
-                ),
-            }
-        if pkg.info_url.endswith("index-v2.json"):
-            fdroid = from_dict(FdroidIndexV2, get_data_from_url(pkg.info_url).json())
-            if fdroid.packages.get(pkg.pkg_name):
-                data = fdroid.packages[pkg.pkg_name].metadata
-                if not metadata.get("Summary") and data.summary:
-                    metadata["Summary"] = data.summary.get("en-US", data.summary)
-                if not metadata.get("Description") and data.description:
-                    metadata["Description"] = data.description.get(
-                        "en-US", data.description
-                    )
-                if not pkg.icon_url and data.icon:
-                    icon_info = data.icon.get("en-US") or list(data.icon.values())[0]
+        metadata = {}
+        source_type = get_source_type(pkg.info_url)
+
+        if source_type == "fdroid":
+            response = get_data_from_url(pkg.info_url)
+            fdroid = from_dict(FdroidIndexV2, response.json())
+
+            if pkg.pkg_name in fdroid.packages:
+                pkg_metadata = fdroid.packages[pkg.pkg_name].metadata
+                metadata = {
+                    "Name": get_localized_text(pkg_metadata.name),
+                    "Summary": get_localized_text(pkg_metadata.summary),
+                    "Description": get_localized_text(pkg_metadata.description),
+                    "AuthorName": pkg_metadata.authorName,
+                    "AuthorEmail": pkg_metadata.authorEmail,
+                    "AuthorWebSite": pkg_metadata.authorWebSite,
+                    "WebSite": pkg_metadata.webSite,
+                    "SourceCode": pkg_metadata.sourceCode,
+                    "Changelog": pkg_metadata.changelog,
+                    "IssueTracker": pkg_metadata.issueTracker,
+                    "License": pkg_metadata.license,
+                    "Categories": pkg_metadata.categories or [],
+                    "Donate": pkg_metadata.donate,
+                    "Translation": pkg_metadata.translation,
+                }
+                # 自动提取 icon_url（如果没提供且存在）
+                if not pkg.icon_url and pkg_metadata.icon:
+                    icon_info = pkg_metadata.icon.get("en-US") or list(pkg_metadata.icon.values())[0]
                     if icon_info:
                         base_url = pkg.info_url[:-len("/index-v2.json")]
                         pkg.icon_url = base_url + icon_info.name
+
+        # 从 metadata_url 获取（用于覆盖/补充）
+        if pkg.metadata_url:
+            url_metadata = yaml.safe_load(
+                get_data_from_url(pkg.metadata_url.replace("$PKG_NAME", pkg.pkg_name)).content
+            )
+            metadata = {**metadata, **url_metadata}
+
+        # 手动指定的 metadata（优先级最高）
         if pkg.metadata:
             metadata = {**metadata, **pkg.metadata}
+
+        # 过滤无效字段
         metadata = {
             k: v
             for k, v in metadata.items()
             if k not in banned_keys and v is not None and v != ""
         }
-        metadata["Categories"].append(repo.config.repo_name)
+
+        # 添加仓库名到分类
+        if "Categories" in metadata:
+            if repo.config.repo_name not in metadata["Categories"]:
+                metadata["Categories"].append(repo.config.repo_name)
+        else:
+            metadata["Categories"] = [repo.config.repo_name]
+
         if metadata.get("Name") is None and metadata.get("AutoName") is not None:
             metadata["Name"] = metadata["AutoName"]
 

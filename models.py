@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 
 @dataclass
@@ -15,30 +15,14 @@ class RepoConfig:
 
 
 @dataclass
-class PackageMetadataOverride:
-    Name: str
-    AuthorName: str
-    License: str
-    SourceCode: str
-    Categories: list[str]
-
-
-@dataclass
-class PackageMetadata:
-    icon_url: str
-    url: str | None = None
-    override: PackageMetadataOverride | None = None
-
-
-@dataclass
 class Package:
     pkg_name: str
-    icon_url: str | None
-    metadata_url: str | None
-    metadata: dict | None
     info_url: str
-    version_jq: str
-    download_jq: str
+    icon_url: str | None = None
+    metadata_url: str | None = None
+    metadata: dict | None = None
+    version_jq: str | None = None
+    download_jq: str | None = None
 
 
 @dataclass
@@ -51,11 +35,22 @@ class RepoData:
 class FdroidPackageManifest:
     versionName: str
     versionCode: int
+    nativecode: list[str] | None = None
+
+
+@dataclass
+class FdroidPackageFile:
+    name: str
+    sha256: str
+    size: int
 
 
 @dataclass
 class FdroidPackageVersion:
+    file: FdroidPackageFile
     manifest: FdroidPackageManifest
+    releaseChannels: list[str] | None = None
+
 
 @dataclass
 class IconInfo:
@@ -63,18 +58,32 @@ class IconInfo:
     sha256: str
     size: int
 
+
 @dataclass
 class FdroidPackageMetadata:
-    summary: dict[str, str] | None
-    description: dict[str, str] | None
-    icon: dict[str, IconInfo] | None
+    name: dict[str, str] | None = None
+    summary: dict[str, str] | None = None
+    description: dict[str, str] | None = None
+    icon: dict[str, IconInfo] | None = None
+    authorName: str | None = None
+    authorEmail: str | None = None
+    authorWebSite: str | None = None
+    webSite: str | None = None
+    sourceCode: str | None = None
+    changelog: str | None = None
+    issueTracker: str | None = None
+    license: str | None = None
+    categories: list[str] | None = None
+    donate: list[str] | None = None
+    translation: str | None = None
+
 
 @dataclass
 class FdroidPackage:
     metadata: FdroidPackageMetadata
-    versions: dict[str, FdroidPackageVersion]
+    versions: dict[str, FdroidPackageVersion] = field(default_factory=dict)
 
 
 @dataclass
 class FdroidIndexV2:
-    packages: dict[str, FdroidPackage]
+    packages: dict[str, FdroidPackage] = field(default_factory=dict)
