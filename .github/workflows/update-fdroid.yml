@@ -72,9 +72,9 @@ jobs:
           git remote add github "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
           git push github fdroid --force
 
-          if [ -n "${{ secrets.CNB_TOKEN_USER_NAME }}" ] && [ -n "${{ secrets.CNB_TOKEN }}" ]; then
+          if [ -n "${{ secrets.CNB_TOKEN }}" ]; then
             git remote add cnb "https://cnb:${{ secrets.CNB_TOKEN }}@cnb.cool/aalivexy/fdroid-repo.git"
             git push cnb fdroid --force
           else
-            echo "CNB credentials are not configured, skipping CNB push"
+            echo "CNB token is not configured, skipping CNB push"
           fi
