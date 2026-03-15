@@ -12,6 +12,7 @@ main:
         UV_LINK_MODE: copy
         UV_UNMANAGED_INSTALL: /usr/bin
         UV_CACHE_DIR: /cache
+        UV_INSTALLER_GITHUB_BASE_URL: https://github.com
       stages:
         - name: Install astral-sh/uv
           script: curl -LsSf https://astral.sh/uv/install.sh | sh
