@@ -2,6 +2,12 @@ name: Update F-Droid Branch
 
 on:
   workflow_dispatch:
+    inputs:
+      rebuild:
+        description: Force rebuild even if no updates are detected
+        required: false
+        default: "false"
+        type: boolean
   schedule:
     - cron: "0 8,20 * * *"
 
@@ -29,10 +35,8 @@ jobs:
         uses: android-actions/setup-android@v3
         with:
           packages: >-
-            tools
             platform-tools
             build-tools;36.0.0
-            platforms;android-36
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -50,6 +54,7 @@ jobs:
       - name: Check for updates
         env:
           GH_API_TOKEN: ${{ secrets.GH_API_TOKEN }}
+          REBUILD: ${{ github.event.inputs.rebuild == 'true' && '1' || '' }}
           repo_keyalias: ${{ secrets.REPO_KEYALIAS }}
           keystore: ${{ secrets.KEYSTORE }}
           keystorepass: ${{ secrets.KEYSTOREPASS }}
@@ -71,10 +76,3 @@ jobs:
 
           git remote add github "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
           git push github fdroid --force
-
-          if [ -n "${{ secrets.CNB_TOKEN }}" ]; then
-            git remote add cnb "https://cnb:${{ secrets.CNB_TOKEN }}@cnb.cool/aalivexy/fdroid-repo.git"
-            git push cnb fdroid --force
-          else
-            echo "CNB token is not configured, skipping CNB push"
-          fi

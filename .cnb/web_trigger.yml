@@ -3,8 +3,8 @@ branch:
       - name: Update
         description: Update fdroid branch
         event: web_trigger_update
-      - name: Force Update
-        description: Force update fdroid branch
-        event: web_trigger_update
-        env:
-          REBUILD: 1
+      # - name: Force Update
+      #   description: Force update fdroid branch
+      #   event: web_trigger_update
+      #   env:
+      #     REBUILD: 1

@@ -199,7 +199,7 @@ def get_data_from_url(
 
 
 def check_for_updates() -> bool:
-    if os.environ.get("REBUILD"):
+    if os.environ.get("REBUILD") == "1":
         logging.info("REBUILD environment variable found, forcing update")
         return True
 

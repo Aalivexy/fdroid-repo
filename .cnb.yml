@@ -1,35 +1,55 @@
 main:
   web_trigger_update: &web_trigger_update
-    - name: Update fdroid branch
+    - name: Sync fdroid branch from GitHub
       runner:
         cpus: 2
-      docker:
-        image: mobiledevops/android-sdk-image:34.0.1
-        volumes:
-          - /cache:cow
-      imports: "https://cnb.cool/aalivexy/fdroid-env/-/blob/main/env.yml"
-      env:
-        UV_LINK_MODE: copy
-        UV_UNMANAGED_INSTALL: /usr/bin
-        UV_CACHE_DIR: /cache
-        UV_INSTALLER_GITHUB_BASE_URL: https://github.com
       stages:
-        - name: Install astral-sh/uv
-          script: curl -LsSf https://astral.sh/uv/install.sh | sh
-        - name: Install dependencies
-          script: uv sync
-        - name: Check for updates
-          script: uv run main.py
-        - name: Update fdroid branch
-          if: '[ -d "fdroid" ]'
+        - name: Sync fdroid branch
           script: |
-            cd fdroid
-            git config --global user.name "Cloud Native Build"
-            git config --global user.email "cnb@cnb.cool"
-            git init --initial-branch=fdroid
-            git remote add origin https://${CNB_TOKEN_USER_NAME}:${CNB_TOKEN}@cnb.cool/aalivexy/fdroid-repo.git
-            git add repo/
-            git commit -m "Update fdroid branch"
-            git push --force origin fdroid
+            workdir="$(mktemp -d)"
+            trap 'rm -rf "$workdir"' EXIT
 
-  # "crontab: 0 4,16 * * *": *web_trigger_update
+            git init --initial-branch=fdroid "$workdir"
+            cd "$workdir"
+
+            git remote add github https://github.com/Aalivexy/fdroid-repo.git
+            git fetch --depth=1 github fdroid
+            git checkout -B fdroid FETCH_HEAD
+
+            git config user.name "Cloud Native Build"
+            git config user.email "cnb@cnb.cool"
+            git remote add origin https://cnb:${CNB_TOKEN}@cnb.cool/aalivexy/fdroid-repo.git
+            git push --force origin fdroid
+    # - name: Update fdroid branch
+    #   runner:
+    #     cpus: 2
+    #   docker:
+    #     image: mobiledevops/android-sdk-image:34.0.1
+    #     volumes:
+    #       - /cache:cow
+    #   imports: "https://cnb.cool/aalivexy/fdroid-env/-/blob/main/env.yml"
+    #   env:
+    #     UV_LINK_MODE: copy
+    #     UV_UNMANAGED_INSTALL: /usr/bin
+    #     UV_CACHE_DIR: /cache
+    #     UV_INSTALLER_GITHUB_BASE_URL: https://github.com
+    #   stages:
+    #     - name: Install astral-sh/uv
+    #       script: curl -LsSf https://astral.sh/uv/install.sh | sh
+    #     - name: Install dependencies
+    #       script: uv sync
+    #     - name: Check for updates
+    #       script: uv run main.py
+    #     - name: Update fdroid branch
+    #       if: '[ -d "fdroid" ]'
+    #       script: |
+    #         cd fdroid
+    #         git config --global user.name "Cloud Native Build"
+    #         git config --global user.email "cnb@cnb.cool"
+    #         git init --initial-branch=fdroid
+    #         git remote add origin https://${CNB_TOKEN_USER_NAME}:${CNB_TOKEN}@cnb.cool/aalivexy/fdroid-repo.git
+    #         git add repo/
+    #         git commit -m "Update fdroid branch"
+    #         git push --force origin fdroid
+
+  "crontab: 0 5,17 * * *": *web_trigger_update
