@@ -1,0 +1,80 @@
+name: Update F-Droid Branch
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 8,20 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-fdroid-branch
+  cancel-in-progress: false
+
+jobs:
+  update-fdroid-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Set up Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+        with:
+          packages: >-
+            tools
+            platform-tools
+            build-tools;36.0.0
+            platforms;android-36
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: .python-version
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Check for updates
+        env:
+          GH_API_TOKEN: ${{ secrets.GH_API_TOKEN }}
+          repo_keyalias: ${{ secrets.REPO_KEYALIAS }}
+          keystore: ${{ secrets.KEYSTORE }}
+          keystorepass: ${{ secrets.KEYSTOREPASS }}
+          keypass: ${{ secrets.KEYPASS }}
+          keydname: ${{ secrets.KEYDNAME }}
+          keycontent: ${{ secrets.KEYCONTENT }}
+        run: uv run main.py
+
+      - name: Publish fdroid branch
+        if: hashFiles('fdroid/repo/**') != ''
+        run: |
+          cd fdroid
+          rm -rf .git
+          git init --initial-branch=fdroid
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add repo/
+          git commit -m "Update fdroid branch"
+
+          git remote add github "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          git push github fdroid --force
+
+          if [ -n "${{ secrets.CNB_TOKEN_USER_NAME }}" ] && [ -n "${{ secrets.CNB_TOKEN }}" ]; then
+            git remote add cnb "https://cnb:${{ secrets.CNB_TOKEN }}@cnb.cool/aalivexy/fdroid-repo.git"
+            git push cnb fdroid --force
+          else
+            echo "CNB credentials are not configured, skipping CNB push"
+          fi

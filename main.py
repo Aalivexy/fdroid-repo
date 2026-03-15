@@ -169,7 +169,7 @@ def get_data_from_url(
         or url.startswith("https://raw.githubusercontent.com/")
         or url.startswith("https://github.com/")
     ):
-        github_token = os.environ.get("GITHUB_TOKEN")
+        github_token = os.environ.get("GH_API_TOKEN")
         if github_token:
             headers["Authorization"] = f"Bearer {github_token}"
 
