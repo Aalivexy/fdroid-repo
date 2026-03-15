@@ -180,3 +180,6 @@ packages:
 
   - pkg_name: me.weishu.kernelsu
     <<: *IzzyOnDroid
+
+  - pkg_name: org.frknkrc44.hma_oss
+    <<: *IzzyOnDroid
