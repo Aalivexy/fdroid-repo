@@ -59,7 +59,12 @@ def get_source_type(info_url: str) -> str:
 def get_localized_text(text_dict: dict | None, default: str = "") -> str:
     if not text_dict:
         return default
-    return text_dict.get("en-US") or list(text_dict.values())[0] or default
+
+    return (
+        text_dict.get("zh-CN")
+        or text_dict.get("en-US")
+        or next((value for value in text_dict.values() if value), default)
+    )
 
 
 def get_current_repo() -> FdroidIndexV2 | None:
@@ -73,7 +78,9 @@ def get_current_repo() -> FdroidIndexV2 | None:
         return None
 
 
-def filter_fdroid_versions(versions: dict[str, FdroidPackageVersion]) -> list[FdroidPackageVersion]:
+def filter_fdroid_versions(
+    versions: dict[str, FdroidPackageVersion],
+) -> list[FdroidPackageVersion]:
     filtered = []
     for version in versions.values():
         release_channels = version.releaseChannels or []
@@ -105,8 +112,7 @@ def get_package_info_from_fdroid(data: dict, pkg: Package) -> tuple[str, str]:
     latest = versions[0]
     version = normalize_version(latest.manifest.versionName)
 
-    # 拼接下载链接
-    base_url = pkg.info_url[:-len("/index-v2.json")]
+    base_url = pkg.info_url[: -len("/index-v2.json")]
     download = base_url + latest.file.name
 
     return version, download
@@ -123,7 +129,9 @@ def get_package_info(pkg: Package) -> tuple[str, str]:
             return get_package_info_from_fdroid(data, pkg)
         else:
             if not pkg.version_jq or not pkg.download_jq:
-                logging.error(f"version_jq and download_jq are required for custom source: {pkg.info_url}")
+                logging.error(
+                    f"version_jq and download_jq are required for custom source: {pkg.info_url}"
+                )
                 sys.exit(1)
 
             version = (
@@ -300,20 +308,25 @@ def download_packages():
                     "IssueTracker": pkg_metadata.issueTracker,
                     "License": pkg_metadata.license,
                     "Categories": pkg_metadata.categories or [],
-                    "Donate": pkg_metadata.donate,
+                    "Donate": (pkg_metadata.donate[0] if pkg_metadata.donate else None),
                     "Translation": pkg_metadata.translation,
                 }
                 # 自动提取 icon_url（如果没提供且存在）
                 if not pkg.icon_url and pkg_metadata.icon:
-                    icon_info = pkg_metadata.icon.get("en-US") or list(pkg_metadata.icon.values())[0]
+                    icon_info = (
+                        pkg_metadata.icon.get("en-US")
+                        or list(pkg_metadata.icon.values())[0]
+                    )
                     if icon_info:
-                        base_url = pkg.info_url[:-len("/index-v2.json")]
+                        base_url = pkg.info_url[: -len("/index-v2.json")]
                         pkg.icon_url = base_url + icon_info.name
 
         # 从 metadata_url 获取（用于覆盖/补充）
         if pkg.metadata_url:
             url_metadata = yaml.safe_load(
-                get_data_from_url(pkg.metadata_url.replace("$PKG_NAME", pkg.pkg_name)).content
+                get_data_from_url(
+                    pkg.metadata_url.replace("$PKG_NAME", pkg.pkg_name)
+                ).content
             )
             metadata = {**metadata, **url_metadata}
 

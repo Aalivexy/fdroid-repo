@@ -6,8 +6,8 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "dacite>=1.9.2",
-    "fdroidserver>=2.3.5",
-    "jq>=1.8.0",
+    "fdroidserver>=2.4.3",
+    "jq>=1.11.0",
 ]
 
 [[tool.uv.index]]
