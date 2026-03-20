@@ -1,0 +1,1645 @@
+{
+  "repo": {
+    "timestamp": 1774038051000,
+    "version": 20002,
+    "name": "Aalivexy",
+    "icon": "icon.png",
+    "address": "https://aalivexy.cc/fdroid/repo",
+    "description": "Aalivexy's F-Droid Repo"
+  },
+  "requests": {
+    "install": [],
+    "uninstall": []
+  },
+  "apps": [
+    {
+      "authorName": "bitwarden",
+      "categories": [
+        "Security",
+        "Aalivexy"
+      ],
+      "suggestedVersionCode": "21345",
+      "description": "Bitwarden is the easiest and safest way to store all of your logins and passwords while conveniently keeping them synced between all of your devices.\n\nPassword theft is a serious problem. The websites and apps that you use are under attack every day. Security breaches occur and your passwords are stolen. When you reuse the same passwords across apps and websites hackers can easily access your email, bank, and other important accounts.\n\nSecurity experts recommend that you use a different, randomly generated password for every account that you create. But how do you manage all those passwords? Bitwarden makes it easy for you to create, store, and access your passwords.\n\nBitwarden stores all of your logins in an encrypted vault that syncs across all of your devices. Since it's fully encrypted before it ever leaves your device, only you have access to your data. Not even the team at Bitwarden can read your data, even if we wanted to. Your data is sealed with AES-256 bit encryption, salted hashing, and PBKDF2 SHA-256.\n\nBitwarden is focused on open source software. The source code for Bitwarden is hosted on GitHub and everyone is free to review, audit, and contribute to the Bitwarden codebase.\n",
+      "license": "GPL-3.0",
+      "name": "Bitwarden",
+      "sourceCode": "https://github.com/bitwarden/android",
+      "summary": "Bitwarden mobile app for Android.",
+      "added": 1774037946000,
+      "packageName": "com.x8bit.bitwarden",
+      "lastUpdated": 1774037946000,
+      "localized": {
+        "en-US": {
+          "icon": "icon_Dly6-w5KULd-EpRTlErXqrWp4_8krIL4HsD5tgrN28I=.png"
+        }
+      }
+    },
+    {
+      "authorEmail": "mohit2002ss@gmail.com",
+      "authorName": "Iamlooker",
+      "categories": [
+        "App Store & Updater",
+        "System",
+        "Aalivexy"
+      ],
+      "changelog": "https://github.com/Droid-ify/client/releases",
+      "suggestedVersionCode": "700",
+      "description": "Features:\n\u2022 Browse and install apps from F-Droid repositories\n\u2022 Automatic app updates in the background \n\u2022 Multiple installation methods (Session, Root, Shizuku)\n\u2022 Add custom repositories with one tap\n\u2022 Works completely offline after initial sync\n\nAvailable in 63 languages including English, German, French, Spanish, and Chinese.\n\nCopylefted libre software, licensed GPLv3+.\n",
+      "issueTracker": "https://github.com/Droid-ify/client/issues",
+      "license": "GPL-3.0-or-later",
+      "name": "Droid-ify",
+      "sourceCode": "https://github.com/Droid-ify/client",
+      "summary": "Clutterfree F-Droid client",
+      "translation": "https://hosted.weblate.org/engage/droidify/",
+      "webSite": "https://droidify.eu.org/",
+      "added": 1774037959000,
+      "packageName": "com.looker.droidify",
+      "lastUpdated": 1774037959000,
+      "localized": {
+        "en-US": {
+          "icon": "icon_lApsnfhrMqGkCaW-IdnYwx86CUjdTutncPvXPJythaM=.png"
+        }
+      }
+    },
+    {
+      "allowedAPKSigningKeys": [
+        "2859e236b6c1c6073773752678c52e8e902a9503ae9beed6729ca999c376841c"
+      ],
+      "authorName": "chen08209",
+      "categories": [
+        "Internet",
+        "Connectivity",
+        "Aalivexy"
+      ],
+      "changelog": "https://github.com/chen08209/FlClash/releases",
+      "suggestedVersionCode": "2026022201",
+      "description": "\u2708\ufe0f \u591a\u5e73\u53f0: Android, Windows, macOS and Linux\n\ud83d\udcbb \u81ea\u9002\u5e94\u591a\u4e2a\u5c4f\u5e55\u5c3a\u5bf8,\u591a\u79cd\u989c\u8272\u4e3b\u9898\u53ef\u4f9b\u9009\u62e9\n\ud83d\udca1 \u57fa\u672c Material You \u8bbe\u8ba1, \u7c7bSurfboard\u7528\u6237\u754c\u9762\n\u2601\ufe0f \u652f\u6301\u901a\u8fc7WebDAV\u540c\u6b65\u6570\u636e\n\u2728 \u652f\u6301\u4e00\u952e\u5bfc\u5165\u8ba2\u9605, \u6df1\u8272\u6a21\u5f0f\n",
+      "issueTracker": "https://github.com/chen08209/FlClash/issues",
+      "license": "GPL-3.0-or-later",
+      "name": "FlClash",
+      "sourceCode": "https://github.com/chen08209/FlClash",
+      "summary": "\u57fa\u4e8eClashMeta\u7684\u591a\u5e73\u53f0\u4ee3\u7406\u5ba2\u6237\u7aef\uff0c\u7b80\u5355\u6613\u7528\uff0c\u5f00\u6e90\u65e0\u5e7f\u544a\u3002",
+      "added": 1774037961000,
+      "packageName": "com.follow.clash",
+      "lastUpdated": 1774037961000,
+      "localized": {
+        "en-US": {
+          "icon": "icon_WEd-r8lMFUzb7RfF4hkm1NZdvmb7DZSsQI-L_YuRq7A=.png"
+        }
+      }
+    },
+    {
+      "authorName": "GKD",
+      "categories": [
+        "System",
+        "Aalivexy"
+      ],
+      "changelog": "https://github.com/gkd-kit/gkd/releases",
+      "suggestedVersionCode": "81",
+      "description": "\u57fa\u4e8e \u65e0\u969c\u788d + \u9ad8\u7ea7\u9009\u62e9\u5668 + \u8ba2\u9605\u89c4\u5219 \u7684\u81ea\u5b9a\u4e49\u5c4f\u5e55\u70b9\u51fb APP\n\u57fa\u4e8e \u9ad8\u7ea7\u9009\u62e9\u5668 + \u8ba2\u9605\u89c4\u5219 + \u5feb\u7167\u5ba1\u67e5 \u5b9e\u73b0\u6839\u636e\u5c4f\u5e55\u4e0a\u4e0b\u6587\u4fe1\u606f\u81ea\u5b9a\u4e49\u70b9\u51fb\u76ee\u6807\u63a7\u4ef6\n\n\u672c\u5e94\u7528 \u9ed8\u8ba4\u4e0d\u643a\u5e26\u4efb\u4f55\u89c4\u5219\uff0c\u9700\u81ea\u884c\u6dfb\u52a0\u672c\u5730\u89c4\u5219\uff0c\u6216\u8005\u901a\u8fc7\u8ba2\u9605\u94fe\u63a5\u7684\u65b9\u5f0f\u83b7\u53d6\u89c4\u5219\n\u4e5f\u53ef\u901a\u8fc7 subscription-template \u5feb\u901f\u6784\u5efa\u81ea\u5df1\u7684\u8fdc\u7a0b\u8ba2\u9605\n\u7b2c\u4e09\u65b9\u8ba2\u9605\u5217\u8868\u53ef\u5728 https://github.com/topics/gkd-subscription \u67e5\u770b\n",
+      "issueTracker": "https://github.com/gkd-kit/gkd/issues",
+      "license": "GPL-3.0",
+      "name": "GKD",
+      "sourceCode": "https://github.com/gkd-kit/gkd",
+      "summary": "\u57fa\u4e8e\u65e0\u969c\u788d\uff0c\u9ad8\u7ea7\u9009\u62e9\u5668\uff0c\u8ba2\u9605\u89c4\u5219\u7684\u81ea\u5b9a\u4e49\u5c4f\u5e55\u70b9\u51fb Android \u5e94\u7528",
+      "added": 1774038018000,
+      "packageName": "li.songe.gkd",
+      "lastUpdated": 1774038018000,
+      "localized": {
+        "en-US": {
+          "icon": "icon_owcM-CcpytC3drg0jCb4Tr-ANMDS_mikYeqgySAwk2E=.png"
+        }
+      }
+    },
+    {
+      "authorName": "Furkan Karc\u0131o\u011flu",
+      "authorWebSite": "https://furkank.net/",
+      "categories": [
+        "Xposed",
+        "Aalivexy"
+      ],
+      "changelog": "https://github.com/frknkrc44/HMA-OSS/releases",
+      "suggestedVersionCode": "7304641",
+      "description": "<p>A FOSS continuation of Hide My Applist project with bunch of new features.</p><p>Features of HMA-OSS:</p><ul><li>Hide your application list (similar to what Hide My Applist does)</li><li>Activity launch protection</li><li>Installation source spoofing for both user and system apps (replaces BetterKnownInstalled)</li><li>Application presets</li><li>Settings presets</li><li>Settings templates (more flexible than what SettingsFirewall does, also allows you to override the settings presets)</li><li>Propless appdata and vold appdata isolation with exclude system apps option</li><li>Ignore hiding an app from Google Play services automatically if it is risky to hide (fixes crash issues etc.)</li><li>Experimental Restrict Zygote permissions option</li><li>Extra opposite app list option to add:<ul><li>More visible apps in blacklist mode</li><li>More invisible apps in whitelist mode</li></ul></li><li>Redesigned home screen and some other screens</li><li>Bulk config wizard (apply a config to more than one apps)</li></ul><p>For more information, check this wiki page: https://github.com/frknkrc44/HMA-OSS/wiki</p>",
+      "donate": "https://github.com/sponsors/frknkrc44",
+      "issueTracker": "https://github.com/frknkrc44/HMA-OSS/issues",
+      "license": "AGPL-3.0-only",
+      "name": "HMA-OSS",
+      "sourceCode": "https://github.com/frknkrc44/HMA-OSS",
+      "summary": "A FOSS continuation of Hide My Applist project with bunch of new features.",
+      "translation": "https://crowdin.com/project/frknkrc44-hma-oss",
+      "added": 1774038038000,
+      "packageName": "org.frknkrc44.hma_oss",
+      "lastUpdated": 1774038038000,
+      "localized": {
+        "en-US": {
+          "icon": "icon_7DJ3TTbSI2Hdpfne80hKNkunsnJ9FQUbdGqf631Qczw=.png"
+        }
+      }
+    },
+    {
+      "authorName": "bg443",
+      "categories": [
+        "Connectivity",
+        "VPN & Proxy",
+        "Aalivexy"
+      ],
+      "changelog": "https://codeberg.org/bg443/JetBird/releases",
+      "suggestedVersionCode": "342",
+      "description": "JetBird is a wrapper around the NetBird client and is privacy friendly, containing no blobs or trackers.\n\n## Features\n- Native UI\n- Supports SSO and setup keys\n- Supports pre-shared keys\n- Real-time logs\n- Quick tile\n- Exclude apps from the tunnel\n- Exit nodes (with client-side customisation)\n- Android TV support\n- Lazy connection support\n",
+      "issueTracker": "https://codeberg.org/bg443/JetBird/issues",
+      "license": "GPL-3.0-or-later",
+      "name": "JetBird",
+      "sourceCode": "https://codeberg.org/bg443/JetBird",
+      "summary": "An unofficial, FLOSS, native Android NetBird client built with privacy in mind",
+      "translation": "https://translate.codeberg.org/engage/jetbird/",
+      "added": 1774038017000,
+      "packageName": "dev.bg.jetbird",
+      "lastUpdated": 1774038017000,
+      "localized": {
+        "en-US": {
+          "icon": "icon_zrFmhHT-oXLB17byCI8yFcplbyDd2j9VIlp0JCtE4nQ=.png"
+        }
+      }
+    },
+    {
+      "authorEmail": "twsxtd@gmail.com",
+      "authorName": "weishu",
+      "authorWebSite": "https://weishu.me/",
+      "categories": [
+        "System",
+        "Aalivexy"
+      ],
+      "changelog": "https://github.com/tiann/KernelSU/releases",
+      "suggestedVersionCode": "32302",
+      "description": "<p><i>KernelSU</i> is a Kernel based root solution for Android devices. It features kernel-based <code>su</code> and root access management as well as a Module system based on overlayfs (similar to Magisk). <i>KernelSU</i> works whitelist-based: Only App that is granted root permission can access <code>su</code>, other apps cannot perceive <code>su</code>.</p><p><i>KernelSU</i> officially supports Android GKI 2.0 devices(with kernel 5.10+), old kernels(4.14+) is also compatiable, but you need to build kernel yourself. WSA and containter-based Android should also work with <i>KernelSU</i> integrated.</p><p>Current supported ABIs are: <code>arm64-v8a</code> and <code>x86_64</code>.</p>",
+      "donate": "https://github.com/sponsors/tiann",
+      "issueTracker": "https://github.com/tiann/KernelSU/issues",
+      "license": "GPL-3.0-only",
+      "name": "KernelSU",
+      "sourceCode": "https://github.com/tiann/KernelSU",
+      "summary": "Kernel based root solution for Android",
+      "translation": "https://hosted.weblate.org/engage/kernelsu/",
+      "webSite": "https://kernelsu.org/",
+      "added": 1774038035000,
+      "packageName": "me.weishu.kernelsu",
+      "lastUpdated": 1774038035000,
+      "localized": {
+        "en-US": {
+          "icon": "icon_M7DZhmQpzGYjpAefQJSjS9iDIKpiNapHUji_4cuaC20=.png"
+        }
+      }
+    },
+    {
+      "authorEmail": "zhaobozhen2025@gmail.com",
+      "authorName": "Absinthe",
+      "authorWebSite": "https://absinthe.life",
+      "categories": [
+        "System",
+        "Aalivexy"
+      ],
+      "changelog": "https://github.com/LibChecker/LibChecker/releases",
+      "suggestedVersionCode": "2515",
+      "description": "\u6b64\u5e94\u7528\u53ef\u4ee5\u67e5\u770b\u4f60\u7684\u8bbe\u5907\u4e0a\u5e94\u7528\u4f7f\u7528\u7684\u7b2c\u4e09\u65b9\u5e93\u3002\u5b83\u4e5f\u53ef\u4ee5\u67e5\u770b\u5e94\u7528\u672c\u673a\u5e93\u7684 ABI \u67b6\u6784\uff08\u901a\u5e38\u7528\u6765\u67e5\u770b\u5e94\u7528\u662f 64 \u4f4d\u8fd8\u662f 32 \u4f4d\uff09\u3002\u5b83\u8fd8\u53ef\u4ee5\u67e5\u770b<a href=\"https://github.com/LibChecker/LibChecker-Rules\">\u5728\u7ebf\u89c4\u5219\u5e93</a>\u4e2d\u6807\u8bb0\u7684\u5e38\u89c1\u5e93\uff0c\u751a\u81f3\u53ef\u4ee5\u6839\u636e\u5e93\u5f15\u7528\u6570\u6392\u5e8f\u5e76\u67e5\u770b\u4ed6\u4eec\u3002\n",
+      "issueTracker": "https://github.com/LibChecker/LibChecker/issues",
+      "license": "Apache-2.0",
+      "name": "LibChecker",
+      "sourceCode": "https://github.com/LibChecker/LibChecker",
+      "summary": "\u67e5\u770b\u5e94\u7528\u4f7f\u7528\u7684\u7b2c\u4e09\u65b9\u5e93",
+      "added": 1774037968000,
+      "packageName": "com.absinthe.libchecker",
+      "lastUpdated": 1774037968000,
+      "localized": {
+        "en-US": {
+          "icon": "icon_1XBWwrUgYnF6QQtZEqtXUZqSr0mGhzC9ZvlCVb_Xv8A=.png"
+        }
+      }
+    },
+    {
+      "authorName": "Tien Do Nam",
+      "authorWebSite": "https://tienisto.com",
+      "categories": [
+        "Connectivity",
+        "File Transfer",
+        "Aalivexy"
+      ],
+      "changelog": "https://github.com/localsend/localsend/blob/HEAD/app/assets/CHANGELOG.md",
+      "suggestedVersionCode": "583",
+      "description": "LocalSend is an open source app to share files and messages between nearby devices using the local wifi network.\nThe communication between devices is entirely end-to-end encrypted via HTTPS.\nNo Internet required. No tracking*. No ads.\n\nCurrently, this app is available on Android, iOS, macOS, Windows and Linux. You can find all download options on the official homepage.\n\n*The operating system may still gather usage data.\n",
+      "donate": "https://github.com/sponsors/Tienisto",
+      "issueTracker": "https://github.com/localsend/localsend/issues",
+      "license": "Apache-2.0",
+      "name": "LocalSend",
+      "sourceCode": "https://github.com/localsend/localsend",
+      "summary": "Cross-Platform file sharing solution via WiFi.",
+      "translation": "https://hosted.weblate.org/projects/localsend/app/",
+      "webSite": "https://localsend.org",
+      "added": 1774037977000,
+      "packageName": "org.localsend.localsend_app",
+      "lastUpdated": 1774037977000,
+      "localized": {
+        "en-US": {
+          "icon": "icon_dWMGq3-j8OMRJVh9FIZdNi18jl9qo_z2pjjXR-l_oaI=.png"
+        }
+      }
+    },
+    {
+      "authorEmail": "fooblubb@gmail.com",
+      "authorName": "IKARUS Projects",
+      "authorWebSite": "https://www.icaria.de/",
+      "categories": [
+        "Connectivity",
+        "Development",
+        "Aalivexy"
+      ],
+      "changelog": "https://github.com/ikarus23/MifareClassicTool/raw/HEAD/CHANGELOG.txt",
+      "suggestedVersionCode": "70",
+      "description": "This is a low-level tool for reading, writing and analyzing MIFARE Classic RFID tags.\nIt is designed for users who have at least basic familiarity with the MIFARE Classic technology.\nIt provides several features to interact with (and only with) MIFARE Classic RFID-Tags.\n\n<ul>\n  <li>Read MIFARE Classic tags</li>\n  <li>Save, edit and share the tag data you read</li>\n  <li>Write to MIFARE Classic tags (block-wise)</li>\n  <li>Clone MIFARE Classic tags<br />\n    (Write dump of a tag to another tag; write 'dump-wise')</li>\n  <li>Key management based on dictionary-attack<br />\n    (Write the keys you know in a file (dictionary).<br />\n    MCT will try to authenticate with these\n    keys against all sectors<br />and read as much as possible.)\n  </li>\n  <li>Format a tag back to the factory/delivery state</li>\n  <li>Write the manufacturer block of special MIFARE Classic tags</li>\n  <li>Use external NFC readers like ACR 122U</li>\n  <li>Create, edit, save and share key files (dictionaries)</li>\n  <li>Decode &amp; Encode MIFARE Classic Value Blocks</li>\n  <li>Decode &amp; Encode MIFARE Classic Access Conditions</li>\n  <li>Display generic tag information</li>\n  <li>Display the tag data as highlighted hex</li>\n  <li>Display the tag data as 7-Bit US-ASCII</li>\n  <li>Display the MIFARE Classic Access Conditions as a table</li>\n  <li>Display MIFARE Classic Value Blocks as integer</li>\n  <li>Calcualate the BCC</li>\n  <li>Quick UID clone feature</li>\n  <li>Import/export/convert files</li>\n  <li>In-App (offline) help and information</li>\n  <li>It's open source ;)</li>\n</ul>\n\nMore information can be found at the\n<a href=\"https://github.com/ikarus23/MifareClassicTool/blob/master/README.md\">README</a>.\n\nIt should work on most NFC-enabled devices but there are exceptions. Have a look at the\n<a href=\"https://github.com/ikarus23/MifareClassicTool/blob/master/INCOMPATIBLE_DEVICES.md\">list\nof devices which are known to be incompatible to MIFARE Classic</a>.\n\nMIFARE\u00ae is a registered trademark of NXP Semiconductors.",
+      "donate": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=24ET8A36XLMNW",
+      "issueTracker": "https://github.com/ikarus23/MifareClassicTool/issues",
+      "license": "GPL-3.0-only",
+      "name": "MIFARE Classic Tool",
+      "sourceCode": "https://github.com/ikarus23/MifareClassicTool",
+      "summary": "An NFC app for reading, writing, analyzing, etc. MIFARE Classic RFID tags.",
+      "webSite": "https://www.icaria.de/mct/",
+      "added": 1774037984000,
+      "packageName": "de.syss.MifareClassicTool",
+      "lastUpdated": 1774037984000,
+      "localized": {
+        "en-US": {
+          "icon": "icon_bAVJReOwdaXYNdu5v4zxyUWDJoNTic8et4pIY2jlmYI=.png"
+        }
+      }
+    },
+    {
+      "authorEmail": "asdplk3@live.com",
+      "authorName": "Notsfsssf",
+      "categories": [
+        "Graphics",
+        "Internet",
+        "Aalivexy"
+      ],
+      "suggestedVersionCode": "10009860",
+      "description": "<p>This is a third-party Pixiv flutter client that supports browsing ugoira and reverse image search. Discover and explore more creative illustrations with this app!<br></p><ul><li>Latest Works<ul><li>Quickly view the latest works of the users you follow</li><li>Support for viewing ranked works</li></ul></li><li>Search<ul><li>Search by any keyword</li><li>Search by work title or character name</li><li>Search by work ID, character ID or link</li><li>Frequently searched keywords will remain on the search bar</li></ul></li><li>Feature<ul><li>Support for blocking specific authors, tags or works</li></ul></li></ul>",
+      "issueTracker": "https://github.com/Notsfsssf/pixez-flutter/issues",
+      "license": "GPL-3.0-only",
+      "name": "PixEz",
+      "sourceCode": "https://github.com/Notsfsssf/pixez-flutter",
+      "summary": "A third-party Pixiv flutter client that supports viewing ugoira",
+      "added": 1774038021000,
+      "packageName": "com.perol.pixez",
+      "lastUpdated": 1774038021000,
+      "localized": {
+        "en-US": {
+          "icon": "icon_vaUFtiFxbRjcW9_jO-vcaEt9IEuIowBzLRRTMg4_MmY=.png"
+        }
+      }
+    },
+    {
+      "authorEmail": "Ashinch@outlook.it",
+      "authorName": "Ashinch",
+      "authorWebSite": "https://www.ashinch.com/",
+      "categories": [
+        "News",
+        "Reading",
+        "Aalivexy"
+      ],
+      "changelog": "https://github.com/Ashinch/ReadYou/releases",
+      "suggestedVersionCode": "46",
+      "description": "<i>Read You</i> \u662f\u4e00\u4e2a\u4ee5 <a href='https://m3.material.io/' target='_blank' rel='nofollow'>Material You</a> \u98ce\u683c\u5448\u73b0\u7684 RSS \u9605\u8bfb\u5668\n\n<b>\u7279\u6027\uff1a</b>\n\n* \u8ba2\u9605 RSS \u94fe\u63a5\n* \u5bfc\u5165 OPML \u6587\u4ef6\n* \u6587\u7ae0\u540c\u6b65\n* \u6587\u7ae0\u66f4\u65b0\u901a\u77e5\n* \u5168\u6587\u89e3\u6790\n* \u8fc7\u6ee4\u672a\u8bfb\u3001\u661f\u6807\n* \u8ba2\u9605\u6e90\u5206\u7ec4\n* \u672c\u5730\u5316\n* \u5bfc\u51fa OPML \u6587\u4ef6\n* \u6587\u7ae0\u641c\u7d22\n\n\u66f4\u591a\u7684\u5728\u8def\u4e0a\u2026\n",
+      "donate": "https://ash7.io/sponsor",
+      "issueTracker": "https://github.com/Ashinch/ReadYou/issues",
+      "license": "GPL-3.0-only",
+      "name": "Read You",
+      "sourceCode": "https://github.com/Ashinch/ReadYou",
+      "summary": "\u4e00\u4e2a\u4ee5 Material You \u98ce\u683c\u5448\u73b0\u7684 RSS \u9605\u8bfb\u5668",
+      "added": 1774037992000,
+      "packageName": "me.ash.reader",
+      "lastUpdated": 1774037992000,
+      "localized": {
+        "en-US": {
+          "icon": "icon_Bq9nQb_UzmI1DBSluSA8Q-d5tFo9dQWmyIyt69onHfo=.png"
+        }
+      }
+    },
+    {
+      "antiFeatures": [
+        "UpstreamNonFree"
+      ],
+      "authorName": "RE",
+      "categories": [
+        "Internet",
+        "Utilities",
+        "Aalivexy"
+      ],
+      "changelog": "https://github.com/rikkahub/rikkahub/releases",
+      "suggestedVersionCode": "147",
+      "description": "\u529f\u80fd\u7279\u8272:\n* \ud83c\udfa8 \u73b0\u4ee3\u5316\u5b89\u5353APP\u8bbe\u8ba1\uff08Material You / \u9884\u6d4b\u6027\u8fd4\u56de\uff09\n* \ud83c\udf19 \u6697\u8272\u6a21\u5f0f\n* \ud83d\udee0\ufe0f MCP \u652f\u6301\n* \ud83d\udd04 \u591a\u79cd\u7c7b\u578b\u7684\u4f9b\u5e94\u5546\u652f\u6301\uff0c\u81ea\u5b9a\u4e49 API / URL / \u6a21\u578b\uff08\u76ee\u524d\u652f\u6301 OpenAI\u3001Google\u3001Anthropic\uff09\n* \ud83d\uddbc\ufe0f \u591a\u6a21\u6001\u8f93\u5165\u652f\u6301\n* \ud83d\udcdd Markdown \u6e32\u67d3\uff08\u652f\u6301\u4ee3\u7801\u9ad8\u4eae\u3001\u6570\u5b66\u516c\u5f0f\u3001\u8868\u683c\u3001Mermaid\uff09\n* \ud83d\udd0d \u641c\u7d22\u529f\u80fd\uff08Exa\u3001Tavily\u3001Zhipu\u3001LinkUp\u3001Brave\u3001Perplexity...\uff09\n* \ud83e\udde9 Prompt \u53d8\u91cf\uff08\u6a21\u578b\u540d\u79f0\u3001\u65f6\u95f4\u7b49\uff09\n* \ud83e\udd33 \u4e8c\u7ef4\u7801\u5bfc\u51fa\u548c\u5bfc\u5165\u63d0\u4f9b\u5546\n* \ud83e\udd16 \u667a\u80fd\u4f53\u81ea\u5b9a\u4e49\n* \ud83e\udde0 \u7c7bChatGPT\u8bb0\u5fc6\u529f\u80fd\n* \ud83d\udcdd AI\u7ffb\u8bd1\n* \ud83c\udf10 \u81ea\u5b9a\u4e49HTTP\u8bf7\u6c42\u5934\u548c\u8bf7\u6c42\u4f53\n",
+      "issueTracker": "https://github.com/rikkahub/rikkahub/issues",
+      "license": "AGPL-3.0-only",
+      "name": "RikkaHub",
+      "sourceCode": "https://github.com/rikkahub/rikkahub",
+      "summary": "\u4e00\u4e2a\u539f\u751fAndroid LLM \u804a\u5929\u5ba2\u6237\u7aef\uff0c\u652f\u6301\u5207\u6362\u4e0d\u540c\u7684\u4f9b\u5e94\u5546\u8fdb\u884c\u804a\u5929\u3002",
+      "webSite": "https://rikka-ai.com",
+      "added": 1774038024000,
+      "packageName": "me.rerere.rikkahub",
+      "lastUpdated": 1774038024000,
+      "localized": {
+        "en-US": {
+          "icon": "icon_v7ThQ5nRK3tQIJmx_SObsyGlCJ2FR6LUxDbGjV--3KU=.png"
+        }
+      }
+    },
+    {
+      "categories": [
+        "Cloud Storage & File Sync",
+        "Internet",
+        "Aalivexy"
+      ],
+      "suggestedVersionCode": "310",
+      "description": "Client for the Seafile cloud file server and project management software. If you\nare in a small team with a few people, you can create a group in Seafile and\ninvite other team members. Team members can then maintain file libraries\ntogether and collaborate around them.\n\nYou can try the <a href=\"https://seacloud.cc/demo\">demo</a>, sign up for an account at the\nwebsite, or since the server-side is also free-as-in-freedom, it can be\ninstalled on any server and configured to work with the app.",
+      "issueTracker": "https://github.com/haiwen/seadroid/issues",
+      "license": "AGPL-3.0-or-later",
+      "name": "Seafile",
+      "sourceCode": "https://github.com/haiwen/seadroid",
+      "summary": "\u6587\u4ef6\u540c\u6b65",
+      "webSite": "http://seafile.com/en/download",
+      "added": 1774038001000,
+      "packageName": "com.seafile.seadroid2",
+      "lastUpdated": 1774038001000,
+      "localized": {
+        "en-US": {
+          "icon": "icon_xfmcrQyNqoO0eP8FKGd_vGwgP3km1560ctkHmLi9_Bk=.png"
+        }
+      }
+    },
+    {
+      "authorEmail": "support@rikka.app",
+      "authorName": "Rikka apps",
+      "authorWebSite": "https://t.me/RikkaUserGroup",
+      "categories": [
+        "System",
+        "Aalivexy"
+      ],
+      "changelog": "https://github.com/RikkaApps/Shizuku/releases",
+      "suggestedVersionCode": "1086",
+      "description": "<p>When developing apps that requires root, the most common method is to run some commands in the su shell. For example, there is app uses <code>pm enable/disable</code> command to enable/disable components. This method has very big disadvantages:</p><ul><li><b>Extremely slow</b> (Multiple process creation)</li><li>Needs to process texts (Super unreliable)</li><li>The possibility is limited to available commands</li><li>Even if adb has sufficient permissions, the app requires root privileges to run</li></ul><p><i>Shizuku</i> uses a completely different way. The most important feature <i>Shizuku</i> provides is something like be a middle man to receive requests from the app, sent to the system server, and send back the results. To the app, it is almost identical to the use system APIs directly. But it's much faster as it hooks into the system directly.</p><p>Several <a href='https://shizuku.rikka.app/apps.html' target='_blank' rel='noindex nofollow noopener'>apps already use <i>Shizuku</i></a>. If you want to integrate it with yours, take a look at the <a href='https://github.com/RikkaApps/Shizuku/blob/master/README.md' target='_blank' rel='noindex nofollow noopener'>Developer guide</a>. For users, there's also a <a href='https://shizuku.rikka.app/guide/setup.html' target='_blank' rel='noindex nofollow noopener'>User guide</a>.</p>",
+      "issueTracker": "https://github.com/RikkaApps/Shizuku/issues",
+      "license": "Apache-2.0",
+      "name": "Shizuku",
+      "sourceCode": "https://github.com/RikkaApps/Shizuku",
+      "summary": "using system APIs directly with adb/root privileges from normal apps",
+      "webSite": "https://shizuku.rikka.app/",
+      "added": 1774038007000,
+      "packageName": "moe.shizuku.privileged.api",
+      "lastUpdated": 1774038007000,
+      "localized": {
+        "en-US": {
+          "icon": "icon_a_rgBFKzdMU3NI8LCqRWPYppNNyuJke0dpxh34I0qkg=.png"
+        }
+      }
+    },
+    {
+      "authorName": "\u5357\u5bab\u96ea\u73ca",
+      "categories": [
+        "System",
+        "Utilities",
+        "Aalivexy"
+      ],
+      "changelog": "https://github.com/vvb2060/PackageInstaller/releases",
+      "suggestedVersionCode": "8",
+      "description": "A lightweight yet powerful package installer for Android that supports advanced installation features.\n\nFeatures:\n\u2022 Split APKs: Install .apks files generated by bundletool with automatic split selection\n\u2022 APK Dumps: Install apps from zipped APK dumps containing all base and split APKs\n\u2022 Zipped APKs: Install a single APK from within a ZIP archive\n\u2022 Add/Remove Splits: Manage split APKs for existing applications\n\u2022 Interactive Split Installation: Progressively add APK files without pre-packaging\n\u2022 Archive Apps: Backup installed applications to zip files\n\nUser Experience:\n\u2022 Instant Preview: View package information without slow copying or extraction\n\u2022 Detailed Info: Shows version, API level, split type and failure reasons\n\u2022 Bypass Play Protect: Skip Google Play Protect security scan\n\u2022 Private Space Support: Install apps into Android 15 private space\n\u2022 Zero Permissions: Requires no standard Android permissions\n\u2022 No Background Processes: Extremely lightweight with no background services\n\u2022 Extremely Small: Less than 500KiB in size\n",
+      "issueTracker": "https://github.com/vvb2060/PackageInstaller/issues",
+      "license": "Apache-2.0",
+      "name": "Shizuku Package Installer",
+      "sourceCode": "https://github.com/vvb2060/PackageInstaller",
+      "summary": "A lightweight yet powerful package installer for Android",
+      "added": 1774038023000,
+      "packageName": "io.github.vvb2060.packageinstaller",
+      "lastUpdated": 1774038023000,
+      "localized": {
+        "en-US": {
+          "icon": "icon_VdkqECo0Lps1W_5O-Lz5keg9oYMCSk9PnWEjM5CnXfc=.png"
+        }
+      }
+    },
+    {
+      "categories": [
+        "Development",
+        "Aalivexy"
+      ],
+      "changelog": "https://github.com/termux/termux-app/releases",
+      "suggestedVersionCode": "1002",
+      "description": "Termux combines powerful terminal emulation with an extensive Linux package\ncollection.\n\n* Enjoy the bash and zsh shells.\n* Edit files with nano and vim.\n* Access servers over ssh.\n* Compile code with gcc and clang.\n* Use the python console as a pocket calculator.\n* Check out projects with git and subversion.\n* Run text-based games with frotz.\n\nAt first start a small base system is downloaded - desired packages can then be\ninstalled using the apt package manager known from the Debian and Ubuntu Linux\ndistributions. Access the built-in help by long-pressing anywhere on the\nterminal and selecting the Help menu option to learn more.\n\nRead help online: <a href=\"https://wiki.termux.com/\">https://wiki.termux.com/</a>\n\nReddit Community: <a href=\"https://termux.com/community\">https://termux.com/community</a>",
+      "donate": "https://termux.com/donate.html",
+      "issueTracker": "https://github.com/termux/termux-app/issues",
+      "license": "GPL-3.0-only",
+      "name": "Termux",
+      "openCollective": "Termux",
+      "sourceCode": "https://github.com/termux/termux-app",
+      "webSite": "https://termux.com",
+      "added": 1774038025000,
+      "icon": "com.termux.1002.png",
+      "packageName": "com.termux",
+      "lastUpdated": 1774038025000,
+      "localized": {
+        "en-US": {
+          "icon": "icon_7jMZ7XD80oeucmGEaTwktIRZexLtGWvJfKdVD6Wu2SI=.png"
+        }
+      }
+    },
+    {
+      "authorEmail": "dreaming.in.code.zh@gmail.com",
+      "authorName": "Hai Zhang",
+      "categories": [
+        "Cloud Storage & File Sync",
+        "File Encryption & Vault",
+        "File Transfer",
+        "System",
+        "Text Editor",
+        "Aalivexy"
+      ],
+      "changelog": "https://github.com/zhanghai/MaterialFiles/releases",
+      "suggestedVersionCode": "39",
+      "description": "\u4e00\u4e2a\u5f00\u6e90\u7684 Material Design \u6587\u4ef6\u7ba1\u7406\u5668\u3002\n\n\u7279\u6027\uff1a\n- \u5f00\u6e90\uff1a\u8f7b\u91cf\u3001\u7b80\u6d01\u5e76\u4e14\u5b89\u5168\u3002\n- Material Design\uff1a\u9075\u5faa Material Design \u89c4\u8303\uff0c\u5e76\u4e14\u6ce8\u91cd\u7ec6\u8282\u3002\n- \u9762\u5305\u5c51\u5bfc\u822a\u680f\uff1a\u70b9\u51fb\u5bfc\u822a\u680f\u6240\u663e\u793a\u8def\u5f84\u4e2d\u7684\u4efb\u4e00\u6587\u4ef6\u5939\u5373\u53ef\u5feb\u901f\u8bbf\u95ee\u3002\n- Root \u652f\u6301\uff1a\u4f7f\u7528 root \u6743\u9650\u67e5\u770b\u548c\u7ba1\u7406\u6587\u4ef6\u3002\n- \u538b\u7f29\u6587\u4ef6\u652f\u6301\uff1a\u67e5\u770b\u3001\u63d0\u53d6\u548c\u521b\u5efa\u5e38\u89c1\u7684\u538b\u7f29\u6587\u4ef6\u3002\n- NAS \u652f\u6301\uff1a\u67e5\u770b\u548c\u7ba1\u7406 FTP\u3001SFTP\u3001SMB \u548c WebDAV \u670d\u52a1\u5668\u4e0a\u7684\u6587\u4ef6\u3002\n- \u4e3b\u9898\uff1a\u53ef\u5b9a\u5236\u7684\u754c\u9762\u989c\u8272\uff0c\u4ee5\u53ca\u53ef\u9009\u7eaf\u9ed1\u7684\u591c\u95f4\u6a21\u5f0f\u3002\n- Linux \u53cb\u597d\uff1a\u652f\u6301\u7b26\u53f7\u94fe\u63a5\u3001\u6587\u4ef6\u6743\u9650\u548c SELinux \u4e0a\u4e0b\u6587\u3002\n- \u5065\u58ee\u6027\uff1a\u4f7f\u7528 Linux \u7cfb\u7edf\u8c03\u7528\u5b9e\u73b0\uff0c\u800c\u4e0d\u662f\u53e6\u4e00\u4e2a ls \u89e3\u6790\u5668\u3002\n- \u5b9e\u73b0\u826f\u597d\uff1a\u4f7f\u7528\u6b63\u786e\u7684\u65b9\u5f0f\u6253\u9020\uff0c\u5305\u62ec Java NIO2 \u6587\u4ef6 API \u548c LiveData\u3002\n\nhttps://github.com/zhanghai/MaterialFiles\n",
+      "issueTracker": "https://github.com/zhanghai/MaterialFiles/issues",
+      "license": "GPL-3.0-or-later",
+      "name": "\u8d28\u611f\u6587\u4ef6",
+      "sourceCode": "https://github.com/zhanghai/MaterialFiles",
+      "summary": "\u5f00\u6e90\u7684 Material Design \u6587\u4ef6\u7ba1\u7406\u5668",
+      "translation": "https://www.transifex.com/zhanghai/MaterialFiles",
+      "added": 1774038032000,
+      "packageName": "me.zhanghai.android.files",
+      "lastUpdated": 1774038032000,
+      "localized": {
+        "en-US": {
+          "icon": "icon_BFY8kIAZkrB0kKwXt1uVDgghMociormUlcOIedEh2mA=.png"
+        }
+      }
+    }
+  ],
+  "packages": {
+    "com.absinthe.libchecker": [
+      {
+        "added": 1774037968000,
+        "apkName": "com.absinthe.libchecker_2515.apk",
+        "hash": "ac1ff15c10bfab0dae1d75056eea0ebcf8e4b5008bdd8dd6733095266779dbdb",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "packageName": "com.absinthe.libchecker",
+        "sig": "3596ad186ba9d3cd0ca15d6dc2cc36ae",
+        "signer": "47274114ab10ade16e41088a991be3ea4a621855f2487f1edc62187367f4a5c0",
+        "size": 5031952,
+        "targetSdkVersion": 36,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.QUERY_ALL_PACKAGES",
+            null
+          ],
+          [
+            "com.android.permission.GET_INSTALLED_APPS",
+            null
+          ],
+          [
+            "moe.shizuku.manager.permission.API_V23",
+            null
+          ]
+        ],
+        "versionCode": 2515,
+        "versionName": "2.5.3"
+      }
+    ],
+    "com.follow.clash": [
+      {
+        "added": 1774037961000,
+        "apkName": "com.follow.clash_2026022201.apk",
+        "hash": "1db4692940bc24a0d2ad5cfe59335ac0d48cef23c61d9ac6d8bfa563683736b6",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "nativecode": [
+          "arm64-v8a"
+        ],
+        "packageName": "com.follow.clash",
+        "sig": "01d20204fe36565bf08806d0249b75a9",
+        "signer": "2859e236b6c1c6073773752678c52e8e902a9503ae9beed6729ca999c376841c",
+        "size": 47529200,
+        "targetSdkVersion": 36,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.CHANGE_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.QUERY_ALL_PACKAGES",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_SPECIAL_USE",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "com.follow.clash.permission.RECEIVE_BROADCASTS",
+            null
+          ],
+          [
+            "android.permission.CAMERA",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+            null
+          ],
+          [
+            "com.google.android.gms.permission.AD_ID",
+            null
+          ],
+          [
+            "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_ADSERVICES_AD_ID",
+            null
+          ],
+          [
+            "com.follow.clash.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 2026022201,
+        "versionName": "0.8.92"
+      }
+    ],
+    "com.looker.droidify": [
+      {
+        "added": 1774037959000,
+        "apkName": "com.looker.droidify_700.apk",
+        "hash": "8c83c035304a3930df27f5fae83b5e5347ff01834730ee521c3caa6644a8a223",
+        "hashType": "sha256",
+        "minSdkVersion": 23,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "com.looker.droidify",
+        "sig": "1f5e88a854b991bf5d56c95acec001c1",
+        "signer": "b4f1c8a81e4b9f6e02638e93bead56656502c21fb95c8d3ec93d0cdd1f6e0d3f",
+        "size": 5386649,
+        "targetSdkVersion": 36,
+        "uses-permission": [
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "android.permission.REQUEST_INSTALL_PACKAGES",
+            null
+          ],
+          [
+            "android.permission.REQUEST_DELETE_PACKAGES",
+            null
+          ],
+          [
+            "android.permission.RUN_USER_INITIATED_JOBS",
+            null
+          ],
+          [
+            "android.permission.UPDATE_PACKAGES_WITHOUT_USER_ACTION",
+            null
+          ],
+          [
+            "android.permission.ENFORCE_UPDATE_OWNERSHIP",
+            null
+          ],
+          [
+            "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+            null
+          ],
+          [
+            "android.permission.QUERY_ALL_PACKAGES",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "com.looker.droidify.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ],
+          [
+            "moe.shizuku.manager.permission.API_V23",
+            null
+          ]
+        ],
+        "versionCode": 700,
+        "versionName": "0.7.0"
+      }
+    ],
+    "com.perol.pixez": [
+      {
+        "added": 1774038021000,
+        "apkName": "com.perol.pixez_10009860.apk",
+        "hash": "d14e17e8d444605c2f548b75314074d9a770f9472f3e2e3dfb8681e86f22cb8b",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "nativecode": [
+          "arm64-v8a"
+        ],
+        "packageName": "com.perol.pixez",
+        "sig": "aef4d9f65c901f9a4c487ed33eb62a84",
+        "signer": "932bc3027fd22606d662e8f454690f7b60d8c0f23bdaa951131138bcad2b8ff7",
+        "size": 17134047,
+        "targetSdkVersion": 35,
+        "uses-permission": [
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_IMAGES",
+            null
+          ],
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "com.android.vending.BILLING",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "com.perol.pixez.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 10009860,
+        "versionName": "0.9.86 lea"
+      }
+    ],
+    "com.seafile.seadroid2": [
+      {
+        "added": 1774038001000,
+        "apkName": "com.seafile.seadroid2_310.apk",
+        "hash": "1f0660358b91a348a538cc7d9972dbfb313a70ab2293199b76333bcdefc5188f",
+        "hashType": "sha256",
+        "minSdkVersion": 28,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86_64"
+        ],
+        "packageName": "com.seafile.seadroid2",
+        "sig": "5d4a9ff449755c827fdabe080e436bc0",
+        "signer": "9debb43891c667ead7a999d45abb69afcca9c43a48ceb7f4f4cabbaffb1e48af",
+        "size": 28307078,
+        "targetSdkVersion": 35,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.CAMERA",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "android.permission.READ_SYNC_SETTINGS",
+            null
+          ],
+          [
+            "android.permission.WRITE_SYNC_SETTINGS",
+            null
+          ],
+          [
+            "android.permission.USE_CREDENTIALS",
+            null
+          ],
+          [
+            "android.permission.AUTHENTICATE_ACCOUNTS",
+            null
+          ],
+          [
+            "android.permission.GET_ACCOUNTS",
+            null
+          ],
+          [
+            "android.permission.MANAGE_ACCOUNTS",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            32
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "android.permission.MANAGE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.READ_SYNC_STATS",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_IMAGES",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_VIDEO",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "com.seafile.seadroid2.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 310,
+        "versionName": "4.0.2"
+      }
+    ],
+    "com.termux": [
+      {
+        "added": 1774038025000,
+        "apkName": "com.termux_1002.apk",
+        "hash": "72fdb596045116bf5ba1b5bdf5b26fddb9acc0bd074ad9f2da9eb0ae85e83a4e",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "nativecode": [
+          "arm64-v8a"
+        ],
+        "packageName": "com.termux",
+        "sig": "c3320b7e82d5d4a2f83371b194ee34e3",
+        "signer": "b6da01480eefd5fbf2cd3771b8d1021ec791304bdd6c4bf41d3faabad48ee5e1",
+        "size": 35106607,
+        "targetSdkVersion": 28,
+        "uses-permission": [
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.MANAGE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+            null
+          ],
+          [
+            "android.permission.SYSTEM_ALERT_WINDOW",
+            null
+          ],
+          [
+            "android.permission.READ_LOGS",
+            null
+          ],
+          [
+            "android.permission.DUMP",
+            null
+          ],
+          [
+            "android.permission.WRITE_SECURE_SETTINGS",
+            null
+          ],
+          [
+            "android.permission.REQUEST_INSTALL_PACKAGES",
+            null
+          ],
+          [
+            "android.permission.PACKAGE_USAGE_STATS",
+            null
+          ],
+          [
+            "com.android.alarm.permission.SET_ALARM",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            null
+          ]
+        ],
+        "versionCode": 1002,
+        "versionName": "0.118.3"
+      }
+    ],
+    "com.x8bit.bitwarden": [
+      {
+        "added": 1774037946000,
+        "apkName": "com.x8bit.bitwarden_21345.apk",
+        "hash": "77bc93b28caf1ef9fc1054ba0d15502c36a2370bf7fc9fb26b60892e0cc9245f",
+        "hashType": "sha256",
+        "minSdkVersion": 29,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi",
+          "armeabi-v7a",
+          "mips",
+          "mips64",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "com.x8bit.bitwarden",
+        "sig": "4eca64d92c5726e95b1fcf98e8feef4c",
+        "signer": "de6ec91431557995297bf3e65bc80349bc603a04708160618c86bc9994171c90",
+        "size": 73706739,
+        "targetSdkVersion": 36,
+        "uses-permission": [
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.USE_BIOMETRIC",
+            null
+          ],
+          [
+            "android.permission.NFC",
+            null
+          ],
+          [
+            "android.permission.CAMERA",
+            null
+          ],
+          [
+            "horizons.permission.HEADSET_CAMERA",
+            null
+          ],
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.READ_USER_DICTIONARY",
+            null
+          ],
+          [
+            "android.permission.USE_FINGERPRINT",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "com.x8bit.bitwarden.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 21345,
+        "versionName": "2026.3.0"
+      }
+    ],
+    "de.syss.MifareClassicTool": [
+      {
+        "added": 1774037984000,
+        "apkName": "de.syss.MifareClassicTool_70.apk",
+        "features": [
+          "android.hardware.nfc"
+        ],
+        "hash": "1e230b26d97d119c7f8034af082fbe6cc41b99a955b6d699d951c59c456a086c",
+        "hashType": "sha256",
+        "minSdkVersion": 19,
+        "packageName": "de.syss.MifareClassicTool",
+        "sig": "f8a2eae34a28aedb04629f9c3250be6e",
+        "signer": "37d940651520f32f66eeb60f1dc8d30afa00951304f9936d9ddd2ee1623512f8",
+        "size": 4027988,
+        "targetSdkVersion": 35,
+        "uses-permission": [
+          [
+            "android.permission.NFC",
+            null
+          ],
+          [
+            "de.syss.MifareClassicTool.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 70,
+        "versionName": "4.3.1"
+      }
+    ],
+    "dev.bg.jetbird": [
+      {
+        "added": 1774038017000,
+        "apkName": "dev.bg.jetbird_342.apk",
+        "hash": "dcf9d1934bb99756a708b3b09574d6334437e7cc3d6ebb458f17bf10ffa5c2e1",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "nativecode": [
+          "arm64-v8a"
+        ],
+        "packageName": "dev.bg.jetbird",
+        "sig": "cacb7c3347043d5b5edb616f297c3be7",
+        "signer": "3956533c542218349b5f3f7f3d3a6926060c1a0cdf32d6e58ea1de3a36c21213",
+        "size": 37553393,
+        "targetSdkVersion": 36,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.CHANGE_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.QUERY_ALL_PACKAGES",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "dev.bg.jetbird.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 342,
+        "versionName": "1.4.6"
+      }
+    ],
+    "io.github.vvb2060.packageinstaller": [
+      {
+        "added": 1774038023000,
+        "apkName": "io.github.vvb2060.packageinstaller_8.apk",
+        "hash": "070c2cc1472cb253e486be1117e801cd8806d671914a493406d1a850d4a0c3f1",
+        "hashType": "sha256",
+        "minSdkVersion": 28,
+        "packageName": "io.github.vvb2060.packageinstaller",
+        "sig": "e9291da92c5d6d90f35e1ff87b1d5507",
+        "signer": "8edfe55b81207b8b31ed81453db259c23c80f8c755371f9a68b33f3d7e37a551",
+        "size": 426412,
+        "targetSdkVersion": 36,
+        "uses-permission": [
+          [
+            "moe.shizuku.manager.permission.API_V23",
+            null
+          ]
+        ],
+        "versionCode": 8,
+        "versionName": "1.7"
+      }
+    ],
+    "li.songe.gkd": [
+      {
+        "added": 1774038018000,
+        "apkName": "li.songe.gkd_81.apk",
+        "hash": "4bb0da6b60cfe16e090e18f00cdf6e232851df0f20e7036726c6cb64e559a8e4",
+        "hashType": "sha256",
+        "minSdkVersion": 26,
+        "nativecode": [
+          "arm64-v8a",
+          "x86_64"
+        ],
+        "packageName": "li.songe.gkd",
+        "sig": "41931fed2bedba24cb212dcc65d413d7",
+        "signer": "27a532fff3cf13524a89a86adf99ac05ce708dd781680b04846d4b9fb795a391",
+        "size": 4057956,
+        "targetSdkVersion": 36,
+        "uses-permission": [
+          [
+            "android.permission.REQUEST_INSTALL_PACKAGES",
+            null
+          ],
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_SPECIAL_USE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION",
+            29
+          ],
+          [
+            "android.permission.QUERY_ALL_PACKAGES",
+            null
+          ],
+          [
+            "com.android.permission.GET_INSTALLED_APPS",
+            null
+          ],
+          [
+            "android.permission.SYSTEM_ALERT_WINDOW",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            28
+          ],
+          [
+            "android.permission.WRITE_SECURE_SETTINGS",
+            null
+          ],
+          [
+            "android.permission.GET_APP_OPS_STATS",
+            null
+          ],
+          [
+            "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+            null
+          ],
+          [
+            "li.songe.gkd.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ],
+          [
+            "moe.shizuku.manager.permission.API_V23",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            28
+          ]
+        ],
+        "versionCode": 81,
+        "versionName": "1.11.6"
+      }
+    ],
+    "me.ash.reader": [
+      {
+        "added": 1774037992000,
+        "apkName": "me.ash.reader_46.apk",
+        "hash": "41732ae9a57737c060b66f2d24a10440c53a92beee9dfdce8d5cc3d76041069a",
+        "hashType": "sha256",
+        "minSdkVersion": 26,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "me.ash.reader",
+        "sig": "a3d567aa1f6be2e6e99a47da3963f010",
+        "signer": "cef338a474523bdfcf3fb82cbee2d45f6fd9610e95902ba78c8c79a45e102ae9",
+        "size": 11197406,
+        "targetSdkVersion": 34,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            28
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "me.ash.reader.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            28
+          ]
+        ],
+        "versionCode": 46,
+        "versionName": "0.16.1"
+      }
+    ],
+    "me.rerere.rikkahub": [
+      {
+        "added": 1774038024000,
+        "apkName": "me.rerere.rikkahub_147.apk",
+        "hash": "b36a9c1c9ed8698e7908328eadfd979bf6529be451d8967ef333141db0856488",
+        "hashType": "sha256",
+        "minSdkVersion": 26,
+        "nativecode": [
+          "arm64-v8a"
+        ],
+        "packageName": "me.rerere.rikkahub",
+        "sig": "3e51b9253e65313a2768d43d74a74995",
+        "signer": "2ab3ecd515c24a19eb6c317dd99c0b94ac15f5822228ab9cf520a8ab444ea3f1",
+        "size": 38652855,
+        "targetSdkVersion": 36,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.CAMERA",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.POST_PROMOTED_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.CHANGE_WIFI_MULTICAST_STATE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_SPECIAL_USE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.NEARBY_WIFI_DEVICES",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+            null
+          ],
+          [
+            "com.google.android.gms.permission.AD_ID",
+            null
+          ],
+          [
+            "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_ADSERVICES_AD_ID",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "me.rerere.rikkahub.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 147,
+        "versionName": "2.1.4"
+      }
+    ],
+    "me.weishu.kernelsu": [
+      {
+        "added": 1774038035000,
+        "apkName": "me.weishu.kernelsu_32302.apk",
+        "hash": "480c52b8e8caf65a25f927028ff50e50c4fb5a762ea361406d6d6992233e3b31",
+        "hashType": "sha256",
+        "minSdkVersion": 26,
+        "nativecode": [
+          "arm64-v8a",
+          "x86_64"
+        ],
+        "packageName": "me.weishu.kernelsu",
+        "sig": "87dc6bf0cecc26e08c870a453832f096",
+        "signer": "c371061b19d8c7d7d6133c6a9bafe198fa944e50c1b31c9d8daa8d7f1fc2d2d6",
+        "size": 7903953,
+        "targetSdkVersion": 36,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.READ_PHONE_STATE",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "me.weishu.kernelsu.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 32302,
+        "versionName": "v3.1.0"
+      }
+    ],
+    "me.zhanghai.android.files": [
+      {
+        "added": 1774038032000,
+        "apkName": "me.zhanghai.android.files_39.apk",
+        "hash": "ebc5138b6f713f0f73b5467a1a8a4ac3ccfcb2e82135372665b6811a8947641f",
+        "hashType": "sha256",
+        "minSdkVersion": 21,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "me.zhanghai.android.files",
+        "sig": "7b848bc946569132c2a0c7bcf8e6f0fe",
+        "signer": "9c22a742fa200c85bafbc9924a02ddc8f3a0b975d4d7b5a8da21d7cf34ce2b20",
+        "size": 9751305,
+        "targetSdkVersion": 34,
+        "uses-permission": [
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+            null
+          ],
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.MANAGE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.QUERY_ALL_PACKAGES",
+            null
+          ],
+          [
+            "android.permission.REQUEST_INSTALL_PACKAGES",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            32
+          ],
+          [
+            "com.android.launcher.permission.INSTALL_SHORTCUT",
+            null
+          ],
+          [
+            "me.zhanghai.android.files.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            32
+          ]
+        ],
+        "versionCode": 39,
+        "versionName": "1.7.4"
+      }
+    ],
+    "moe.shizuku.privileged.api": [
+      {
+        "added": 1774038007000,
+        "apkName": "moe.shizuku.privileged.api_1086.apk",
+        "hash": "6e273ab0e991c4e79bc8b1bbb9b9dd739ccac1a8712a541a214078886b7b790f",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "moe.shizuku.privileged.api",
+        "sig": "74bc5f213b047db4700e2b52515d0fa0",
+        "signer": "268b5590e868fb08bae7e0ac413564cd1ff88f5ccff74af9dbd0dc918e30db30",
+        "size": 2571773,
+        "targetSdkVersion": 36,
+        "uses-permission": [
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.WRITE_SECURE_SETTINGS",
+            null
+          ],
+          [
+            "moe.shizuku.manager.permission.MANAGER",
+            null
+          ]
+        ],
+        "versionCode": 1086,
+        "versionName": "13.6.0.r1086.2650830c"
+      }
+    ],
+    "org.frknkrc44.hma_oss": [
+      {
+        "added": 1774038038000,
+        "apkName": "org.frknkrc44.hma_oss_7304641.apk",
+        "hash": "afa03331a9e572ede6bdffb7eac873653b576cda81057e4f2d6152023b91085c",
+        "hashType": "sha256",
+        "minSdkVersion": 29,
+        "packageName": "org.frknkrc44.hma_oss",
+        "sig": "12273c4f1acdb6d34ce26192642452bc",
+        "signer": "35caf9c5e4859a36a75a0645b5e8faf16adbdc48e28ae393671e6b859edf3d43",
+        "size": 3048969,
+        "targetSdkVersion": 36,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.QUERY_ALL_PACKAGES",
+            null
+          ],
+          [
+            "org.frknkrc44.hma_oss.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 7304641,
+        "versionName": "oss-158"
+      }
+    ],
+    "org.localsend.localsend_app": [
+      {
+        "added": 1774037977000,
+        "apkName": "org.localsend.localsend_app_583.apk",
+        "hash": "2c7f5fd4872da25115bb8e5e62f92de94dda47b0f249ff387ac667b13871dc3e",
+        "hashType": "sha256",
+        "minSdkVersion": 21,
+        "nativecode": [
+          "arm64-v8a"
+        ],
+        "packageName": "org.localsend.localsend_app",
+        "sig": "c36e092bb453739a34b4c086a247af74",
+        "signer": "3220c353a73cfbd0c2f3052471c445324cf452bcba26de1c473a52fe5c44e1d6",
+        "size": 17491108,
+        "targetSdkVersion": 34,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            32
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_IMAGES",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_VIDEO",
+            null
+          ],
+          [
+            "android.permission.ACCESS_MEDIA_LOCATION",
+            null
+          ],
+          [
+            "android.permission.QUERY_ALL_PACKAGES",
+            null
+          ],
+          [
+            "android.permission.REQUEST_INSTALL_PACKAGES",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_AUDIO",
+            null
+          ],
+          [
+            "org.localsend.localsend_app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 583,
+        "versionName": "1.17.0"
+      }
+    ]
+  }
+}
