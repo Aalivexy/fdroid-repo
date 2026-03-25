@@ -17,6 +17,10 @@ config:
   info_url: https://apt.izzysoft.de/fdroid/repo/index-v2.json
 
 packages:
+  - pkg_name: me.weishu.kernelsu
+    icon_url: https://apt.izzysoft.de/fdroid/repo/me.weishu.kernelsu/en-US/icon.png
+    <<: *IzzyOnDroid
+
   - pkg_name: com.x8bit.bitwarden
     info_url: https://github.com/bitwarden/f-droid/raw/main/fdroid/repo/index-v2.json
 
@@ -166,9 +170,6 @@ packages:
 
   - pkg_name: me.zhanghai.android.files
     <<: *fdroid
-
-  - pkg_name: me.weishu.kernelsu
-    <<: *IzzyOnDroid
 
   - pkg_name: org.frknkrc44.hma_oss
     <<: *IzzyOnDroid
