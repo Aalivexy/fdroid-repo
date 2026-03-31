@@ -321,6 +321,8 @@ def download_packages():
                         base_url = pkg.info_url[: -len("/index-v2.json")]
                         pkg.icon_url = base_url + icon_info.name
 
+        pkg.icon_url = pkg.icon_url.replace("$PKG_NAME", pkg.pkg_name) if pkg.icon_url else None
+
         # 从 metadata_url 获取（用于覆盖/补充）
         if pkg.metadata_url:
             url_metadata = yaml.safe_load(

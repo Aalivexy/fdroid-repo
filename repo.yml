@@ -14,11 +14,11 @@ config:
   info_url: https://mirrors.tuna.tsinghua.edu.cn/fdroid/repo/index-v2.json
 
 .IzzyOnDroid: &IzzyOnDroid
+  icon_url: https://apt.izzysoft.de/fdroid/repo/$PKG_NAME/en-US/icon.png
   info_url: https://apt.izzysoft.de/fdroid/repo/index-v2.json
 
 packages:
   - pkg_name: me.weishu.kernelsu
-    icon_url: https://apt.izzysoft.de/fdroid/repo/me.weishu.kernelsu/en-US/icon.png
     <<: *IzzyOnDroid
 
   - pkg_name: com.x8bit.bitwarden
