@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fdroid>
+	<repo icon="icon.png" name="Aalivexy" pubkey="308204ef308202d7a003020102020839964681484c6eb9300d06092a864886f70d01010b050030253110300e060355040b1307462d44726f69643111300f0603550403130861616c69766578793020170d3235303332303035333634345a180f32303532303830353035333634345a30253110300e060355040b1307462d44726f69643111300f0603550403130861616c697665787930820222300d06092a864886f70d01010105000382020f003082020a0282020100cf01643b6f5d426d7542e6d1f035e92696ebb78ed99a1f83974e223396e2cad27fb41751312b94995e8b8469bd2711783e5319551ce4b564056ec18812fb8f5dc81422573a103797e633c8bf89cf4c374980cc66d17f10789907d964b16279fc9667fd585ceb0f4273d13056d2c593fb60d1541c90309e1ac0f40a43024b1feb03a2643df930d3e7d5f69a55e9fdd576cafc0997687db8bba0a2627a976d74a2009d69632663f41328637eef81bd7dfff7a3d24bd9ae6b71b2865f68b7ee179b1c16941698525b78dd2dca42dc240d211628b7d5621fb27a0a46c7ca3c967d97686da99fe7a838cb140709655d0713e0fa5f845df6587f681c41b4d932305db7d4f8cea590be78123f53185e8931b7f8f7d1d01682c82bf894303659282f3c4f67ae8c7b9723cd8cd7d025303a3c1080bd2e633408d317df346d792da17e150a0a97d88782544a3101254dcd4eca7b36221559d016e2c84b260a0e0d3ff559da3ee310a81d25649357cd44c17dc9d0f4fc7f973a1fd030e3043d4d971b980a515186b6a052bbda39987bbb24f6d4d71a1ab9c87fbcf0f8476ab46670270a22b1cb7349c9de0ee9fb0a7d5795f95bdf504d70790bde20bf0bce5b937320e16ddb0ee2e1da544bcc256078c45b7b8c93812bac792e1be592e053b1b9f0254b0a67b4615551f37de668c704f647296880197d85caa920e838d9930074ff5a4f6f250203010001a321301f301d0603551d0e041604141392c4086b46e489f0bb460a7b71e4d353fe4130300d06092a864886f70d01010b050003820201007d339d050326da660e5764da2c4978c559f0cdd6f59fa257b2294e829d8edfd365974697a3ac79a7ee4dcd77ce3b6ef9ebd3a4349eb2a93b423d9cbdb03a7c15b0bde16f97b173b31035667b2ac18c78e871d0d5cee359cf1a866219cb4837e900460bfee5017375ee14e70940c3f1346ccc78b970d524f6cdad34a19aad047e288a4490418e849087306217bae8db1543363f3e8ff0f5ffb07cdb4f56fb52e4c6617bced1942d1062af1568922e6842a437b9c1d10bd41a20ead8d56dc9e04776457b8e2d9bf82fcf79a0845e92b3b21ef7bfcc5aad16a9c9fb176c632b850d18ab570762804863fe05356cb34cd026869dd7027bf4d196f8cc5c11f1709aa2c00fe330c21492ee32acfbc27c807208d3d8f71357b76acfd123209d002240838c9b2e4688cf8591074947aac3522a7c1fbaa75faee6ef45fa177fde14b0f405d00efa2ea7c02370bc7e067b46d21397cb517ba9470551374db468b01a0826bffa1a1525d031f1b6c5b707967731a32f870a25b298e07fb7a494b094efec02d0ba0aa1e1dec454e67a160112cec750d12c66b2a66a4ccb751972b478feb019021dc954bb9835d0b6c922b06883367afc86670b8c41db4a08f125e7f401808c67b09d10ad30c6c5927613a357f2bf33c7bdf041721ff3c2fd9a4a8cf8f2fc4d496a445a267a2ac88c14af388ac61f78d61176b0ef30ff72eee0f88d7ded36fd69" timestamp="1775507343" url="https://aalivexy.cc/fdroid/repo" version="20002">
+		<description>Aalivexy's F-Droid Repo</description>
+	</repo>
+	<application id="com.x8bit.bitwarden">
+		<id>com.x8bit.bitwarden</id>
+		<added>2026-04-06</added>
+		<lastupdated>2026-04-06</lastupdated>
+		<name>Bitwarden</name>
+		<summary>Bitwarden mobile app for Android.</summary>
+		<desc>Bitwarden is the easiest and safest way to store all of your logins and passwords while conveniently keeping them synced between all of your devices.
+
+Password theft is a serious problem. The websites and apps that you use are under attack every day. Security breaches occur and your passwords are stolen. When you reuse the same passwords across apps and websites hackers can easily access your email, bank, and other important accounts.
+
+Security experts recommend that you use a different, randomly generated password for every account that you create. But how do you manage all those passwords? Bitwarden makes it easy for you to create, store, and access your passwords.
+
+Bitwarden stores all of your logins in an encrypted vault that syncs across all of your devices. Since it's fully encrypted before it ever leaves your device, only you have access to your data. Not even the team at Bitwarden can read your data, even if we wanted to. Your data is sealed with AES-256 bit encryption, salted hashing, and PBKDF2 SHA-256.
+
+Bitwarden is focused on open source software. The source code for Bitwarden is hosted on GitHub and everyone is free to review, audit, and contribute to the Bitwarden codebase.
+</desc>
+		<license>GPL-3.0</license>
+		<categories>Security,Aalivexy</categories>
+		<category>Security</category>
+		<web></web>
+		<source>https://github.com/bitwarden/android</source>
+		<tracker></tracker>
+		<author>bitwarden</author>
+		<marketversion></marketversion>
+		<marketvercode>21415</marketvercode>
+		<package>
+			<version>2026.3.1</version>
+			<versioncode>21415</versioncode>
+			<apkname>com.x8bit.bitwarden_21415.apk</apkname>
+			<hash type="sha256">227f7d393a93d0ad8767485145b0d4899a64b585fbb60cb12201492f8a4ada64</hash>
+			<size>73960266</size>
+			<sdkver>29</sdkver>
+			<targetSdkVersion>36</targetSdkVersion>
+			<added>2026-04-06</added>
+			<sig>4eca64d92c5726e95b1fcf98e8feef4c</sig>
+			<permissions>ACCESS_NETWORK_STATE,CAMERA,FOREGROUND_SERVICE,INTERNET,NFC,POST_NOTIFICATIONS,READ_USER_DICTIONARY,RECEIVE_BOOT_COMPLETED,USE_BIOMETRIC,USE_FINGERPRINT,WAKE_LOCK,com.x8bit.bitwarden.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION,horizons.permission.HEADSET_CAMERA</permissions>
+			<nativecode>arm64-v8a,armeabi,armeabi-v7a,mips,mips64,x86,x86_64</nativecode>
+		</package>
+	</application>
+	<application id="com.looker.droidify">
+		<id>com.looker.droidify</id>
+		<added>2026-04-06</added>
+		<lastupdated>2026-04-06</lastupdated>
+		<name>Droid-ify</name>
+		<summary>Clutterfree F-Droid client</summary>
+		<desc>Features:
+
+• Browse and install apps from F-Droid repositories
+• Automatic app updates in the background 
+• Multiple installation methods (Session, Root, Shizuku)
+• Add custom repositories with one tap
+• Works completely offline after initial sync
+
+Available in 63 languages including English, German, French, Spanish, and Chinese.
+
+Copylefted libre software, licensed GPLv3+.
+</desc>
+		<license>GPL-3.0-or-later</license>
+		<categories>App Store &amp; Updater,System,Aalivexy</categories>
+		<category>App Store &amp; Updater</category>
+		<web>https://droidify.eu.org/</web>
+		<source>https://github.com/Droid-ify/client</source>
+		<tracker>https://github.com/Droid-ify/client/issues</tracker>
+		<changelog>https://github.com/Droid-ify/client/releases</changelog>
+		<author>Iamlooker</author>
+		<email>mohit2002ss@gmail.com</email>
+		<marketversion></marketversion>
+		<marketvercode>710</marketvercode>
+		<package>
+			<version>0.7.1</version>
+			<versioncode>710</versioncode>
+			<apkname>com.looker.droidify_710.apk</apkname>
+			<hash type="sha256">f9c648df9efe82aa2a70d89e6591a73dfdaa864ac60916ed4668ce8bd6a99695</hash>
+			<size>5465719</size>
+			<sdkver>23</sdkver>
+			<targetSdkVersion>36</targetSdkVersion>
+			<added>2026-04-06</added>
+			<sig>1f5e88a854b991bf5d56c95acec001c1</sig>
+			<permissions>ACCESS_NETWORK_STATE,ENFORCE_UPDATE_OWNERSHIP,FOREGROUND_SERVICE,FOREGROUND_SERVICE_DATA_SYNC,INTERNET,POST_NOTIFICATIONS,QUERY_ALL_PACKAGES,RECEIVE_BOOT_COMPLETED,REQUEST_DELETE_PACKAGES,REQUEST_IGNORE_BATTERY_OPTIMIZATIONS,REQUEST_INSTALL_PACKAGES,RUN_USER_INITIATED_JOBS,UPDATE_PACKAGES_WITHOUT_USER_ACTION,WAKE_LOCK,com.looker.droidify.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION,moe.shizuku.manager.permission.API_V23</permissions>
+			<nativecode>arm64-v8a,armeabi-v7a,x86,x86_64</nativecode>
+		</package>
+	</application>
+	<application id="com.follow.clash">
+		<id>com.follow.clash</id>
+		<added>2026-04-06</added>
+		<lastupdated>2026-04-06</lastupdated>
+		<name>FlClash</name>
+		<summary>基于ClashMeta的多平台代理客户端，简单易用，开源无广告。</summary>
+		<desc>✈️ 多平台: Android, Windows, macOS and Linux
+💻 自适应多个屏幕尺寸,多种颜色主题可供选择
+💡 基本 Material You 设计, 类Surfboard用户界面
+☁️ 支持通过WebDAV同步数据
+✨ 支持一键导入订阅, 深色模式
+</desc>
+		<license>GPL-3.0-or-later</license>
+		<categories>Internet,Connectivity,Aalivexy</categories>
+		<category>Internet</category>
+		<web></web>
+		<source>https://github.com/chen08209/FlClash</source>
+		<tracker>https://github.com/chen08209/FlClash/issues</tracker>
+		<changelog>https://github.com/chen08209/FlClash/releases</changelog>
+		<author>chen08209</author>
+		<marketversion></marketversion>
+		<marketvercode>2026022201</marketvercode>
+		<package>
+			<version>0.8.92</version>
+			<versioncode>2026022201</versioncode>
+			<apkname>com.follow.clash_2026022201.apk</apkname>
+			<hash type="sha256">1db4692940bc24a0d2ad5cfe59335ac0d48cef23c61d9ac6d8bfa563683736b6</hash>
+			<size>47529200</size>
+			<sdkver>24</sdkver>
+			<targetSdkVersion>36</targetSdkVersion>
+			<added>2026-04-06</added>
+			<sig>01d20204fe36565bf08806d0249b75a9</sig>
+			<permissions>ACCESS_ADSERVICES_AD_ID,ACCESS_ADSERVICES_ATTRIBUTION,ACCESS_NETWORK_STATE,CAMERA,CHANGE_NETWORK_STATE,FOREGROUND_SERVICE,FOREGROUND_SERVICE_SPECIAL_USE,INTERNET,POST_NOTIFICATIONS,QUERY_ALL_PACKAGES,RECEIVE_BOOT_COMPLETED,WAKE_LOCK,com.follow.clash.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION,com.follow.clash.permission.RECEIVE_BROADCASTS,com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE,com.google.android.gms.permission.AD_ID</permissions>
+			<nativecode>arm64-v8a</nativecode>
+		</package>
+	</application>
+	<application id="li.songe.gkd">
+		<id>li.songe.gkd</id>
+		<added>2026-04-06</added>
+		<lastupdated>2026-04-06</lastupdated>
+		<name>GKD</name>
+		<summary>基于无障碍，高级选择器，订阅规则的自定义屏幕点击 Android 应用</summary>
+		<desc>基于 无障碍 + 高级选择器 + 订阅规则 的自定义屏幕点击 APP
+基于 高级选择器 + 订阅规则 + 快照审查 实现根据屏幕上下文信息自定义点击目标控件
+
+本应用 默认不携带任何规则，需自行添加本地规则，或者通过订阅链接的方式获取规则
+也可通过 subscription-template 快速构建自己的远程订阅
+第三方订阅列表可在 https://github.com/topics/gkd-subscription 查看
+</desc>
+		<license>GPL-3.0</license>
+		<categories>System,Aalivexy</categories>
+		<category>System</category>
+		<web></web>
+		<source>https://github.com/gkd-kit/gkd</source>
+		<tracker>https://github.com/gkd-kit/gkd/issues</tracker>
+		<changelog>https://github.com/gkd-kit/gkd/releases</changelog>
+		<author>GKD</author>
+		<marketversion></marketversion>
+		<marketvercode>81</marketvercode>
+		<package>
+			<version>1.11.6</version>
+			<versioncode>81</versioncode>
+			<apkname>li.songe.gkd_81.apk</apkname>
+			<hash type="sha256">4bb0da6b60cfe16e090e18f00cdf6e232851df0f20e7036726c6cb64e559a8e4</hash>
+			<size>4057956</size>
+			<sdkver>26</sdkver>
+			<targetSdkVersion>36</targetSdkVersion>
+			<added>2026-04-06</added>
+			<sig>41931fed2bedba24cb212dcc65d413d7</sig>
+			<permissions>FOREGROUND_SERVICE,FOREGROUND_SERVICE_MEDIA_PROJECTION,FOREGROUND_SERVICE_SPECIAL_USE,GET_APP_OPS_STATS,INTERNET,POST_NOTIFICATIONS,QUERY_ALL_PACKAGES,READ_EXTERNAL_STORAGE,REQUEST_IGNORE_BATTERY_OPTIMIZATIONS,REQUEST_INSTALL_PACKAGES,SYSTEM_ALERT_WINDOW,WRITE_EXTERNAL_STORAGE,WRITE_SECURE_SETTINGS,com.android.permission.GET_INSTALLED_APPS,li.songe.gkd.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION,moe.shizuku.manager.permission.API_V23</permissions>
+			<uses-permission maxSdkVersion="29" name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION"/>
+			<uses-permission maxSdkVersion="28" name="android.permission.READ_EXTERNAL_STORAGE"/>
+			<uses-permission maxSdkVersion="28" name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+			<nativecode>arm64-v8a,x86_64</nativecode>
+		</package>
+	</application>
+	<application id="org.frknkrc44.hma_oss">
+		<id>org.frknkrc44.hma_oss</id>
+		<added>2026-04-06</added>
+		<lastupdated>2026-04-06</lastupdated>
+		<name>HMA-OSS</name>
+		<summary>A FOSS continuation of Hide My Applist project with bunch of new features.</summary>
+		<desc>&lt;p&gt;A FOSS continuation of Hide My Applist project with bunch of new features.&lt;/p&gt;&lt;p&gt;Features of HMA-OSS:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Hide your application list (similar to what Hide My Applist does)&lt;/li&gt;&lt;li&gt;Activity launch protection&lt;/li&gt;&lt;li&gt;Installation source spoofing for both user and system apps (replaces BetterKnownInstalled)&lt;/li&gt;&lt;li&gt;Application presets&lt;/li&gt;&lt;li&gt;Settings presets&lt;/li&gt;&lt;li&gt;Settings templates (more flexible than what SettingsFirewall does, also allows you to override the settings presets)&lt;/li&gt;&lt;li&gt;Propless appdata and vold appdata isolation with exclude system apps option&lt;/li&gt;&lt;li&gt;Ignore hiding an app from Google Play services automatically if it is risky to hide (fixes crash issues etc.)&lt;/li&gt;&lt;li&gt;Experimental Restrict Zygote permissions option&lt;/li&gt;&lt;li&gt;Extra opposite app list option to add:&lt;ul&gt;&lt;li&gt;More visible apps in blacklist mode&lt;/li&gt;&lt;li&gt;More invisible apps in whitelist mode&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Redesigned home screen and some other screens&lt;/li&gt;&lt;li&gt;Bulk config wizard (apply a config to more than one apps)&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;For more information, check this wiki page: https://github.com/frknkrc44/HMA-OSS/wiki&lt;/p&gt;</desc>
+		<license>AGPL-3.0-only</license>
+		<categories>Xposed,Aalivexy</categories>
+		<category>Xposed</category>
+		<web></web>
+		<source>https://github.com/frknkrc44/HMA-OSS</source>
+		<tracker>https://github.com/frknkrc44/HMA-OSS/issues</tracker>
+		<changelog>https://github.com/frknkrc44/HMA-OSS/releases</changelog>
+		<author>Furkan Karcıoğlu</author>
+		<donate>https://github.com/sponsors/frknkrc44</donate>
+		<marketversion></marketversion>
+		<marketvercode>7304641</marketvercode>
+		<package>
+			<version>oss-158</version>
+			<versioncode>7304641</versioncode>
+			<apkname>org.frknkrc44.hma_oss_7304641.apk</apkname>
+			<hash type="sha256">afa03331a9e572ede6bdffb7eac873653b576cda81057e4f2d6152023b91085c</hash>
+			<size>3048969</size>
+			<sdkver>29</sdkver>
+			<targetSdkVersion>36</targetSdkVersion>
+			<added>2026-04-06</added>
+			<sig>12273c4f1acdb6d34ce26192642452bc</sig>
+			<permissions>INTERNET,QUERY_ALL_PACKAGES,org.frknkrc44.hma_oss.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+		</package>
+	</application>
+	<application id="dev.bg.jetbird">
+		<id>dev.bg.jetbird</id>
+		<added>2026-04-06</added>
+		<lastupdated>2026-04-06</lastupdated>
+		<name>JetBird</name>
+		<summary>An unofficial, FLOSS, native Android NetBird client built with privacy in mind</summary>
+		<desc>JetBird is a wrapper around the NetBird client and is privacy friendly, containing no blobs or trackers.
+
+## Features
+- Native UI
+- Supports SSO and setup keys
+- Supports pre-shared keys
+- Real-time logs
+- Quick tile
+- Exclude apps from the tunnel
+- Exit nodes (with client-side customisation)
+- Android TV support
+- Lazy connection support
+</desc>
+		<license>GPL-3.0-or-later</license>
+		<categories>Connectivity,VPN &amp; Proxy,Aalivexy</categories>
+		<category>Connectivity</category>
+		<web></web>
+		<source>https://codeberg.org/bg443/JetBird</source>
+		<tracker>https://codeberg.org/bg443/JetBird/issues</tracker>
+		<changelog>https://codeberg.org/bg443/JetBird/releases</changelog>
+		<author>bg443</author>
+		<marketversion></marketversion>
+		<marketvercode>342</marketvercode>
+		<package>
+			<version>1.4.6</version>
+			<versioncode>342</versioncode>
+			<apkname>dev.bg.jetbird_342.apk</apkname>
+			<hash type="sha256">dcf9d1934bb99756a708b3b09574d6334437e7cc3d6ebb458f17bf10ffa5c2e1</hash>
+			<size>37553393</size>
+			<sdkver>24</sdkver>
+			<targetSdkVersion>36</targetSdkVersion>
+			<added>2026-04-06</added>
+			<sig>cacb7c3347043d5b5edb616f297c3be7</sig>
+			<permissions>ACCESS_NETWORK_STATE,CHANGE_NETWORK_STATE,FOREGROUND_SERVICE,FOREGROUND_SERVICE_SYSTEM_EXEMPTED,INTERNET,POST_NOTIFICATIONS,QUERY_ALL_PACKAGES,RECEIVE_BOOT_COMPLETED,dev.bg.jetbird.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<nativecode>arm64-v8a</nativecode>
+		</package>
+	</application>
+	<application id="me.weishu.kernelsu">
+		<id>me.weishu.kernelsu</id>
+		<added>2026-04-06</added>
+		<lastupdated>2026-04-06</lastupdated>
+		<name>KernelSU</name>
+		<summary>Kernel based root solution for Android</summary>
+		<desc>&lt;p&gt;&lt;i&gt;KernelSU&lt;/i&gt; is a Kernel based root solution for Android devices. It features kernel-based &lt;code&gt;su&lt;/code&gt; and root access management as well as a Module system based on overlayfs (similar to Magisk). &lt;i&gt;KernelSU&lt;/i&gt; works whitelist-based: Only App that is granted root permission can access &lt;code&gt;su&lt;/code&gt;, other apps cannot perceive &lt;code&gt;su&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;&lt;i&gt;KernelSU&lt;/i&gt; officially supports Android GKI 2.0 devices(with kernel 5.10+), old kernels(4.14+) is also compatiable, but you need to build kernel yourself. WSA and containter-based Android should also work with &lt;i&gt;KernelSU&lt;/i&gt; integrated.&lt;/p&gt;&lt;p&gt;Current supported ABIs are: &lt;code&gt;arm64-v8a&lt;/code&gt; and &lt;code&gt;x86_64&lt;/code&gt;.&lt;/p&gt;</desc>
+		<license>GPL-3.0-only</license>
+		<categories>System,Aalivexy</categories>
+		<category>System</category>
+		<web>https://kernelsu.org/</web>
+		<source>https://github.com/tiann/KernelSU</source>
+		<tracker>https://github.com/tiann/KernelSU/issues</tracker>
+		<changelog>https://github.com/tiann/KernelSU/releases</changelog>
+		<author>weishu</author>
+		<email>twsxtd@gmail.com</email>
+		<donate>https://github.com/sponsors/tiann</donate>
+		<marketversion></marketversion>
+		<marketvercode>32457</marketvercode>
+		<package>
+			<version>v3.2.4</version>
+			<versioncode>32457</versioncode>
+			<apkname>me.weishu.kernelsu_32457.apk</apkname>
+			<hash type="sha256">f0951351291494e0c309267b375cf5bfbdb5eca6df0ec18f6fb7df8b3dea990b</hash>
+			<size>8776001</size>
+			<sdkver>31</sdkver>
+			<targetSdkVersion>36</targetSdkVersion>
+			<added>2026-04-06</added>
+			<sig>87dc6bf0cecc26e08c870a453832f096</sig>
+			<permissions>ACCESS_NETWORK_STATE,FOREGROUND_SERVICE,FOREGROUND_SERVICE_DATA_SYNC,INTERNET,POST_NOTIFICATIONS,RECEIVE_BOOT_COMPLETED,me.weishu.kernelsu.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<nativecode>arm64-v8a,x86_64</nativecode>
+		</package>
+	</application>
+	<application id="com.absinthe.libchecker">
+		<id>com.absinthe.libchecker</id>
+		<added>2026-04-06</added>
+		<lastupdated>2026-04-06</lastupdated>
+		<name>LibChecker</name>
+		<summary>查看应用使用的第三方库</summary>
+		<desc>此应用可以查看你的设备上应用使用的第三方库。它也可以查看应用本机库的 ABI 架构（通常用来查看应用是 64 位还是 32 位）。它还可以查看&lt;a href=&quot;https://github.com/LibChecker/LibChecker-Rules&quot;&gt;在线规则库&lt;/a&gt;中标记的常见库，甚至可以根据库引用数排序并查看他们。
+</desc>
+		<license>Apache-2.0</license>
+		<categories>System,Aalivexy</categories>
+		<category>System</category>
+		<web></web>
+		<source>https://github.com/LibChecker/LibChecker</source>
+		<tracker>https://github.com/LibChecker/LibChecker/issues</tracker>
+		<changelog>https://github.com/LibChecker/LibChecker/releases</changelog>
+		<author>Absinthe</author>
+		<email>zhaobozhen2025@gmail.com</email>
+		<marketversion></marketversion>
+		<marketvercode>2515</marketvercode>
+		<package>
+			<version>2.5.3</version>
+			<versioncode>2515</versioncode>
+			<apkname>com.absinthe.libchecker_2515.apk</apkname>
+			<hash type="sha256">ac1ff15c10bfab0dae1d75056eea0ebcf8e4b5008bdd8dd6733095266779dbdb</hash>
+			<size>5031952</size>
+			<sdkver>24</sdkver>
+			<targetSdkVersion>36</targetSdkVersion>
+			<added>2026-04-06</added>
+			<sig>3596ad186ba9d3cd0ca15d6dc2cc36ae</sig>
+			<permissions>FOREGROUND_SERVICE,INTERNET,POST_NOTIFICATIONS,QUERY_ALL_PACKAGES,com.android.permission.GET_INSTALLED_APPS,moe.shizuku.manager.permission.API_V23</permissions>
+		</package>
+	</application>
+	<application id="org.localsend.localsend_app">
+		<id>org.localsend.localsend_app</id>
+		<added>2026-04-06</added>
+		<lastupdated>2026-04-06</lastupdated>
+		<name>LocalSend</name>
+		<summary>Cross-Platform file sharing solution via WiFi.</summary>
+		<desc>LocalSend is an open source app to share files and messages between nearby devices using the local wifi network.
+The communication between devices is entirely end-to-end encrypted via HTTPS.
+No Internet required. No tracking*. No ads.
+
+Currently, this app is available on Android, iOS, macOS, Windows and Linux. You can find all download options on the official homepage.
+
+*The operating system may still gather usage data.
+</desc>
+		<license>Apache-2.0</license>
+		<categories>Connectivity,File Transfer,Aalivexy</categories>
+		<category>Connectivity</category>
+		<web>https://localsend.org</web>
+		<source>https://github.com/localsend/localsend</source>
+		<tracker>https://github.com/localsend/localsend/issues</tracker>
+		<changelog>https://github.com/localsend/localsend/blob/HEAD/app/assets/CHANGELOG.md</changelog>
+		<author>Tien Do Nam</author>
+		<donate>https://github.com/sponsors/Tienisto</donate>
+		<marketversion></marketversion>
+		<marketvercode>583</marketvercode>
+		<package>
+			<version>1.17.0</version>
+			<versioncode>583</versioncode>
+			<apkname>org.localsend.localsend_app_583.apk</apkname>
+			<hash type="sha256">2c7f5fd4872da25115bb8e5e62f92de94dda47b0f249ff387ac667b13871dc3e</hash>
+			<size>17491108</size>
+			<sdkver>21</sdkver>
+			<targetSdkVersion>34</targetSdkVersion>
+			<added>2026-04-06</added>
+			<sig>c36e092bb453739a34b4c086a247af74</sig>
+			<permissions>ACCESS_MEDIA_LOCATION,ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE,INTERNET,QUERY_ALL_PACKAGES,READ_EXTERNAL_STORAGE,READ_MEDIA_AUDIO,READ_MEDIA_IMAGES,READ_MEDIA_VIDEO,REQUEST_INSTALL_PACKAGES,WRITE_EXTERNAL_STORAGE,org.localsend.localsend_app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<uses-permission maxSdkVersion="32" name="android.permission.READ_EXTERNAL_STORAGE"/>
+			<nativecode>arm64-v8a</nativecode>
+		</package>
+	</application>
+	<application id="de.syss.MifareClassicTool">
+		<id>de.syss.MifareClassicTool</id>
+		<added>2026-04-06</added>
+		<lastupdated>2026-04-06</lastupdated>
+		<name>MIFARE Classic Tool</name>
+		<summary>An NFC app for reading, writing, analyzing, etc. MIFARE Classic RFID tags.</summary>
+		<desc>This is a low-level tool for reading, writing and analyzing MIFARE Classic RFID tags.
+It is designed for users who have at least basic familiarity with the MIFARE Classic technology.
+It provides several features to interact with (and only with) MIFARE Classic RFID-Tags.
+
+&lt;ul&gt;
+  &lt;li&gt;Read MIFARE Classic tags&lt;/li&gt;
+  &lt;li&gt;Save, edit and share the tag data you read&lt;/li&gt;
+  &lt;li&gt;Write to MIFARE Classic tags (block-wise)&lt;/li&gt;
+  &lt;li&gt;Clone MIFARE Classic tags&lt;br /&gt;
+    (Write dump of a tag to another tag; write 'dump-wise')&lt;/li&gt;
+  &lt;li&gt;Key management based on dictionary-attack&lt;br /&gt;
+    (Write the keys you know in a file (dictionary).&lt;br /&gt;
+    MCT will try to authenticate with these
+    keys against all sectors&lt;br /&gt;and read as much as possible.)
+  &lt;/li&gt;
+  &lt;li&gt;Format a tag back to the factory/delivery state&lt;/li&gt;
+  &lt;li&gt;Write the manufacturer block of special MIFARE Classic tags&lt;/li&gt;
+  &lt;li&gt;Use external NFC readers like ACR 122U&lt;/li&gt;
+  &lt;li&gt;Create, edit, save and share key files (dictionaries)&lt;/li&gt;
+  &lt;li&gt;Decode &amp;amp; Encode MIFARE Classic Value Blocks&lt;/li&gt;
+  &lt;li&gt;Decode &amp;amp; Encode MIFARE Classic Access Conditions&lt;/li&gt;
+  &lt;li&gt;Display generic tag information&lt;/li&gt;
+  &lt;li&gt;Display the tag data as highlighted hex&lt;/li&gt;
+  &lt;li&gt;Display the tag data as 7-Bit US-ASCII&lt;/li&gt;
+  &lt;li&gt;Display the MIFARE Classic Access Conditions as a table&lt;/li&gt;
+  &lt;li&gt;Display MIFARE Classic Value Blocks as integer&lt;/li&gt;
+  &lt;li&gt;Calcualate the BCC&lt;/li&gt;
+  &lt;li&gt;Quick UID clone feature&lt;/li&gt;
+  &lt;li&gt;Import/export/convert files&lt;/li&gt;
+  &lt;li&gt;In-App (offline) help and information&lt;/li&gt;
+  &lt;li&gt;It's open source ;)&lt;/li&gt;
+&lt;/ul&gt;
+
+More information can be found at the
+&lt;a href=&quot;https://github.com/ikarus23/MifareClassicTool/blob/master/README.md&quot;&gt;README&lt;/a&gt;.
+
+It should work on most NFC-enabled devices but there are exceptions. Have a look at the
+&lt;a href=&quot;https://github.com/ikarus23/MifareClassicTool/blob/master/INCOMPATIBLE_DEVICES.md&quot;&gt;list
+of devices which are known to be incompatible to MIFARE Classic&lt;/a&gt;.
+
+MIFARE® is a registered trademark of NXP Semiconductors.</desc>
+		<license>GPL-3.0-only</license>
+		<categories>Connectivity,Development,Aalivexy</categories>
+		<category>Connectivity</category>
+		<web>https://www.icaria.de/mct/</web>
+		<source>https://github.com/ikarus23/MifareClassicTool</source>
+		<tracker>https://github.com/ikarus23/MifareClassicTool/issues</tracker>
+		<changelog>https://github.com/ikarus23/MifareClassicTool/raw/HEAD/CHANGELOG.txt</changelog>
+		<author>IKARUS Projects</author>
+		<email>fooblubb@gmail.com</email>
+		<donate>https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=24ET8A36XLMNW</donate>
+		<marketversion></marketversion>
+		<marketvercode>70</marketvercode>
+		<package>
+			<version>4.3.1</version>
+			<versioncode>70</versioncode>
+			<apkname>de.syss.MifareClassicTool_70.apk</apkname>
+			<hash type="sha256">1e230b26d97d119c7f8034af082fbe6cc41b99a955b6d699d951c59c456a086c</hash>
+			<size>4027988</size>
+			<sdkver>19</sdkver>
+			<targetSdkVersion>35</targetSdkVersion>
+			<added>2026-04-06</added>
+			<sig>f8a2eae34a28aedb04629f9c3250be6e</sig>
+			<permissions>NFC,de.syss.MifareClassicTool.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<features>android.hardware.nfc</features>
+		</package>
+	</application>
+	<application id="com.perol.pixez">
+		<id>com.perol.pixez</id>
+		<added>2026-04-06</added>
+		<lastupdated>2026-04-06</lastupdated>
+		<name>PixEz</name>
+		<summary>A third-party Pixiv flutter client that supports viewing ugoira</summary>
+		<desc>&lt;p&gt;This is a third-party Pixiv flutter client that supports browsing ugoira and reverse image search. Discover and explore more creative illustrations with this app!&lt;br&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Latest Works&lt;ul&gt;&lt;li&gt;Quickly view the latest works of the users you follow&lt;/li&gt;&lt;li&gt;Support for viewing ranked works&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Search&lt;ul&gt;&lt;li&gt;Search by any keyword&lt;/li&gt;&lt;li&gt;Search by work title or character name&lt;/li&gt;&lt;li&gt;Search by work ID, character ID or link&lt;/li&gt;&lt;li&gt;Frequently searched keywords will remain on the search bar&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Feature&lt;ul&gt;&lt;li&gt;Support for blocking specific authors, tags or works&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</desc>
+		<license>GPL-3.0-only</license>
+		<categories>Graphics,Internet,Aalivexy</categories>
+		<category>Graphics</category>
+		<web></web>
+		<source>https://github.com/Notsfsssf/pixez-flutter</source>
+		<tracker>https://github.com/Notsfsssf/pixez-flutter/issues</tracker>
+		<author>Notsfsssf</author>
+		<email>asdplk3@live.com</email>
+		<marketversion></marketversion>
+		<marketvercode>10010000</marketvercode>
+		<package>
+			<version>0.9.100 ttl</version>
+			<versioncode>10010000</versioncode>
+			<apkname>com.perol.pixez_10010000.apk</apkname>
+			<hash type="sha256">30881a9307c021912ac28a46f30ca282e3850960fbb289eaf143c364c9e90842</hash>
+			<size>18698101</size>
+			<sdkver>24</sdkver>
+			<targetSdkVersion>35</targetSdkVersion>
+			<added>2026-04-06</added>
+			<sig>aef4d9f65c901f9a4c487ed33eb62a84</sig>
+			<permissions>ACCESS_NETWORK_STATE,INTERNET,POST_NOTIFICATIONS,READ_EXTERNAL_STORAGE,READ_MEDIA_IMAGES,WAKE_LOCK,WRITE_EXTERNAL_STORAGE,com.android.vending.BILLING,com.perol.pixez.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<nativecode>arm64-v8a</nativecode>
+		</package>
+	</application>
+	<application id="me.ash.reader">
+		<id>me.ash.reader</id>
+		<added>2026-04-06</added>
+		<lastupdated>2026-04-06</lastupdated>
+		<name>Read You</name>
+		<summary>一个以 Material You 风格呈现的 RSS 阅读器</summary>
+		<desc>&lt;i&gt;Read You&lt;/i&gt; 是一个以 &lt;a href='https://m3.material.io/' target='_blank' rel='nofollow'&gt;Material You&lt;/a&gt; 风格呈现的 RSS 阅读器
+
+&lt;b&gt;特性：&lt;/b&gt;
+
+* 订阅 RSS 链接
+* 导入 OPML 文件
+* 文章同步
+* 文章更新通知
+* 全文解析
+* 过滤未读、星标
+* 订阅源分组
+* 本地化
+* 导出 OPML 文件
+* 文章搜索
+
+更多的在路上…
+</desc>
+		<license>GPL-3.0-only</license>
+		<categories>News,Reading,Aalivexy</categories>
+		<category>News</category>
+		<web></web>
+		<source>https://github.com/Ashinch/ReadYou</source>
+		<tracker>https://github.com/Ashinch/ReadYou/issues</tracker>
+		<changelog>https://github.com/Ashinch/ReadYou/releases</changelog>
+		<author>Ashinch</author>
+		<email>Ashinch@outlook.it</email>
+		<donate>https://ash7.io/sponsor</donate>
+		<marketversion></marketversion>
+		<marketvercode>46</marketvercode>
+		<package>
+			<version>0.16.1</version>
+			<versioncode>46</versioncode>
+			<apkname>me.ash.reader_46.apk</apkname>
+			<hash type="sha256">41732ae9a57737c060b66f2d24a10440c53a92beee9dfdce8d5cc3d76041069a</hash>
+			<size>11197406</size>
+			<sdkver>26</sdkver>
+			<targetSdkVersion>34</targetSdkVersion>
+			<added>2026-04-06</added>
+			<sig>a3d567aa1f6be2e6e99a47da3963f010</sig>
+			<permissions>ACCESS_NETWORK_STATE,FOREGROUND_SERVICE,INTERNET,POST_NOTIFICATIONS,READ_EXTERNAL_STORAGE,RECEIVE_BOOT_COMPLETED,WAKE_LOCK,WRITE_EXTERNAL_STORAGE,me.ash.reader.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<uses-permission maxSdkVersion="28" name="android.permission.READ_EXTERNAL_STORAGE"/>
+			<uses-permission maxSdkVersion="28" name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+			<nativecode>arm64-v8a,armeabi-v7a,x86,x86_64</nativecode>
+		</package>
+	</application>
+	<application id="me.rerere.rikkahub">
+		<id>me.rerere.rikkahub</id>
+		<added>2026-04-06</added>
+		<lastupdated>2026-04-06</lastupdated>
+		<name>RikkaHub</name>
+		<summary>一个原生Android LLM 聊天客户端，支持切换不同的供应商进行聊天。</summary>
+		<desc>功能特色:
+* 🎨 现代化安卓APP设计（Material You / 预测性返回）
+* 🌙 暗色模式
+* 🛠️ MCP 支持
+* 🔄 多种类型的供应商支持，自定义 API / URL / 模型（目前支持 OpenAI、Google、Anthropic）
+* 🖼️ 多模态输入支持
+* 📝 Markdown 渲染（支持代码高亮、数学公式、表格、Mermaid）
+* 🔍 搜索功能（Exa、Tavily、Zhipu、LinkUp、Brave、Perplexity...）
+* 🧩 Prompt 变量（模型名称、时间等）
+* 🤳 二维码导出和导入提供商
+* 🤖 智能体自定义
+* 🧠 类ChatGPT记忆功能
+* 📝 AI翻译
+* 🌐 自定义HTTP请求头和请求体
+</desc>
+		<license>AGPL-3.0-only</license>
+		<categories>Internet,Utilities,Aalivexy</categories>
+		<category>Internet</category>
+		<web>https://rikka-ai.com</web>
+		<source>https://github.com/rikkahub/rikkahub</source>
+		<tracker>https://github.com/rikkahub/rikkahub/issues</tracker>
+		<changelog>https://github.com/rikkahub/rikkahub/releases</changelog>
+		<author>RE</author>
+		<marketversion></marketversion>
+		<marketvercode>150</marketvercode>
+		<antifeatures>UpstreamNonFree</antifeatures>
+		<package>
+			<version>2.1.7</version>
+			<versioncode>150</versioncode>
+			<apkname>me.rerere.rikkahub_150.apk</apkname>
+			<hash type="sha256">daa9df3578425c236a4aedb69bb3b7422b11a14753b6e862ee7eb743b1316cd9</hash>
+			<size>38674059</size>
+			<sdkver>26</sdkver>
+			<targetSdkVersion>36</targetSdkVersion>
+			<added>2026-04-06</added>
+			<sig>3e51b9253e65313a2768d43d74a74995</sig>
+			<permissions>ACCESS_ADSERVICES_AD_ID,ACCESS_ADSERVICES_ATTRIBUTION,ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE,CAMERA,CHANGE_WIFI_MULTICAST_STATE,FOREGROUND_SERVICE,FOREGROUND_SERVICE_SPECIAL_USE,INTERNET,NEARBY_WIFI_DEVICES,POST_NOTIFICATIONS,POST_PROMOTED_NOTIFICATIONS,RECEIVE_BOOT_COMPLETED,WAKE_LOCK,com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE,com.google.android.gms.permission.AD_ID,me.rerere.rikkahub.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<nativecode>arm64-v8a</nativecode>
+		</package>
+	</application>
+	<application id="com.seafile.seadroid2">
+		<id>com.seafile.seadroid2</id>
+		<added>2026-04-06</added>
+		<lastupdated>2026-04-06</lastupdated>
+		<name>Seafile</name>
+		<summary>文件同步</summary>
+		<desc>Client for the Seafile cloud file server and project management software. If you
+are in a small team with a few people, you can create a group in Seafile and
+invite other team members. Team members can then maintain file libraries
+together and collaborate around them.
+
+You can try the &lt;a href=&quot;https://seacloud.cc/demo&quot;&gt;demo&lt;/a&gt;, sign up for an account at the
+website, or since the server-side is also free-as-in-freedom, it can be
+installed on any server and configured to work with the app.</desc>
+		<license>AGPL-3.0-or-later</license>
+		<categories>Cloud Storage &amp; File Sync,Internet,Aalivexy</categories>
+		<category>Cloud Storage &amp; File Sync</category>
+		<web>http://seafile.com/en/download</web>
+		<source>https://github.com/haiwen/seadroid</source>
+		<tracker>https://github.com/haiwen/seadroid/issues</tracker>
+		<marketversion></marketversion>
+		<marketvercode>320</marketvercode>
+		<package>
+			<version>4.0.3</version>
+			<versioncode>320</versioncode>
+			<apkname>com.seafile.seadroid2_320.apk</apkname>
+			<hash type="sha256">7e00e0b199366549963eaf9c0a001e4c61c8297780176a962acb5e745145d6e4</hash>
+			<size>29538257</size>
+			<sdkver>28</sdkver>
+			<targetSdkVersion>35</targetSdkVersion>
+			<added>2026-04-06</added>
+			<sig>5d4a9ff449755c827fdabe080e436bc0</sig>
+			<permissions>ACCESS_NETWORK_STATE,AUTHENTICATE_ACCOUNTS,CAMERA,FOREGROUND_SERVICE,FOREGROUND_SERVICE_DATA_SYNC,GET_ACCOUNTS,INTERNET,MANAGE_ACCOUNTS,MANAGE_EXTERNAL_STORAGE,POST_NOTIFICATIONS,READ_EXTERNAL_STORAGE,READ_MEDIA_IMAGES,READ_MEDIA_VIDEO,READ_SYNC_SETTINGS,READ_SYNC_STATS,RECEIVE_BOOT_COMPLETED,USE_BIOMETRIC,USE_CREDENTIALS,USE_FINGERPRINT,VIBRATE,WAKE_LOCK,WRITE_EXTERNAL_STORAGE,WRITE_SYNC_SETTINGS,com.seafile.seadroid2.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<uses-permission maxSdkVersion="32" name="android.permission.READ_EXTERNAL_STORAGE"/>
+			<nativecode>arm64-v8a,armeabi-v7a,x86_64</nativecode>
+		</package>
+	</application>
+	<application id="moe.shizuku.privileged.api">
+		<id>moe.shizuku.privileged.api</id>
+		<added>2026-04-06</added>
+		<lastupdated>2026-04-06</lastupdated>
+		<name>Shizuku</name>
+		<summary>using system APIs directly with adb/root privileges from normal apps</summary>
+		<desc>&lt;p&gt;When developing apps that requires root, the most common method is to run some commands in the su shell. For example, there is app uses &lt;code&gt;pm enable/disable&lt;/code&gt; command to enable/disable components. This method has very big disadvantages:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;Extremely slow&lt;/b&gt; (Multiple process creation)&lt;/li&gt;&lt;li&gt;Needs to process texts (Super unreliable)&lt;/li&gt;&lt;li&gt;The possibility is limited to available commands&lt;/li&gt;&lt;li&gt;Even if adb has sufficient permissions, the app requires root privileges to run&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;i&gt;Shizuku&lt;/i&gt; uses a completely different way. The most important feature &lt;i&gt;Shizuku&lt;/i&gt; provides is something like be a middle man to receive requests from the app, sent to the system server, and send back the results. To the app, it is almost identical to the use system APIs directly. But it's much faster as it hooks into the system directly.&lt;/p&gt;&lt;p&gt;Several &lt;a href='https://shizuku.rikka.app/apps.html' target='_blank' rel='noindex nofollow noopener'&gt;apps already use &lt;i&gt;Shizuku&lt;/i&gt;&lt;/a&gt;. If you want to integrate it with yours, take a look at the &lt;a href='https://github.com/RikkaApps/Shizuku/blob/master/README.md' target='_blank' rel='noindex nofollow noopener'&gt;Developer guide&lt;/a&gt;. For users, there's also a &lt;a href='https://shizuku.rikka.app/guide/setup.html' target='_blank' rel='noindex nofollow noopener'&gt;User guide&lt;/a&gt;.&lt;/p&gt;</desc>
+		<license>Apache-2.0</license>
+		<categories>System,Aalivexy</categories>
+		<category>System</category>
+		<web>https://shizuku.rikka.app/</web>
+		<source>https://github.com/RikkaApps/Shizuku</source>
+		<tracker>https://github.com/RikkaApps/Shizuku/issues</tracker>
+		<changelog>https://github.com/RikkaApps/Shizuku/releases</changelog>
+		<author>Rikka apps</author>
+		<email>support@rikka.app</email>
+		<marketversion></marketversion>
+		<marketvercode>1086</marketvercode>
+		<package>
+			<version>13.6.0.r1086.2650830c</version>
+			<versioncode>1086</versioncode>
+			<apkname>moe.shizuku.privileged.api_1086.apk</apkname>
+			<hash type="sha256">6e273ab0e991c4e79bc8b1bbb9b9dd739ccac1a8712a541a214078886b7b790f</hash>
+			<size>2571773</size>
+			<sdkver>24</sdkver>
+			<targetSdkVersion>36</targetSdkVersion>
+			<added>2026-04-06</added>
+			<sig>74bc5f213b047db4700e2b52515d0fa0</sig>
+			<permissions>FOREGROUND_SERVICE,INTERNET,POST_NOTIFICATIONS,RECEIVE_BOOT_COMPLETED,WRITE_SECURE_SETTINGS,moe.shizuku.manager.permission.MANAGER</permissions>
+			<nativecode>arm64-v8a,armeabi-v7a,x86,x86_64</nativecode>
+		</package>
+	</application>
+	<application id="io.github.vvb2060.packageinstaller">
+		<id>io.github.vvb2060.packageinstaller</id>
+		<added>2026-04-06</added>
+		<lastupdated>2026-04-06</lastupdated>
+		<name>Shizuku Package Installer</name>
+		<summary>A lightweight yet powerful package installer for Android</summary>
+		<desc>A lightweight yet powerful package installer for Android that supports advanced installation features.
+
+Features:
+• Split APKs: Install .apks files generated by bundletool with automatic split selection
+• APK Dumps: Install apps from zipped APK dumps containing all base and split APKs
+• Zipped APKs: Install a single APK from within a ZIP archive
+• Add/Remove Splits: Manage split APKs for existing applications
+• Interactive Split Installation: Progressively add APK files without pre-packaging
+• Archive Apps: Backup installed applications to zip files
+
+User Experience:
+• Instant Preview: View package information without slow copying or extraction
+• Detailed Info: Shows version, API level, split type and failure reasons
+• Bypass Play Protect: Skip Google Play Protect security scan
+• Private Space Support: Install apps into Android 15 private space
+• Zero Permissions: Requires no standard Android permissions
+• No Background Processes: Extremely lightweight with no background services
+• Extremely Small: Less than 500KiB in size
+</desc>
+		<license>Apache-2.0</license>
+		<categories>System,Utilities,Aalivexy</categories>
+		<category>System</category>
+		<web></web>
+		<source>https://github.com/vvb2060/PackageInstaller</source>
+		<tracker>https://github.com/vvb2060/PackageInstaller/issues</tracker>
+		<changelog>https://github.com/vvb2060/PackageInstaller/releases</changelog>
+		<author>南宫雪珊</author>
+		<marketversion></marketversion>
+		<marketvercode>8</marketvercode>
+		<package>
+			<version>1.7</version>
+			<versioncode>8</versioncode>
+			<apkname>io.github.vvb2060.packageinstaller_8.apk</apkname>
+			<hash type="sha256">070c2cc1472cb253e486be1117e801cd8806d671914a493406d1a850d4a0c3f1</hash>
+			<size>426412</size>
+			<sdkver>28</sdkver>
+			<targetSdkVersion>36</targetSdkVersion>
+			<added>2026-04-06</added>
+			<sig>e9291da92c5d6d90f35e1ff87b1d5507</sig>
+			<permissions>moe.shizuku.manager.permission.API_V23</permissions>
+		</package>
+	</application>
+	<application id="com.termux">
+		<id>com.termux</id>
+		<added>2026-04-06</added>
+		<lastupdated>2026-04-06</lastupdated>
+		<name>Termux</name>
+		<summary></summary>
+		<icon>com.termux.1002.png</icon>
+		<desc>Termux combines powerful terminal emulation with an extensive Linux package
+collection.
+
+* Enjoy the bash and zsh shells.
+* Edit files with nano and vim.
+* Access servers over ssh.
+* Compile code with gcc and clang.
+* Use the python console as a pocket calculator.
+* Check out projects with git and subversion.
+* Run text-based games with frotz.
+
+At first start a small base system is downloaded - desired packages can then be
+installed using the apt package manager known from the Debian and Ubuntu Linux
+distributions. Access the built-in help by long-pressing anywhere on the
+terminal and selecting the Help menu option to learn more.
+
+Read help online: &lt;a href=&quot;https://wiki.termux.com/&quot;&gt;https://wiki.termux.com/&lt;/a&gt;
+
+Reddit Community: &lt;a href=&quot;https://termux.com/community&quot;&gt;https://termux.com/community&lt;/a&gt;</desc>
+		<license>GPL-3.0-only</license>
+		<categories>Development,Aalivexy</categories>
+		<category>Development</category>
+		<web>https://termux.com</web>
+		<source>https://github.com/termux/termux-app</source>
+		<tracker>https://github.com/termux/termux-app/issues</tracker>
+		<changelog>https://github.com/termux/termux-app/releases</changelog>
+		<donate>https://termux.com/donate.html</donate>
+		<openCollective>Termux</openCollective>
+		<marketversion></marketversion>
+		<marketvercode>1002</marketvercode>
+		<package>
+			<version>0.118.3</version>
+			<versioncode>1002</versioncode>
+			<apkname>com.termux_1002.apk</apkname>
+			<hash type="sha256">72fdb596045116bf5ba1b5bdf5b26fddb9acc0bd074ad9f2da9eb0ae85e83a4e</hash>
+			<size>35106607</size>
+			<sdkver>24</sdkver>
+			<targetSdkVersion>28</targetSdkVersion>
+			<added>2026-04-06</added>
+			<sig>c3320b7e82d5d4a2f83371b194ee34e3</sig>
+			<permissions>ACCESS_NETWORK_STATE,DUMP,FOREGROUND_SERVICE,INTERNET,MANAGE_EXTERNAL_STORAGE,PACKAGE_USAGE_STATS,READ_EXTERNAL_STORAGE,READ_LOGS,REQUEST_IGNORE_BATTERY_OPTIMIZATIONS,REQUEST_INSTALL_PACKAGES,SYSTEM_ALERT_WINDOW,VIBRATE,WAKE_LOCK,WRITE_EXTERNAL_STORAGE,WRITE_SECURE_SETTINGS,com.android.alarm.permission.SET_ALARM</permissions>
+			<nativecode>arm64-v8a</nativecode>
+		</package>
+	</application>
+	<application id="me.zhanghai.android.files">
+		<id>me.zhanghai.android.files</id>
+		<added>2026-04-06</added>
+		<lastupdated>2026-04-06</lastupdated>
+		<name>质感文件</name>
+		<summary>开源的 Material Design 文件管理器</summary>
+		<desc>一个开源的 Material Design 文件管理器。
+
+特性：
+- 开源：轻量、简洁并且安全。
+- Material Design：遵循 Material Design 规范，并且注重细节。
+- 面包屑导航栏：点击导航栏所显示路径中的任一文件夹即可快速访问。
+- Root 支持：使用 root 权限查看和管理文件。
+- 压缩文件支持：查看、提取和创建常见的压缩文件。
+- NAS 支持：查看和管理 FTP、SFTP、SMB 和 WebDAV 服务器上的文件。
+- 主题：可定制的界面颜色，以及可选纯黑的夜间模式。
+- Linux 友好：支持符号链接、文件权限和 SELinux 上下文。
+- 健壮性：使用 Linux 系统调用实现，而不是另一个 ls 解析器。
+- 实现良好：使用正确的方式打造，包括 Java NIO2 文件 API 和 LiveData。
+
+https://github.com/zhanghai/MaterialFiles
+</desc>
+		<license>GPL-3.0-or-later</license>
+		<categories>Cloud Storage &amp; File Sync,File Encryption &amp; Vault,File Transfer,System,Text Editor,Aalivexy</categories>
+		<category>Cloud Storage &amp; File Sync</category>
+		<web></web>
+		<source>https://github.com/zhanghai/MaterialFiles</source>
+		<tracker>https://github.com/zhanghai/MaterialFiles/issues</tracker>
+		<changelog>https://github.com/zhanghai/MaterialFiles/releases</changelog>
+		<author>Hai Zhang</author>
+		<email>dreaming.in.code.zh@gmail.com</email>
+		<marketversion></marketversion>
+		<marketvercode>39</marketvercode>
+		<package>
+			<version>1.7.4</version>
+			<versioncode>39</versioncode>
+			<apkname>me.zhanghai.android.files_39.apk</apkname>
+			<hash type="sha256">ebc5138b6f713f0f73b5467a1a8a4ac3ccfcb2e82135372665b6811a8947641f</hash>
+			<size>9751305</size>
+			<sdkver>21</sdkver>
+			<targetSdkVersion>34</targetSdkVersion>
+			<added>2026-04-06</added>
+			<sig>7b848bc946569132c2a0c7bcf8e6f0fe</sig>
+			<permissions>ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE,FOREGROUND_SERVICE,FOREGROUND_SERVICE_DATA_SYNC,INTERNET,MANAGE_EXTERNAL_STORAGE,POST_NOTIFICATIONS,QUERY_ALL_PACKAGES,READ_EXTERNAL_STORAGE,REQUEST_INSTALL_PACKAGES,WAKE_LOCK,WRITE_EXTERNAL_STORAGE,com.android.launcher.permission.INSTALL_SHORTCUT,me.zhanghai.android.files.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<uses-permission maxSdkVersion="32" name="android.permission.READ_EXTERNAL_STORAGE"/>
+			<uses-permission maxSdkVersion="32" name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+			<nativecode>arm64-v8a,armeabi-v7a,x86,x86_64</nativecode>
+		</package>
+	</application>
+</fdroid>

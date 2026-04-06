@@ -1,0 +1,95 @@
+{
+  "/etc/issue.net": "Ubuntu 24.04.4 LTS",
+  "antiFeatures": {
+    "UpstreamNonFree": {
+      "apps": [
+        "me.rerere.rikkahub"
+      ]
+    }
+  },
+  "apksigner": "/usr/local/lib/android/sdk/build-tools/37.0.0/apksigner",
+  "archivePolicy0": [],
+  "commandLine": [
+    "fdroid update",
+    "--pretty",
+    "--delete-unknown",
+    "--use-date-from-apk",
+    "--rename-apks"
+  ],
+  "disabled": [],
+  "endTimestamp": 1775507346482,
+  "failedBuilds": {},
+  "jarsigner": "/opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.10-7/x64/bin/jarsigner",
+  "keytool": "/opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.10-7/x64/bin/keytool",
+  "needsUpdate": [
+    "com.absinthe.libchecker",
+    "com.follow.clash",
+    "com.looker.droidify",
+    "com.perol.pixez",
+    "com.seafile.seadroid2",
+    "com.termux",
+    "com.x8bit.bitwarden",
+    "de.syss.MifareClassicTool",
+    "dev.bg.jetbird",
+    "io.github.vvb2060.packageinstaller",
+    "li.songe.gkd",
+    "me.ash.reader",
+    "me.rerere.rikkahub",
+    "me.weishu.kernelsu",
+    "me.zhanghai.android.files",
+    "moe.shizuku.privileged.api",
+    "org.frknkrc44.hma_oss",
+    "org.localsend.localsend_app"
+  ],
+  "noPackages": [
+    "com.absinthe.libchecker",
+    "com.follow.clash",
+    "com.looker.droidify",
+    "com.perol.pixez",
+    "com.seafile.seadroid2",
+    "com.termux",
+    "com.x8bit.bitwarden",
+    "de.syss.MifareClassicTool",
+    "dev.bg.jetbird",
+    "io.github.vvb2060.packageinstaller",
+    "li.songe.gkd",
+    "me.ash.reader",
+    "me.rerere.rikkahub",
+    "me.weishu.kernelsu",
+    "me.zhanghai.android.files",
+    "moe.shizuku.privileged.api",
+    "org.frknkrc44.hma_oss",
+    "org.localsend.localsend_app"
+  ],
+  "noUpdateCheck": [
+    "com.absinthe.libchecker",
+    "com.follow.clash",
+    "com.looker.droidify",
+    "com.perol.pixez",
+    "com.seafile.seadroid2",
+    "com.termux",
+    "com.x8bit.bitwarden",
+    "de.syss.MifareClassicTool",
+    "dev.bg.jetbird",
+    "io.github.vvb2060.packageinstaller",
+    "li.songe.gkd",
+    "me.ash.reader",
+    "me.rerere.rikkahub",
+    "me.weishu.kernelsu",
+    "me.zhanghai.android.files",
+    "moe.shizuku.privileged.api",
+    "org.frknkrc44.hma_oss",
+    "org.localsend.localsend_app"
+  ],
+  "stages": {
+    "delete_disabled_builds": 1775507330405,
+    "index.make repo": 1775507343190,
+    "prepare_apps repo": 1775507342739,
+    "process_apks": 1775507330405,
+    "read_added_date_from_all_apks": 1775507342739,
+    "remove_apks": 1775507342737,
+    "scan_repo_files": 1775507342737
+  },
+  "startTimestamp": 1775507330000,
+  "subcommand": "update"
+}
