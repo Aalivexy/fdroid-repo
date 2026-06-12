@@ -91,7 +91,7 @@ packages:
     <<: *IzzyOnDroid
 
   - pkg_name: io.github.vvb2060.packageinstaller
-    icon_url: https://cnb.cool/aalivexy/fdroid-repo/-/imgs/HnAcIFfRzyilTBJTlXqCuB/2fba6d2a-6c21-4a87-958f-bf51853f5191.png
+    icon_url: https://raw.githubusercontent.com/Aalivexy/fdroid-repo/refs/heads/assets/io.github.vvb2060.packageinstaller.png
     metadata:
       Categories:
         - System
