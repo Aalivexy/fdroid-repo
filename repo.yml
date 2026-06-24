@@ -11,7 +11,7 @@ config:
   keydname: $keydname
 
 .fdroid: &fdroid
-  info_url: https://mirrors.tuna.tsinghua.edu.cn/fdroid/repo/index-v2.json
+  info_url: https://f-droid.org/fdroid/repo/index-v2.json
 
 .IzzyOnDroid: &IzzyOnDroid
   icon_url: https://apt.izzysoft.de/fdroid/repo/$PKG_NAME/en-US/icon.png
