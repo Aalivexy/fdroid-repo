@@ -1,0 +1,86 @@
+{
+  "/etc/issue.net": "Ubuntu 24.04.4 LTS",
+  "antiFeatures": {
+    "UpstreamNonFree": {
+      "apps": [
+        "me.rerere.rikkahub"
+      ]
+    }
+  },
+  "apksigner": "/usr/local/lib/android/sdk/build-tools/37.0.0/apksigner",
+  "archivePolicy0": [],
+  "commandLine": [
+    "fdroid update",
+    "--pretty",
+    "--delete-unknown",
+    "--use-date-from-apk",
+    "--rename-apks"
+  ],
+  "disabled": [],
+  "endTimestamp": 1785638539570,
+  "failedBuilds": {},
+  "jarsigner": "/opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.11-10/x64/bin/jarsigner",
+  "keytool": "/opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.11-10/x64/bin/keytool",
+  "needsUpdate": [
+    "com.absinthe.libchecker",
+    "com.follow.clash",
+    "com.looker.droidify",
+    "com.perol.pixez",
+    "com.termux",
+    "com.x8bit.bitwarden",
+    "de.syss.MifareClassicTool",
+    "io.github.vvb2060.packageinstaller",
+    "li.songe.gkd",
+    "me.ash.reader",
+    "me.rerere.rikkahub",
+    "me.weishu.kernelsu",
+    "me.zhanghai.android.files",
+    "moe.shizuku.privileged.api",
+    "org.localsend.localsend_app"
+  ],
+  "noPackages": [
+    "com.absinthe.libchecker",
+    "com.follow.clash",
+    "com.looker.droidify",
+    "com.perol.pixez",
+    "com.termux",
+    "com.x8bit.bitwarden",
+    "de.syss.MifareClassicTool",
+    "io.github.vvb2060.packageinstaller",
+    "li.songe.gkd",
+    "me.ash.reader",
+    "me.rerere.rikkahub",
+    "me.weishu.kernelsu",
+    "me.zhanghai.android.files",
+    "moe.shizuku.privileged.api",
+    "org.localsend.localsend_app"
+  ],
+  "noUpdateCheck": [
+    "com.absinthe.libchecker",
+    "com.follow.clash",
+    "com.looker.droidify",
+    "com.perol.pixez",
+    "com.termux",
+    "com.x8bit.bitwarden",
+    "de.syss.MifareClassicTool",
+    "io.github.vvb2060.packageinstaller",
+    "li.songe.gkd",
+    "me.ash.reader",
+    "me.rerere.rikkahub",
+    "me.weishu.kernelsu",
+    "me.zhanghai.android.files",
+    "moe.shizuku.privileged.api",
+    "org.localsend.localsend_app"
+  ],
+  "stages": {
+    "delete_disabled_builds": 1785638525465,
+    "index.make repo": 1785638536246,
+    "prepare_apps repo": 1785638535862,
+    "process_apks": 1785638525466,
+    "read_added_date_from_all_apks": 1785638535862,
+    "remove_apks": 1785638535861,
+    "scan_repo_files": 1785638535860
+  },
+  "startTimestamp": 1785638525000,
+  "subcommand": "update"
+}
