@@ -27,12 +27,11 @@ main:
             cd "$workdir"
 
             git remote add github https://github.com/Aalivexy/fdroid-repo.git
-            git fetch github fdroid
-            git checkout -B fdroid FETCH_HEAD
-
-            git config user.name "Cloud Native Build"
-            git config user.email "cnb@cnb.cool"
             git remote add origin https://cnb:${CNB_TOKEN}@cnb.cool/aalivexy/fdroid-repo.git
+
+            git fetch origin fdroid || true
+            git fetch --filter=blob:none github fdroid
+            git checkout -B fdroid FETCH_HEAD
             git push --force origin fdroid
 
   "crontab: 0 5,17 * * *": *web_trigger_update
