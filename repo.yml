@@ -40,7 +40,7 @@ packages:
         ✨ 支持一键导入订阅, 深色模式
     info_url: https://api.github.com/repos/chen08209/FlClash/releases/latest
     version_jq: .tag_name
-    download_jq: .assets[] | select(.name | contains("arm64-v8a.apk")) | .browser_download_url
+    download_jq: .assets[] | select(.name | test("^FlClash-[0-9].*-android-arm64[.]apk$")) | .browser_download_url
 
   - pkg_name: com.absinthe.libchecker
     <<: *fdroid

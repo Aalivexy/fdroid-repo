@@ -118,6 +118,13 @@ def get_package_info_from_fdroid(data: dict, pkg: Package) -> tuple[str, str]:
     return version, download
 
 
+def jq_first(expression: str, data):
+    try:
+        return jq.compile(expression).input_value(data).first()
+    except StopIteration:
+        return None
+
+
 def get_package_info(pkg: Package) -> tuple[str, str]:
     source_type = get_source_type(pkg.info_url)
 
@@ -134,22 +141,22 @@ def get_package_info(pkg: Package) -> tuple[str, str]:
                 )
                 sys.exit(1)
 
-            version = (
-                jq.compile(pkg.version_jq.replace("$PKG_NAME", pkg.pkg_name))
-                .input_value(data)
-                .first()
+            version = jq_first(
+                pkg.version_jq.replace("$PKG_NAME", pkg.pkg_name), data
             )
             if not version:
-                logging.error(f"Failed to extract version from {pkg.info_url}")
+                logging.error(
+                    f"Failed to extract version from {pkg.info_url} using version_jq: {pkg.version_jq}"
+                )
                 sys.exit(1)
 
-            download = (
-                jq.compile(pkg.download_jq.replace("$PKG_NAME", pkg.pkg_name))
-                .input_value(data)
-                .first()
+            download = jq_first(
+                pkg.download_jq.replace("$PKG_NAME", pkg.pkg_name), data
             )
             if not download:
-                logging.error(f"Failed to extract download URL from {pkg.info_url}")
+                logging.error(
+                    f"Failed to extract download URL from {pkg.info_url} using download_jq: {pkg.download_jq}"
+                )
                 sys.exit(1)
 
             return normalize_version(version), download
